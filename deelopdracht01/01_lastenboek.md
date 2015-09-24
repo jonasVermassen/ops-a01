@@ -19,9 +19,10 @@
 
 | Student  | Geschat | Gerealiseerd |
 | :---     |    ---: |         ---: |
-| student1 |         |              |
-| student2 |         |              |
-| student3 |         |              |
-| student4 |         |              |
+| Jens |         |              |
+| Jarno |         |              |
+| Jonas |         |              |
+| Karel |         |              |
+| Robin |         |              |
 
 (na oplevering van de taak een schermafbeelding toevoegen van rapport tijdbesteding voor deze taak)
