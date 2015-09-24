@@ -9,6 +9,7 @@
 | student2 |       |           |
 | student3 |       |           |
 | student4 |       |           |
+| student5 |       |           |
 
 ## Wat heb je deze week gerealiseerd?
 
