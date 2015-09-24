@@ -1,4 +1,4 @@
-# Voortgangsrapport week nn
+# Voortgangsrapport week 2
 
 * Groep:
 * Datum:
