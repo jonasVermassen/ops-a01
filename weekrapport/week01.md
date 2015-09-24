@@ -58,6 +58,7 @@
 ### Algemeen
 ### Jens
 * Boek verder lezen en video-lessen beginnen.
+
 ### Jarno
 ### Jonas
 ### Karel
