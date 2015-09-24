@@ -17,14 +17,14 @@
 
 [Afbeelding huidige toestand Kanban-bord(en) invoegen]
 
-* ...
-* ...
+* Taken verdeeld.
+* Boeken opgezocht en verdeeld
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
 ### Jens
 
-* ...
+* Beginnen lezen in boek Windows Powershell.
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -57,6 +57,7 @@
 
 ### Algemeen
 ### Jens
+* Boek verder lezen en video-lessen beginnen.
 ### Jarno
 ### Jonas
 ### Karel
