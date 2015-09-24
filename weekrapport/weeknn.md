@@ -5,11 +5,11 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| student1 |       |           |
-| student2 |       |           |
-| student3 |       |           |
-| student4 |       |           |
-| student5 |       |           |
+| Jens |       |           |
+| Jarno |       |           |
+| Jonas |       |           |
+| Karel |       |           |
+| Robin |       |           |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -22,37 +22,46 @@
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
-### Student 1
+### Jens
 
 * ...
 
 [Afbeelding individueel rapport tijdregistratie]
 
-### Student 2
+### Jarno
 
 * ...
 
 [Afbeelding individueel rapport tijdregistratie]
 
-### Student 3
+### Jonas
 
 * ...
 
 [Afbeelding individueel rapport tijdregistratie]
 
-### Student 4
+### Karel
 
 * ...
 
 [Afbeelding individueel rapport tijdregistratie]
+
+### Robin
+
+* ...
+
+[Afbeelding individueel rapport tijdregistratie]
+
 
 ## Wat plan je volgende week te doen?
 
 ### Algemeen
-### Student 1
-### Student 2
-### Student 3
-### Student 4
+### Jens
+### Jarno
+### Jonas
+### Karel
+### Robin
+
 
 ## Waar hebben jullie nog problemen mee?
 
@@ -63,17 +72,19 @@
 
 ### Algemeen
 
-### Student 1
-### Student 2
-### Student 3
-### Student 4
+### Jens
+### Jarno
+### Jonas
+### Karel
+### Robin
 
 ## Feedback analyseluik
 
 ### Algemeen
 
-### Student 1
-### Student 2
-### Student 3
-### Student 4
+### Jens
+### Jarno
+### Jonas
+### Karel
+### Robin
 
