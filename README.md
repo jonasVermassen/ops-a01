@@ -12,5 +12,5 @@
 
 ## Gebruikte tools
 
-* Kanban-bord: http://trello.com/
+* Kanban-bord: https://huboard.com/HoGentTIN/ops-a01
 * Tijdregistratie: http://toggl.com/
