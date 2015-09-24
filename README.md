@@ -4,11 +4,11 @@
 
 | Naam     | GitHub gebruikersnaam                   |
 | :---     | :---                                    |
-| student1 | [student1](https://github.com/student1) |
-| student2 | [student2](https://github.com/student2) |
-| student3 | [student3](https://github.com/student3) |
-| student4 | [student4](https://github.com/student4) |
-| student5 | [Robin Van Wezemael](https://github.com/confusor) |
+| Jens Borgenon | [Jenss21025](https://github.com/Jenss21025) |
+| Jarno Raes | [JarnoRaes](https://github.com/JarnoRaes) |
+| Jonas Vermassen | [JonasVermassen](https://github.com/JonasVermassen) |
+| Karel Willems | [KrlWil](https://github.com/KrlWil) |
+| Robin Van Wezemael | [Confusor](https://github.com/confusor) |
 
 ## Gebruikte tools
 
