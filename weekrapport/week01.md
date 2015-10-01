@@ -38,7 +38,7 @@
 
 * Eerste twee hoofdstukken lezen van het boek: 'Learn Windows Powershell 3 in a month of lunches'
 
-[Afbeelding individueel rapport tijdregistratie]
+http://i.imgur.com/yzM4jtg.png
 
 ### Karel
 
