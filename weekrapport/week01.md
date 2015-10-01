@@ -61,6 +61,8 @@
 
 ### Jarno
 * Verder in het boek lezen en beginnen met virtual academy.
+
+
 ### Jonas
 
 
