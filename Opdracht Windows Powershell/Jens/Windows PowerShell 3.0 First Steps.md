@@ -85,10 +85,13 @@ Once you start the Windows PowerShell transcript, all commands, command output, 
 
 ##Chapter 5
 ###Storing data in text files
+```PowerShell
 Get-Volume >>c:\fso\volumeinfo.txt
-
+```
 ###Storing data in CSV files
 ![ALt text](http://i.imgur.com/kUzOt38.png)
 
 ###Storing data in XML
+```PowerShell
 Get-Process | Export-Clixml -Path c:\fso\processXML.xml
+```
