@@ -26,7 +26,7 @@
 
 * Beginnen lezen in boek Windows Powershell.
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt Text](http://i.imgur.com/wJUrg4Z.png)
 
 ### Jarno
 
