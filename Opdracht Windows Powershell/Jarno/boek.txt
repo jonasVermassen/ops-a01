@@ -12,3 +12,4 @@ Show-Command: laat alle commands zien die je kunt gebruiken.
 Alle draaiende services zien: Get-Service
 Om alle leden van een service object te zien: Get-Service | Get-Member | Out-Host -Paging
 Iets beknopter is Get-Service | Get-Member -MemberType Properties
+Deze cmdlet zet je achter een andere cmdlet om pagina data te weergeven: Out-Host
