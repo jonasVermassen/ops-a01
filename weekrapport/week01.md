@@ -30,7 +30,7 @@
 
 ### Jarno
 
-* ...
+* Beginnen lezen in boek Powershell 3 Advanced Administration Handbook.
 
 [Afbeelding individueel rapport tijdregistratie]
 
