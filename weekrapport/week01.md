@@ -48,7 +48,7 @@
 
 ### Robin
 
-* ...
+* Boek Windows Powershell 3.0 Step by Step beginnen lezen
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -65,6 +65,8 @@
  * Boek powershell verder lezen.
 
 ### Robin
+ * Boek verder lezen
+ * videos van Microsoft Virtual Academy starten
 
 
 ## Waar hebben jullie nog problemen mee?
