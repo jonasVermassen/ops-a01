@@ -5,11 +5,11 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Jens |       |           |
-| Jarno |       |           |
-| Jonas |       |           |
-| Karel |       |           |
-| Robin |       |           |
+| Jens |  x  |           |
+| Jarno | x  |           |
+| Jonas |   x   |           |
+| Karel |   x   |           |
+| Robin |   x   |           |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -36,7 +36,7 @@
 
 ### Jonas
 
-* ...
+* Eerste twee hoofdstukken lezen van het boek: 'Learn Windows Powershell 3 in a month of lunches'
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -61,6 +61,8 @@
 
 ### Jarno
 ### Jonas
+
+
 ### Karel
  * Boek powershell verder lezen.
 
