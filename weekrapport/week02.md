@@ -71,25 +71,33 @@ Beginnen met de virtual academy & Hoofdstuk 5 & 6 samenvatten
 ## Waar hebben jullie nog problemen mee?
 
 * ...
-* ...
 
 ## Feedback technisch luik
 
 ### Algemeen
 
-### Jens
+- Jullie kunnen al iets voor de Linux-opdracht doen! Bv. info opzoeken over de test frameworks die in de opgave vernoemd worden
+- Zorg er voor dat voor **alles** dat je doet voor het project een neerslag te vinden is op Github. Bijvoorbeeld voor de opdracht van het lezen van Powershell-boeken een samenvatting, overzicht van interessante commando's, ... als Markdown-document.
+- Markdown tips: gebruik codeblokken met syntax coloring, bv.
+
+    ```PowerShell
+    # Filename: Hello.ps1
+    Write-Host 'Hello World!'
+    ```
+- Afbeeldingen invoegen kan met `![ALT TEXT](link)`
+- Tijdregistratie 
+    - Rapporteer telkens over de periode van het begin van de vorige sessie tot het begin van de huidige sessie.
+    - **Alles** wat je doet voor het project moet opgenomen zijn in de tijdregistratie.
+    - De totale studietijd voor het vak is begroot op 75 uur per student (zie [ECTS fiche](https://bamaflexweb.hogent.be/BMFUIDetailxOLOD.aspx?a=68558&b=5&c=1)). Dat betekent dat als je enkel de uren van de sessie (3u/w) indient, dit onvoldoende is! In W12 is er een opdracht die heel de dag in beslag neemt (neem ~8u), waarmee nog 67 uur over de andere 11 weken overblijven, ofwel iets meer dan 6u per week.
+
 ### Jarno
-### Jonas
+
+- Aan het einde van de sessie weekrapport en tijdregistratie nog altijd niet in orde!
+
 ### Karel
+
+- Aan het einde van de sessie weekrapport en tijdregistratie nog altijd niet in orde!
+
 ### Robin
 
-## Feedback analyseluik
-
-### Algemeen
-
-### Jens
-### Jarno
-### Jonas
-### Karel
-### Robin
-
+- Aan het einde van de sessie weekrapport en tijdregistratie nog altijd niet in orde!
