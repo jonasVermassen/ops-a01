@@ -26,9 +26,10 @@
 
 ### Jens
 
-* ...
+* Hoofdstuk 1,2,3 & 4 samengevat
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/EcLd2CO.png)
+
 
 ### Jarno
 
@@ -60,6 +61,7 @@
 
 ### Algemeen
 ### Jens
+Beginnen met de virtual academy & Hoofdstuk 5 & 6 samenvatten
 ### Jarno
 ### Jonas
 ### Karel
