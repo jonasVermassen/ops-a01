@@ -1,1 +1,8 @@
-H1 ...
+H1 Getting started with powershell
+
+In de plaats van text te gebruiken om commands in te geven, gebruikt powershell objecten. 
+Als je bijvoorbeeld de Get-Location command in geeft krijg je geen text terug dat de directory laat zien waar je in zit, maar in de plaats een object genaamd PathInfo. Daarnaast krijg je ook het huidige path waar je zit. 
+
+Door gebruik van de cmdlet Out-Host wordt de informatie die in het object PathInfo zit verstuurd naar het scherm.
+
+Get-Location: directory laten zien
