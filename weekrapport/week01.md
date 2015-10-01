@@ -42,7 +42,7 @@
 
 ### Karel
 
-* ...
+* Boek powershell beginnen lezen.
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -62,6 +62,7 @@
 ### Jarno
 ### Jonas
 ### Karel
+ * Boek powershell verder lezen.
 ### Robin
 
 
