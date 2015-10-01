@@ -17,7 +17,7 @@
 
 *Iedereen heeft individueel verdergewerkt aan de eerste opdracht. 
 
-http://i.imgur.com/47mZ4Y7.png
+![Alt text](http://i.imgur.com/47mZ4Y7.png)
 
 * ...
 * ...
@@ -41,7 +41,7 @@ http://i.imgur.com/47mZ4Y7.png
 * Hoofdstuk 3 en 4 van het boek lezen. 
 * Intro van de filmpjes bekijken. 
 
-http://i.imgur.com/f9Y4puG.png
+![Alt text](http://i.imgur.com/f9Y4puG.png)
 
 ### Karel
 
