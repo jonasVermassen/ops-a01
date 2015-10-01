@@ -1,21 +1,23 @@
 # Voortgangsrapport week 2
 
-* Groep:
-* Datum:
+* Groep: 1
+* Datum: 1 oktober 2015
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Jens |       |           |
-| Jarno |       |           |
-| Jonas |       |           |
-| Karel |       |           |
-| Robin |       |           |
+| Jens |  x   |           |
+| Jarno |  x  |           |
+| Jonas |  x  |           |
+| Karel |  x  |           |
+| Robin |  x  |           |
 
 ## Wat heb je deze week gerealiseerd?
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+*Iedereen heeft individueel verdergewerkt aan de eerste opdracht. 
+
+http://i.imgur.com/47mZ4Y7.png
 
 * ...
 * ...
@@ -36,9 +38,10 @@
 
 ### Jonas
 
-* ...
+* Hoofdstuk 3 en 4 van het boek lezen. 
+* Intro van de filmpjes bekijken. 
 
-[Afbeelding individueel rapport tijdregistratie]
+http://i.imgur.com/f9Y4puG.png
 
 ### Karel
 
