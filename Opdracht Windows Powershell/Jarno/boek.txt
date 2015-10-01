@@ -5,4 +5,6 @@ Als je bijvoorbeeld de Get-Location command in geeft krijg je geen text terug da
 
 Door gebruik van de cmdlet Out-Host wordt de informatie die in het object PathInfo zit verstuurd naar het scherm.
 
+Commands:
 Get-Location: directory laten zien
+Show-Command: laat alle commands zien die je kunt gebruiken.
