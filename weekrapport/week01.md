@@ -42,9 +42,9 @@
 
 ### Karel
 
-* Boek powershell beginnen lezen.
+* Boek "Microsoft Windows PowerShell 3.0 First Look" beginnen lezen.
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](http://i.imgur.com/mq4in4N.jpg)
 
 ### Robin
 
