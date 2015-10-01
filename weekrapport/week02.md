@@ -46,9 +46,10 @@
 
 ### Karel
 
-* ...
+* Samenvatting+lezen H1-H3 boek powershell
+* Intro van de videos over powershell
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](http://i.imgur.com/uAiMI3d.jpg)
 
 ### Robin
 
@@ -65,6 +66,8 @@ Beginnen met de virtual academy & Hoofdstuk 5 & 6 samenvatten
 ### Jarno
 ### Jonas
 ### Karel
+Verder lezen boek
+Video's powershell verder bekijken
 ### Robin
 
 
