@@ -50,7 +50,7 @@
 
 * Boek Windows Powershell 3.0 Step by Step beginnen lezen
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](https://i.gyazo.com/f29baff7060ac647d6fa9b2ca21beeb1.png)
 
 
 ## Wat plan je volgende week te doen?
