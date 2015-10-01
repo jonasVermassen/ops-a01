@@ -7,4 +7,8 @@ Door gebruik van de cmdlet Out-Host wordt de informatie die in het object PathIn
 
 Commands:
 Get-Location: directory laten zien
+
 Show-Command: laat alle commands zien die je kunt gebruiken.
+Alle draaiende services zien: Get-Service
+Om alle leden van een service object te zien: Get-Service | Get-Member | Out-Host -Paging
+Iets beknopter is Get-Service | Get-Member -MemberType Properties
