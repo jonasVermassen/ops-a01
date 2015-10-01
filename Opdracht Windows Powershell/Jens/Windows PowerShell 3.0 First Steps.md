@@ -1,6 +1,6 @@
 #Windows PowerShell 3.0 First Steps
 
-##Chapter1
+##Chapter 1
 
 * Get-Process
 * Get-Service
@@ -16,7 +16,7 @@
 * Get-Random -InputObject (1..10) -Count 5
 * PS C:\> ipconfig
 
-##Chapter2
+##Chapter 2
 
 ###PowerShell parameters
 
