@@ -60,6 +60,7 @@
 * Boek verder lezen en video-lessen beginnen.
 
 ### Jarno
+* Verder in het boek lezen en beginnen met virtual academy.
 ### Jonas
 
 
