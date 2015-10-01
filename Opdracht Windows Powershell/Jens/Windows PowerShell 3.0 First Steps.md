@@ -21,18 +21,18 @@
 ###PowerShell parameters
 
 -	Verbose (vb)
-
+```PowerShell
 PS C:\> Stop-Process -Name notepad
-
+```
 -	Debug (db)
 -	WarningAction (wa)
 -	WarningVariable (wv)
 -	ErrorAction (ea)
-
+```PowerShell
 PS C:\> Get-Process -Name notepad -ErrorAction SilentlyContinue (geef error weergeven)
 
 SilentlyContinue | Stop | Continue | Inquire | Ignore
-
+```
 -	ErrorVariable (ev)
 -	OutVariable (ov)
 -	OutBuffer (ob)
