@@ -13,3 +13,6 @@ Alle draaiende services zien: Get-Service
 Om alle leden van een service object te zien: Get-Service | Get-Member | Out-Host -Paging
 Iets beknopter is Get-Service | Get-Member -MemberType Properties
 Deze cmdlet zet je achter een andere cmdlet om pagina data te weergeven: Out-Host
+Als je een command runned en je krijgt een hoop onnuttige data kan je deze command gebruiken: Get-Command | Out-Null
+Met deze command kan je output in de plaats van op de console in een bestand steken: Out-File
+Bv. Get-Process | Out-File -FilePath C:\tmp\processlist.txt . Alles wordt geschreven in een lijst naar dit tekstbestand.
