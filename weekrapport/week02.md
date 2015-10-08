@@ -28,7 +28,7 @@
 
 * Hoofdstuk 1,2,3 & 4 samengevat
 
-![Alt text](http://i.imgur.com/EcLd2CO.png)
+![Alt text](http://i.imgur.com/pdZLy5z.png)
 
 
 ### Jarno
