@@ -62,6 +62,7 @@ Verder Microsoft Virtual Academy volgen
 ### Jarno
 ### Jonas
 ### Karel
+Videos Microsoft Virtual Academy verder bekijken
 ### Robin
 
 
