@@ -15,16 +15,16 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Alt text](http://i.imgur.com/47mZ4Y7.png)
 
-* ...
-* ...
+* Iedereen heeft individueel aan de opdrachten gewerkt
+
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
 ### Jens
 
-* ...
+* Microsoft Virual Academy Filmpje 1 & 2
 
 [Afbeelding individueel rapport tijdregistratie]
 
