@@ -1,15 +1,15 @@
 # Voortgangsrapport week 3
 
 * Groep:
-* Datum:
+* Datum: 8/10/2015
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Jens |       |           |
-| Jarno |       |           |
-| Jonas |       |           |
-| Karel |       |           |
-| Robin |       |           |
+| Jens |   x    |           |
+| Jarno |   x    |           |
+| Jonas |    x   |           |
+| Karel |    x   |           |
+| Robin |    x   |           |
 
 ## Wat heb je deze week gerealiseerd?
 
