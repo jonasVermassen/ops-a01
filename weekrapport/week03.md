@@ -57,6 +57,7 @@
 
 ### Algemeen
 ### Jens
+Verder Microsoft Virtual Academy volgen
 ### Jarno
 ### Jonas
 ### Karel
