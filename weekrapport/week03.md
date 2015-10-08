@@ -43,9 +43,9 @@
 
 ### Karel
 
-* ...
+* Video microsoft virtual academy H1 + H2 + H3
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](http://i.imgur.com/aVuluF5.jpg)
 
 ### Robin
 
