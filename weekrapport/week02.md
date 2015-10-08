@@ -53,9 +53,10 @@
 
 ### Robin
 
-* ...
+* Hoofdstuk 1 en 2 van boek gelezen
+* Intro van de videolessen bekeken
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](https://i.gyazo.com/aa12304495d5bf2712c07db5aa0ae691.png)
 
 
 ## Wat plan je volgende week te doen?
@@ -69,6 +70,7 @@ Beginnen met de virtual academy & Hoofdstuk 5 & 6 samenvatten
 Verder lezen boek
 Video's powershell verder bekijken
 ### Robin
+verder lezen en videos bekijken, eventueel al info verzamelen over het linux gedeelte
 
 
 ## Waar hebben jullie nog problemen mee?
