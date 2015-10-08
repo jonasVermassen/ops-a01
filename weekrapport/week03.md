@@ -36,9 +36,10 @@
 
 ### Jonas
 
-* ...
+* Microsoft Virual Academy Filmpje 2, 3, 4, 5 & 6
+* Boek Hoofdstuk 5 lezen
+![Alt text](http://i.imgur.com/uV5UJgm.png)
 
-[Afbeelding individueel rapport tijdregistratie]
 
 ### Karel
 
