@@ -38,7 +38,7 @@
 
 * Eerste twee hoofdstukken lezen van het boek: 'Learn Windows Powershell 3 in a month of lunches'
 
-![Alt text](http://i.imgur.com/yzM4jtg.png)
+![Alt text](http://i.imgur.com/dJ1WCTt.png)
 
 ### Karel
 
