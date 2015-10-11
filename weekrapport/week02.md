@@ -33,10 +33,9 @@
 
 ### Jarno
 
-* Virtual Academy 1 - 4 gedaan en samenvatting aangevuld.
-* Nieuw boek begonnen en tot p50 gelezen.
-
-[Afbeelding individueel rapport tijdregistratie]
+* Virtual Academy 1 - 3 gedaan en samenvatting aangevuld.
+* Nieuw boek (cookbook) begonnen en tot p30 gelezen.
+![Alt Text](http://i.imgur.com/nd5rykv.png)
 
 ### Jonas
 
@@ -66,6 +65,7 @@
 ### Jens
 Beginnen met de virtual academy & Hoofdstuk 5 & 6 samenvatten
 ### Jarno
+Verder gaan met virtual academy, het boek en verder aan de samenvatting werken.
 ### Jonas
 ### Karel
 Verder lezen boek
