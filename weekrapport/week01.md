@@ -32,7 +32,7 @@
 
 * Beginnen lezen in boek Powershell 3 Advanced Administration Handbook.
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt Text](http://i.imgur.com/C3Xxfbu.png)
 
 ### Jonas
 
