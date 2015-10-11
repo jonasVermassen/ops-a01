@@ -33,7 +33,8 @@
 
 ### Jarno
 
-* ...
+* Virtual Academy 1 - 4 gedaan en samenvatting aangevuld.
+* Nieuw boek begonnen en tot p50 gelezen.
 
 [Afbeelding individueel rapport tijdregistratie]
 
