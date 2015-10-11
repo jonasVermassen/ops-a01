@@ -30,7 +30,7 @@
 
 ### Jarno
 
-* ...
+* Virtual Academy hfst 4
 
 [Afbeelding individueel rapport tijdregistratie]
 
