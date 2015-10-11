@@ -34,7 +34,7 @@
 ### Jarno
 
 * Virtual Academy 1 - 3 gedaan en samenvatting aangevuld.
-* Nieuw boek (cookbook) begonnen en tot p30 gelezen.
+* Nieuw boek (cookbook) begonnen.
 ![Alt Text](http://i.imgur.com/nd5rykv.png)
 
 ### Jonas
