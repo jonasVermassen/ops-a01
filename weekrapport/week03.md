@@ -30,9 +30,10 @@
 
 ### Jarno
 
-* Virtual Academy hfst 4
+* Virtual Academy les 4-5, samenvatting bijgewerkt.
+* Boek gelezen nu bijna aan hfst 5, p.154/370
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/erLSC7V.png)
 
 ### Jonas
 
