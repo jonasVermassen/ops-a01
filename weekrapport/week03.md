@@ -50,9 +50,9 @@
 
 ### Robin
 
-* ...
+* Videos Virtual Academy
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](https://i.gyazo.com/f514f96263ac836d11285f5751c2bf72.png)
 
 
 ## Wat plan je volgende week te doen?
@@ -65,6 +65,7 @@ Verder Microsoft Virtual Academy volgen
 ### Karel
 Videos Microsoft Virtual Academy verder bekijken
 ### Robin
+Virtual academy afkijken
 
 
 ## Waar hebben jullie nog problemen mee?
