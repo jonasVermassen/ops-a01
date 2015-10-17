@@ -26,7 +26,7 @@
 
 * Microsoft Virual Academy Filmpje 1 & 2
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.prntscr.com/8d9e9ba640904630ac70bd752c013907.png)
 
 ### Jarno
 
