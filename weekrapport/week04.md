@@ -5,7 +5,7 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Jens |       |           |
+| Jens |       |      Geen begeleiding     |
 | Jarno |       |           |
 | Jonas |       |           |
 | Karel |       |           |
@@ -17,14 +17,15 @@
 
 [Afbeelding huidige toestand Kanban-bord(en) invoegen]
 
-* ...
+* Individueel verder gewerkt aan Windows Powershell
 * ...
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
 ### Jens
 
-* ...
+* Microsoft Virtual academy Filmpje 4
+* Github en toggl in orde gebracht
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -57,6 +58,8 @@
 
 ### Algemeen
 ### Jens
+* verder filmpjes Microsoft Virtual Academy kijken
+* eerste stappen zetten in opdracht Linux: LAMP stack
 ### Jarno
 ### Jonas
 ### Karel
