@@ -24,8 +24,7 @@
 
 ### Jens
 
-* Microsoft Virual Academy Filmpje 1 & 2
-
+* Microsoft Virual Academy Filmpje 1, 2 & 3
 ![Alt text](http://i.prntscr.com/8d9e9ba640904630ac70bd752c013907.png)
 
 ### Jarno
