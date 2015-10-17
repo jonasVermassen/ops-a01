@@ -64,6 +64,9 @@
 
 ### Jarno
 ### Jonas
+* samen met de groep de LAMP stack opzetten. 
+* verder kijken naar filmpjes ivm windows powershell
+* Hoofdstuk 7 in mijn boek over windows powershell lezen
 ### Karel
 ### Robin
 
