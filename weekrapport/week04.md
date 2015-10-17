@@ -60,6 +60,7 @@
 ### Jens
 * verder filmpjes Microsoft Virtual Academy kijken
 * eerste stappen zetten in opdracht Linux: LAMP stack
+
 ### Jarno
 ### Jonas
 ### Karel
