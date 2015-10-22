@@ -46,9 +46,9 @@
 
 ### Karel
 
-* ...
+* H4 van MVA cursus bekijken
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](http://i.imgur.com/GS5Tomm.jpg)
 
 ### Robin
 
@@ -72,7 +72,11 @@
 * samen met de groep de LAMP stack opzetten. 
 * verder kijken naar filmpjes ivm windows powershell
 * Hoofdstuk 7 in mijn boek over windows powershell lezen
+
 ### Karel
+ * lamp stack en monitoring server opzetten
+ * MVA course bekijken
+
 ### Robin
 
 
