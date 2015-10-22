@@ -65,6 +65,9 @@
 * eerste stappen zetten in opdracht Linux: LAMP stack
 
 ### Jarno
+* LAMP stack met groep opzetten
+* Alle virtual academy videos afgekeken hebben.
+
 ### Jonas
 * samen met de groep de LAMP stack opzetten. 
 * verder kijken naar filmpjes ivm windows powershell
