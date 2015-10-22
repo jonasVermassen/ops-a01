@@ -31,9 +31,11 @@
 
 ### Jarno
 
-* ...
+* Virtual academy video filmpje 6 en 7
+* Boek advanced administration tot p.186 gelezen.
+* Samenvatting bijgewerkt.
+![Alt text](http://i.imgur.com/shonwKA.png)
 
-[Afbeelding individueel rapport tijdregistratie]
 
 ### Jonas
 
