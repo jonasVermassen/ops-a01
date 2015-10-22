@@ -52,9 +52,9 @@
 
 ### Robin
 
-* ...
+* MVA voortkijken
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](https://i.gyazo.com/99571d858fc1c29721a0bea734e52fcd.png)
 
 
 ## Wat plan je volgende week te doen?
@@ -78,7 +78,9 @@
  * MVA course bekijken
 
 ### Robin
-
+* laatste filmpje van de MVA bekijken
+* boek lezen
+* lamp stack opzetten
 
 ## Waar hebben jullie nog problemen mee?
 
