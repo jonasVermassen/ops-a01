@@ -27,7 +27,7 @@
 * Microsoft Virtual academy Filmpje 4
 * Github en toggl in orde gebracht
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/xMoTVEJ.png)
 
 ### Jarno
 
