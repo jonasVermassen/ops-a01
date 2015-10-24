@@ -5,11 +5,11 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Jens |       |           |
-| Jarno |       |           |
-| Jonas |       |           |
-| Karel |       |           |
-| Robin |       |           |
+| Jens |  x   |           |
+| Jarno |   x   |           |
+| Jonas |   x   |           |
+| Karel |   x   |           |
+| Robin |   x   |           |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -17,14 +17,16 @@
 
 [Afbeelding huidige toestand Kanban-bord(en) invoegen]
 
-* ...
-* ...
+* LAMP-stack opgezet
+* Eerste stappen Monitoring server
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
 ### Jens
 
-* ...
+* LAMP-stack opgezet
+* Eerste stappen Monitoring server
+* Microsoft virtual academy filmpje kijken
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -57,6 +59,11 @@
 
 ### Algemeen
 ### Jens
+
+* Verder MVA volgen
+* Verder lezen in boek Powershell
+* Eventueel Monitoring-server verder configureren
+
 ### Jarno
 ### Jonas
 ### Karel
