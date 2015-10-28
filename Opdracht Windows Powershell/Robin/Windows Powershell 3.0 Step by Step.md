@@ -40,6 +40,10 @@ Cmdlet          Move-MsmqMessage                                   1.0.0.0    MS
 
 ##Chapter 2: Using Powershell Cmdlets
 
+Het object wshShell maken:
+```Powershell
+$wshShell = New-Object -comobject "wscript.shell"
+```
 
 ##Chapter 3: Understanding and using Powershell Providers
 
