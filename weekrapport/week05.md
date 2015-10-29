@@ -28,7 +28,7 @@
 * Eerste stappen Monitoring server
 * Microsoft virtual academy filmpje kijken
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/IKZJUpm.png)
 
 ### Jarno
 
