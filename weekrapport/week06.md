@@ -5,7 +5,7 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Jens |       |           |
+| Jens |     x  |    geen begeleiding       |
 | Jarno |       |           |
 | Jonas |     x  |           |
 | Karel |       |           |
@@ -24,7 +24,7 @@
 
 ### Jens
 
-* ...
+* Microsoft Virtual Academy afronden
 
 [Afbeelding individueel rapport tijdregistratie]
 
