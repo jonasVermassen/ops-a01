@@ -41,7 +41,12 @@
 
 ### Jonas
 
-* ...
+* LAMP-stack opgezet
+* Eerste stappen monitoring server (deze werken we over twee weken uit)
+* powershell filmpje: Getting prepared for automation
+* powershell filmpje: Automation in scale: remoting
+
+![Alt text](http://i.imgur.com/F5kPazE.png)
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -72,6 +77,9 @@
 * Eventueel scripts maken voor de windows server.
 
 ### Jonas
+* Het Laatste filmpje kijken ivm powershell:Introducing scripting and toolmaking
+* Hoofdstuk 7 lezen in mijn boek: Learn Windows PowerShell 3 in a Month of Lunches
+
 ### Karel
 ### Robin
 
