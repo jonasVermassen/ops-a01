@@ -7,7 +7,7 @@
 | :---     | :---  | :---      |
 | Jens |       |           |
 | Jarno |       |           |
-| Jonas |       |           |
+| Jonas |     x  |           |
 | Karel |       |           |
 | Robin |       |           |
 
@@ -36,7 +36,8 @@
 
 ### Jonas
 
-* ...
+* verder lezen in mijn boek: Learn Windows PowerShell 3 in a Month of Lunches, 2nd Edition (H8)
+* Laatste filmpje windows powershell kijken: introducing scripting and toolmaking
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -58,7 +59,11 @@
 ### Algemeen
 ### Jens
 ### Jarno
+
 ### Jonas
+* Deelopdracht twee samen met de groep afwerken
+* verder lezen in mijn boek: Learn Windows PowerShell 3 in a Month of Lunches, 2nd Edition (H9)
+
 ### Karel
 ### Robin
 
