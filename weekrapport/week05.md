@@ -58,9 +58,11 @@
 
 ### Robin
 
-* ...
+* LAMP-Stack opgezet
+* Begonnen aan monitoring server
+* MVA afgewerkt
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](https://i.gyazo.com/f1a6f8c62ec88568d4885cf1fc8ab939.png)
 
 
 ## Wat plan je volgende week te doen?
@@ -81,8 +83,10 @@
 * Hoofdstuk 7 lezen in mijn boek: Learn Windows PowerShell 3 in a Month of Lunches
 
 ### Karel
-### Robin
 
+### Robin
+* Boek lezen en opdracht er rond maken
+* Misschien voortwerken aan het linuxgedeelte
 
 ## Waar hebben jullie nog problemen mee?
 
