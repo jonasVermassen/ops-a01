@@ -35,7 +35,7 @@
 * Samenvatting boek advanced administration verder aangevuld.
 * Microsoft virtual academy
 
-![Alt text](http://i.imgur.com/8xvFfR4.png)
+![Alt text](http://i.imgur.com/K04SQNb.png)
 
 [Afbeelding individueel rapport tijdregistratie]
 
