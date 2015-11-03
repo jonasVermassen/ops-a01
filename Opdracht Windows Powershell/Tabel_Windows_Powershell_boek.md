@@ -31,13 +31,13 @@
 | Using PowerShell Remoting  |      |           |  |
 | Extending Windows PowerShell  |      |           |  |
 | Managing Core Infrastructure with PowerShell  |      |           |  |
-| Managing Active Directory with PowerShell  |      |           | BELANGRIJK!! |
-| Managing the Server with PowerShell  |      |           |  |
+| Managing Active Directory with PowerShell  |   Robin   |           | BELANGRIJK!! |
+| Managing the Server with PowerShell  |   Robin   |           |  |
 | Managing Unified Communication Environments with PowerShell  |      |           |  |
 | Managing Collaboration and Data Platforms with PowerShell  |      |           |  |
 | Managing Microsoft Desktop Virtualization with PowerShell  |      |           |  |
 | Managing Microsoft Cloud Platform with PowerShell  |      |           |  |
 | Integrating Windows PowerShell and System Center Orchestrator  |      |           |  |
-| Working with functions + advanced functions   |      |           |  |
-| Debugging scripts   |      |           |  |
-| Managing Exchange server   |      |           |  |
+| Working with functions + advanced functions   |   Robin   |           |  |
+| Debugging scripts   |   Robin   |           |  |
+| Managing Exchange server   |  Robin    |           |  |
