@@ -15,7 +15,16 @@
 | Variables: a place to store your stuff  |  Jens    |           |  |
 | Input and output  |      |           | Niet hetzelfde als variables? |
 | Scripting  |  Jens    |           |  |
-| Scripting  |      |           |  |
-| Scripting  |      |           |  |
-| Scripting  |      |           |  |
-| Scripting  |      |           |  |
+| Using regular expressions to parse text files + Filtering and comparisons   |      |           |  |
+| Using CIM  |      |           |  |
+| PowerShell ISE  |   Jens   |           |  |
+| Handling errors  |      |           |  |
+| Understanding cmdlet auto-discovery  |      |           |  |
+| Enhancements to tab completion  |      |           |  |
+| Enhancements to tab completion  |      |           |  |
+| Enhancements to tab completion  |      |           |  |
+v
+| Enhancements to tab completion  |      |           |  |
+| Enhancements to tab completion  |      |           |  |
+| Enhancements to tab completion  |      |           |  |
+
