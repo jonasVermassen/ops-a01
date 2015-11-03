@@ -21,10 +21,14 @@
 | Handling errors  |      |           |  |
 | Understanding cmdlet auto-discovery  |      |           |  |
 | Enhancements to tab completion  |      |           |  |
-| Enhancements to tab completion  |      |           |  |
-| Enhancements to tab completion  |      |           |  |
-v
-| Enhancements to tab completion  |      |           |  |
-| Enhancements to tab completion  |      |           |  |
-| Enhancements to tab completion  |      |           |  |
+| Scheduling jobs  |      |           |  |
+| Creating a delegated session configuration  |      |           |  |
+| Integrating Windows Workflow with Powershell  |      |           |  |
+| Installing the Windows Powershell Web Access feature |      |           |  |
+| TODO: FILTER ONDERSTAANDE  |      |           |  |
+| Getting Started with PowerShell  |      |           |  |
+| Developing Snap-ins for PowerShell  |      |           |  |
+| Scripting  |      |           |  |
+| Scripting  |      |           |  |
+| Scripting  |      |           |  |
 
