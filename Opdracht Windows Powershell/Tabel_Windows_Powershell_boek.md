@@ -8,19 +8,16 @@
 | Adding commands  |    Jonas  |           |  |
 | Objects: data by another name  |      |           |  |
 | Formatting—and why it’s done on the right  |    Jens  |           |  |
-| Remoting |      |           |
-| Using Windows Management Instrumentation  |      |           |  |
-| Multitasking with background jobs  |      |           |  |
-| Security   |      |           |  |
+| Remoting |    Jarno  |           |
 | Variables  |  ...    |           |  |
 | Scripting  |  Jens    |           |  |
 | Using regular expressions to parse text files + Filtering and comparisons   |      |           |  |
-| Using CIM  |      |           |  |
+| Using CIM  |  Karel    |           |  |
 | PowerShell ISE  |   Jens   |           |  |
 | Handling errors  |      |           |  |
 | Understanding cmdlet auto-discovery  |      |           |  |
-| Enhancements to tab completion  |      |           |  |
-| Scheduling jobs  |      |           |  |
+| Enhancements to tab completion  |  Karel    |           |  |
+| Scheduling jobs  |    Karel  |           |  |
 | Creating a delegated session configuration  |      |           |  |
 | Integrating Windows Workflow with Powershell  |      |           |  |
 | Installing the Windows Powershell Web Access feature |      |           |  |
