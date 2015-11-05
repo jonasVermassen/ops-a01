@@ -9,7 +9,7 @@
 | Objects: data by another name  |   Jonas   |           |  ||
 | Formatting—and why it’s done on the right  |    Jens  |           |  ||
 | Remoting |    Jarno  |           ||
-| Variables  |  Jarno   |           |  ||
+| Variables  |  Jarno   |           | learn powershell 3 in a month of lunches (Jonas) ||
 | Scripting  |  Jens    |           |  ||
 | Using regular expressions to parse text files + Filtering and comparisons   |   Jens   |           |  ||
 | Using CIM  |  Karel    |           |  ||
