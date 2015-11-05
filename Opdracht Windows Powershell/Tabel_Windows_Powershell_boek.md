@@ -19,12 +19,6 @@
 | Enhancements to tab completion  |  Karel    |           |  |
 | Scheduling jobs  |    Karel  |           |  |
 | Creating a delegated session configuration  |      |           |  |
-| Integrating Windows Workflow with Powershell  |      |           |  |
-| Installing the Windows Powershell Web Access feature |      |           |  |
-| TODO: FILTER ONDERSTAANDE  |      |           |  |
-| Developing Snap-ins for PowerShell  |      |           |  |
-| Extending Windows PowerShell  |      |           |  |
-| Managing Core Infrastructure with PowerShell  |      |           |  |
 | Managing Active Directory with PowerShell  |   Robin   |           | BELANGRIJK!! |
 | Managing the Server with PowerShell  |   Robin   |           |  |
 | Working with functions + advanced functions   |   Robin   |           |  |
