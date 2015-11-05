@@ -3,18 +3,18 @@
 | :---     | :---  | :---      | :---| :---|
 | Using the help system |  Jonas   |           | | |
 | Running commands  |  Robin    |           |  ||
+| Adding commands  |    Jonas  |           |  ||
 | Working with providers |   Jens   |           |  ||
 | The pipeline   |  Jonas    |           |  ||
-| Adding commands  |    Jonas  |           |  ||
 | Objects: data by another name  |   Jonas   |           |  ||
-| Formatting—and why it’s done on the right  |    Jens  |           |  ||
+| Formatting output|    Jens  |           |  ||
+| Using regular expressions to parse text files + Filtering and comparisons   |   Jens   |           |  ||
 | Remoting |    Jarno  |           ||
 | Variables  |  Jarno   |           | learn powershell 3 in a month of lunches (Jonas) ||
-| Scripting  |  Jens    |           |  ||
-| Using regular expressions to parse text files + Filtering and comparisons   |   Jens   |           |  ||
-| Using CIM  |  Karel    |           |  ||
 | PowerShell ISE  |   Jens   |           |  ||
+| Scripting  |  Jens    |           |  ||
 | Handling errors  |   Robin   |           | Windows PowerShell 3.0 First Steps (Jens) ||
+| Using CIM  |  Karel    |           |  ||
 | Enhancements to tab completion  |  Karel    |           |  ||
 | Scheduling jobs  |    Karel  |           |  ||
 | Managing Active Directory with PowerShell  |   Jarno   |           || BELANGRIJK!! |
