@@ -1,23 +1,23 @@
 
-| Hoofdstuk Boek  | Verantwoordelijke | Insert in algemeen document? | Opmerkingen |
-| :---     | :---  | :---      | :---|
-| Using the help system |  Jonas   |           | | 
-| Running commands  |  Robin    |           |  |
-| Working with providers |   Jens   |           |  |
-| The pipeline   |  Jonas    |           |  |
-| Adding commands  |    Jonas  |           |  |
-| Objects: data by another name  |   Jonas   |           |  |
-| Formatting—and why it’s done on the right  |    Jens  |           |  |
-| Remoting |    Jarno  |           |
-| Variables  |  Jarno   |           |  |
-| Scripting  |  Jens    |           |  |
-| Using regular expressions to parse text files + Filtering and comparisons   |   Jens   |           |  |
-| Using CIM  |  Karel    |           |  |
-| PowerShell ISE  |   Jens   |           |  |
-| Handling errors  |      |           |  |
-| Enhancements to tab completion  |  Karel    |           |  |
-| Scheduling jobs  |    Karel  |           |  |
-| Managing Active Directory with PowerShell  |   Robin   |           | BELANGRIJK!! |
-| Managing the Server with PowerShell  |   Robin   |           |  |
-| Working with functions + advanced functions   |   Robin   |           |  |
-| Managing Exchange server   |  Robin    |           |  |
+| Hoofdstuk Boek  | Verantwoordelijke | Insert in algemeen document? | Boek | Opmerkingen |
+| :---     | :---  | :---      | :---| :---|
+| Using the help system |  Jonas   |           | | |
+| Running commands  |  Robin    |           |  ||
+| Working with providers |   Jens   |           |  ||
+| The pipeline   |  Jonas    |           |  ||
+| Adding commands  |    Jonas  |           |  ||
+| Objects: data by another name  |   Jonas   |           |  ||
+| Formatting—and why it’s done on the right  |    Jens  |           |  ||
+| Remoting |    Jarno  |           ||
+| Variables  |  Jarno   |           |  ||
+| Scripting  |  Jens    |           |  ||
+| Using regular expressions to parse text files + Filtering and comparisons   |   Jens   |           |  ||
+| Using CIM  |  Karel    |           |  ||
+| PowerShell ISE  |   Jens   |           |  ||
+| Handling errors  |   Robin   |           |  ||
+| Enhancements to tab completion  |  Karel    |           |  ||
+| Scheduling jobs  |    Karel  |           |  ||
+| Managing Active Directory with PowerShell  |   Robin   |           || BELANGRIJK!! |
+| Managing the Server with PowerShell  |   Robin   |           |  ||
+| Working with functions + advanced functions   |   Robin   |           |  ||
+| Managing Exchange server   |  Robin    |           |  ||
