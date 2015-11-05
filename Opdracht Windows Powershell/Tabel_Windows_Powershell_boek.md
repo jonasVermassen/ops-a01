@@ -5,9 +5,9 @@
 | Running commands  |      |           |  |
 | Working with providers |      |           |  |
 | The pipeline   |  Jonas    |           |  |
-| Adding commands  |      |           |  |
+| Adding commands  |    Jonas  |           |  |
 | Objects: data by another name  |      |           |  |
-| Formatting—and why it’s done on the right  |      |           |  |
+| Formatting—and why it’s done on the right  |    Jens  |           |  |
 | Remoting |      |           |
 | Using Windows Management Instrumentation  |      |           |  |
 | Multitasking with background jobs  |      |           |  |
