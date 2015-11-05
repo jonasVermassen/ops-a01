@@ -31,5 +31,4 @@
 | Managing Active Directory with PowerShell  |   Robin   |           | BELANGRIJK!! |
 | Managing the Server with PowerShell  |   Robin   |           |  |
 | Working with functions + advanced functions   |   Robin   |           |  |
-| Debugging scripts   |   Robin   |           |  |
 | Managing Exchange server   |  Robin    |           |  |
