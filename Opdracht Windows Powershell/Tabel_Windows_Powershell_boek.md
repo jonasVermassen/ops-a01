@@ -17,7 +17,7 @@
 | Handling errors  |   Robin   |           | Windows PowerShell 3.0 First Steps (Jens) ||
 | Enhancements to tab completion  |  Karel    |           |  ||
 | Scheduling jobs  |    Karel  |           |  ||
-| Managing Active Directory with PowerShell  |   Robin   |           || BELANGRIJK!! |
+| Managing Active Directory with PowerShell  |   Jarno   |           || BELANGRIJK!! |
 | Managing the Server with PowerShell  |   Robin   |           |  ||
 | Working with functions + advanced functions   |   Robin   |           |  ||
 | Managing Exchange server   |  Robin    |           |  ||
