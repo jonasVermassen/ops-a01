@@ -6,19 +6,17 @@
 | Working with providers |   Jens   |           |  |
 | The pipeline   |  Jonas    |           |  |
 | Adding commands  |    Jonas  |           |  |
-| Objects: data by another name  |      |           |  |
+| Objects: data by another name  |   Jonas   |           |  |
 | Formatting—and why it’s done on the right  |    Jens  |           |  |
 | Remoting |    Jarno  |           |
-| Variables  |  ...    |           |  |
+| Variables  |  Jarno   |           |  |
 | Scripting  |  Jens    |           |  |
-| Using regular expressions to parse text files + Filtering and comparisons   |      |           |  |
+| Using regular expressions to parse text files + Filtering and comparisons   |   Jens   |           |  |
 | Using CIM  |  Karel    |           |  |
 | PowerShell ISE  |   Jens   |           |  |
 | Handling errors  |      |           |  |
-| Understanding cmdlet auto-discovery  |      |           |  |
 | Enhancements to tab completion  |  Karel    |           |  |
 | Scheduling jobs  |    Karel  |           |  |
-| Creating a delegated session configuration  |      |           |  |
 | Managing Active Directory with PowerShell  |   Robin   |           | BELANGRIJK!! |
 | Managing the Server with PowerShell  |   Robin   |           |  |
 | Working with functions + advanced functions   |   Robin   |           |  |
