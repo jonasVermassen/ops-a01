@@ -12,8 +12,7 @@
 | Using Windows Management Instrumentation  |      |           |  |
 | Multitasking with background jobs  |      |           |  |
 | Security   |      |           |  |
-| Variables: a place to store your stuff  |  Jens    |           |  |
-| Input and output  |      |           | Niet hetzelfde als variables? |
+| Variables  |  ...    |           |  |
 | Scripting  |  Jens    |           |  |
 | Using regular expressions to parse text files + Filtering and comparisons   |      |           |  |
 | Using CIM  |      |           |  |
