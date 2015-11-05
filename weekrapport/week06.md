@@ -51,9 +51,9 @@
 
 ### Robin
 
-* ...
+* Boek lezen
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](https://i.gyazo.com/6a890a95657b9870d415225f2f38ef64.png)
 
 
 ## Wat plan je volgende week te doen?
@@ -71,6 +71,8 @@
 
 ### Karel
 ### Robin
+* Boek verder lezen
+
 
 
 ## Waar hebben jullie nog problemen mee?
