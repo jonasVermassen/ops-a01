@@ -8,7 +8,7 @@
 | Adding commands  |      |           |  |
 | Objects: data by another name  |      |           |  |
 | Formatting—and why it’s done on the right  |      |           |  |
-| Remote control  & sessions  |      |           |
+| Remoting |      |           |
 | Using Windows Management Instrumentation  |      |           |  |
 | Multitasking with background jobs  |      |           |  |
 | Security   |      |           |  |
@@ -25,9 +25,9 @@
 | Integrating Windows Workflow with Powershell  |      |           |  |
 | Installing the Windows Powershell Web Access feature |      |           |  |
 | TODO: FILTER ONDERSTAANDE  |      |           |  |
-| Getting Started with PowerShell  |      |           |  |
+
 | Developing Snap-ins for PowerShell  |      |           |  |
-| Using PowerShell Remoting  |      |           |  |
+
 | Extending Windows PowerShell  |      |           |  |
 | Managing Core Infrastructure with PowerShell  |      |           |  |
 | Managing Active Directory with PowerShell  |   Robin   |           | BELANGRIJK!! |
