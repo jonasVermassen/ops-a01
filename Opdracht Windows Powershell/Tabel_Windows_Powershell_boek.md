@@ -2,8 +2,8 @@
 | Hoofdstuk Boek  | Verantwoordelijke | Insert in algemeen document? | Opmerkingen |
 | :---     | :---  | :---      | :---|
 | Using the help system |  Jonas   |           | | 
-| Running commands  |      |           |  |
-| Working with providers |      |           |  |
+| Running commands  |  Robin    |           |  |
+| Working with providers |   Jens   |           |  |
 | The pipeline   |  Jonas    |           |  |
 | Adding commands  |    Jonas  |           |  |
 | Objects: data by another name  |      |           |  |
