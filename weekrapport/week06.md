@@ -30,9 +30,10 @@
 
 ### Jarno
 
-* ...
+* Laatste les virtualacademy bekeken
+* Mijn samenvatting bijgewerkt
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/rmPy3OP.png)
 
 ### Jonas
 
