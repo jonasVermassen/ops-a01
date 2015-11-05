@@ -62,7 +62,7 @@
 ### Jens
 * packet tracers maken en hoofdstukken verdelen boek
 ### Jarno
-
+* packet tracer EIGRP ipv4 maken en helpen met verdelen hoofdstukken boek.
 ### Jonas
 * Deelopdracht twee samen met de groep afwerken
 * verder lezen in mijn boek: Learn Windows PowerShell 3 in a Month of Lunches, 2nd Edition (H9)
