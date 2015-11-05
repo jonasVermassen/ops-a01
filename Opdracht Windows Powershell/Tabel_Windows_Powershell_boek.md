@@ -14,7 +14,7 @@
 | Using regular expressions to parse text files + Filtering and comparisons   |   Jens   |           |  ||
 | Using CIM  |  Karel    |           |  ||
 | PowerShell ISE  |   Jens   |           |  ||
-| Handling errors  |   Robin   |           |  ||
+| Handling errors  |   Robin   |           | Windows PowerShell 3.0 First Steps (Jens) ||
 | Enhancements to tab completion  |  Karel    |           |  ||
 | Scheduling jobs  |    Karel  |           |  ||
 | Managing Active Directory with PowerShell  |   Robin   |           || BELANGRIJK!! |
