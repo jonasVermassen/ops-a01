@@ -26,7 +26,7 @@
 
 * Microsoft Virtual Academy afronden
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/tks1C3v.png)
 
 ### Jarno
 
@@ -59,6 +59,7 @@
 
 ### Algemeen
 ### Jens
+* packet tracers maken en hoofdstukken verdelen boek
 ### Jarno
 
 ### Jonas
