@@ -18,7 +18,7 @@
 [Afbeelding huidige toestand Kanban-bord(en) invoegen]
 
 * Individueel verder gewerkt aan Windows Powershell
-![Alt text](http://i.imgur.com/47mZ4Y7.png)
+![Alt text](http://i.imgur.com/aYG51i4.png)
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
