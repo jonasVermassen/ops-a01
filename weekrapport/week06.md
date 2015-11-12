@@ -6,19 +6,18 @@
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
 | Jens |     x  |    geen begeleiding       |
-| Jarno |       |           |
+| Jarno |     x  |           |
 | Jonas |     x  |           |
-| Karel |       |           |
-| Robin |       |           |
+| Karel |    x   |           |
+| Robin |    x   |           |
 
 ## Wat heb je deze week gerealiseerd?
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Alt text](http://i.imgur.com/z46S14x.png)
 
-* ...
-* ...
+* Microsoft Virtual Academy afronden
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
