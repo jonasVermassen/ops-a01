@@ -44,9 +44,9 @@
 
 ### Karel
 
-* ...
+* MVA afronden
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](http://i.imgur.com/8kwzcRO.jpg)
 
 ### Robin
 
@@ -69,6 +69,9 @@
 * verder lezen in mijn boek: Learn Windows PowerShell 3 in a Month of Lunches, 2nd Edition (H9)
 
 ### Karel
+* Boek samenvatten
+* Packet tracer oefeningen maken
+
 ### Robin
 * Boek verder lezen
 
