@@ -33,9 +33,10 @@
 
 ### Jarno
 
-* ...
+* Packet tracer Labo 7 EIGRP gemaakt.
+* Samenvatting remoting
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/nzao1Ox.png)
 
 ### Jonas
 
