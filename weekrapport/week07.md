@@ -40,10 +40,7 @@
 
 ### Jonas
 
-* Get-Help samenvatten uit het windows powershell boek: learn windows powershell 3 in a month of lunches
-* packer tracer 2.3.2.3 maken en labo invullen.
-
-![Alt text](http://i.imgur.com/jtlkFw5.png)
+* ...
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -55,9 +52,9 @@
 
 ### Robin
 
-* ...
+* Packet Tracer lab 6.2.3.9 gemaakt
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](https://i.gyazo.com/a7185c522c8b98050b582bd80c664407.png)
 
 
 ## Wat plan je volgende week te doen?
@@ -68,7 +65,7 @@
 ### Jonas
 ### Karel
 ### Robin
-
+Hoofdstukken powershell samenvatten
 
 ## Waar hebben jullie nog problemen mee?
 
