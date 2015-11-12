@@ -40,7 +40,10 @@
 
 ### Jonas
 
-* ...
+* Get-Help samenvatten uit het windows powershell boek: learn windows powershell 3 in a month of lunches
+* packer tracer 2.3.2.3 maken en labo invullen.
+
+![Alt text](http://i.imgur.com/jtlkFw5.png)
 
 [Afbeelding individueel rapport tijdregistratie]
 
