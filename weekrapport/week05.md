@@ -15,7 +15,7 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Alt text](http://i.imgur.com/00Mrimt.png)
 
 * LAMP-stack opgezet
 * Eerste stappen Monitoring server
