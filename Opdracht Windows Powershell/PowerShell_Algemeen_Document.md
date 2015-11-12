@@ -3,8 +3,10 @@
 ##Inhoudstafel
 1. [Using the help system
 ](#Using)
-2. [Running commands](#Running)
+2. [Running commands](#1)
+3. [Running commands](#19)
 
+<div id='1'/>
 ##Using the help system
 ###tussentitel
 patatiepatata
@@ -45,6 +47,7 @@ patatiepatata
 
 ##Working with functions + advanced functions
 
+<div id='19'/>
 ##Managing Exchange server
 
 
