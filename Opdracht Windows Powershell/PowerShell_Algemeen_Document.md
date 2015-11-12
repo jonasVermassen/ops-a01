@@ -26,103 +26,102 @@
 ##Using the help system
 ###tussentitel
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='2'/>
 ##Running commands
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='3'/>
 ##Adding commands
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='4'/>
 ##Working with providers
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='5'/>
 ##The pipeline
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='6'/>
 ##Objects: data by another name
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='7'/>
 ##Formatting output
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='8'/>
 ##Using regular expressions to parse text files + Filtering and comparisons
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='9'/>
 ##Remoting
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='10'/>
 ##Variables
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='11'/>
 ##PowerShell ISE
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='12'/>
 ##Scripting
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='13'/>
 ##Handling errors
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='14'/>
 ##Using CIM
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='15'/>
 ##Enhancements to tab completion
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='16'/>
 ##Scheduling jobs
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='17'/>
 ##Managing Active Directory with PowerShell
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='18'/>
 ##Managing the Server with PowerShell
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='19'/>
 ##Working with functions + advanced functions
 
-<INSERT CONTENT>
+INSERT CONTENT
 
 <div id='20'/>
 ##Managing Exchange server
 
-<INSERT CONTENT>
-
+INSERT CONTENT
 
 
 
