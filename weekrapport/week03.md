@@ -15,7 +15,7 @@
 
 ### Algemeen
 
-![Alt text](http://i.imgur.com/47mZ4Y7.png)
+![Alt text](http://i.imgur.com/aYG51i4.png)
 
 * Iedereen heeft individueel aan de opdrachten gewerkt
 
