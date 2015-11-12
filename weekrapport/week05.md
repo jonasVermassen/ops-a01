@@ -52,9 +52,11 @@
 
 ### Karel
 
-* ...
+* LAMP-stack opgezet
+* Monitoring server ingesteld
+* MVA verder bekeken
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](http://i.imgur.com/ku7X0Rl.jpg)
 
 ### Robin
 
@@ -83,6 +85,8 @@
 * Hoofdstuk 7 lezen in mijn boek: Learn Windows PowerShell 3 in a Month of Lunches
 
 ### Karel
+* MVA afwerken
+* Verder werken aan deelopdracht linux
 
 ### Robin
 * Boek lezen en opdracht er rond maken
