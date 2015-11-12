@@ -15,9 +15,9 @@
 
 ### Algemeen
 
-*Iedereen heeft individueel verdergewerkt aan de eerste opdracht. 
+* Iedereen heeft individueel verdergewerkt aan de eerste opdracht. 
 
-![Alt text](http://i.imgur.com/47mZ4Y7.png)
+![Alt text](http://i.imgur.com/aYG51i4.png)
 
 * ...
 * ...
