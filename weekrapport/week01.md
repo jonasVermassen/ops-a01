@@ -15,7 +15,7 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Alt Text](http://i.imgur.com/ofabE63.png)
 
 * Taken verdeeld.
 * Boeken opgezocht en verdeeld
