@@ -63,6 +63,9 @@
 
 ### Algemeen
 ### Jens
+
+* Opdracht linux verder werken
+
 ### Jarno
 ### Jonas
 ### Karel
