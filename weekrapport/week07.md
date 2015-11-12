@@ -15,10 +15,9 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Alt text](http://i.imgur.com/XMZXnk3.png)
 
-* ...
-* ...
+* Packet tracers maken
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
