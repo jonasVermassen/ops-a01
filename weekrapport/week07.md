@@ -27,7 +27,9 @@
 * Packet tracers maken
 * Hoofdstukken Windows Powershell verdeeld
 
-[Afbeelding individueel rapport tijdregistratie]
+
+![Alt text]( http://i.imgur.com/YhlbYLg.png)
+
 
 ### Jarno
 
