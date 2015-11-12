@@ -48,9 +48,9 @@
 
 ### Karel
 
-* ...
+* Packet tracer 6.2.3.10 gemaakt
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](http://i.imgur.com/XlM3Twt.jpg)
 
 ### Robin
 
@@ -69,6 +69,8 @@
 ### Jarno
 ### Jonas
 ### Karel
+* Deelopdracht linux voortzetten
+
 ### Robin
 Hoofdstukken powershell samenvatten
 
