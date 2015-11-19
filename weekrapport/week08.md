@@ -32,9 +32,11 @@
 
 ### Jarno
 
-* ...
+* Helpen met LAMP-stack te configureren
+* Monitoring server config
+* Samenvatting Remoting
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/6wQSJQX.png)
 
 ### Jonas
 
