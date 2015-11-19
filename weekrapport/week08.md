@@ -5,11 +5,11 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Jens |       |           |
-| Jarno |       |           |
-| Jonas |       |           |
-| Karel |       |           |
-| Robin |       |           |
+| Jens |    x   |           |
+| Jarno |   x    |           |
+| Jonas |   x    |           |
+| Karel |    x   |           |
+| Robin |     x  |           |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -17,16 +17,18 @@
 
 [Afbeelding huidige toestand Kanban-bord(en) invoegen]
 
-* ...
-* ...
+* LAMP-stack geconfigureerd
+* Monitoring server geconfigureerd
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
 ### Jens
 
-* ...
+* LAMP-stack geconfigureerd
+* Monitoring server geconfigureerd
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/6T645us.png)
+
 
 ### Jarno
 
