@@ -52,9 +52,9 @@
 
 ### Robin
 
-* ...
+* samengewerkt aan LAMP Stack
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](https://i.gyazo.com/9d2695bab14bf1ff5f8618f362141373.png)
 
 
 ## Wat plan je volgende week te doen?
@@ -65,6 +65,8 @@
 ### Jonas
 ### Karel
 ### Robin
+fysieke opstelling van labo 6.2.3.8
+hoofdstukken samenvatten powershell boeken
 
 
 ## Waar hebben jullie nog problemen mee?
