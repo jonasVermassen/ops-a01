@@ -46,9 +46,9 @@
 
 ### Karel
 
-* ...
+* gewerkt aan monitoring en lamp server
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](http://i.imgur.com/nCTvb6D.jpg)
 
 ### Robin
 
