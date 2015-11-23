@@ -4,7 +4,7 @@
 | Using the help system |  Jonas   |           | | |
 | Running commands  |  Robin    |           |  ||
 | Adding commands  |    Jonas  |           |  ||
-| Working with providers |   Jens   |           |  ||
+| Working with providers |   Jens   |     OK      |  ||
 | The pipeline   |  Jonas    |           |  ||
 | Objects: data by another name  |   Jonas   |           |  ||
 | Formatting output|    Jens  |           |  ||
