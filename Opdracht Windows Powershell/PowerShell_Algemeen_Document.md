@@ -209,7 +209,26 @@ INSERT CONTENT
 <div id='11'/>
 ##PowerShell ISE
 
-INSERT CONTENT
+
+De ISE in Windows PowerShell ISE staat voor Integrated Scripting Environment. Veel IT-professionals gebruiken Windows PowerShell ISE voor interactieve Windows PowerShell-opdrachten, omdat het is makkelijker om te bewerken, betere tab completion heeft, en een ingebouwde opdracht deelvenster heeft.
+
+Zodra je Windows PowerShell ISE opent, worden twee deelvensters weergegeven. Aan de linkerzijde van het scherm zie je een interactieve Windows PowerShell-console. Aan de rechterkant zie je een Windows PowerShell-opdracht explorer-venster. 
+
+![Alt text](http://i.imgur.com/lhTN8Xv.png)
+
+###Script paneel
+
+Door op het pijltje te drukken naast "Script" krijg je een invoerscherm te zien waar je commando's na elkaar kunt noteren en ze in een keer uitvoeren door op de "run" knop te klikken. Dit is een zeer handige functionaliteit voor scripts te schrijven.
+
+![Alt text](http://i.imgur.com/KzEZHTP.png)
+
+###Intellisense
+
+IntelliSense biedt pop-up help en informatie. Wanneer u een cmdlet typt, levert Intellisense mogelijke overeenkomsten aan. Zodra u de cmdlet gevonden hebt, geeft Intellisense de volledige syntaxis van de cmdlet, zoals weergegeven in onderstaande figuur.
+
+![Alt text](http://i.imgur.com/PtM03Wd.png)
+
+
 
 <div id='12'/>
 ##Scripting
