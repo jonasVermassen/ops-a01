@@ -120,7 +120,22 @@ INSERT CONTENT
 <div id='7'/>
 ##Formatting output
 
-INSERT CONTENT
+
+
+Wanneer u met Windows PowerShell werkt, is het gebruikelijk om de output naar de console Windows PowerShell te schrijven met de gewilde opmaak. Dit is niet altijd een vereiste, maar vele Windows PowerShell-cmdlets omvatten hun eigen opgemaakte uitvoer. Bijvoorbeeld, de cmdlet Get-proces produceert een mooie tabel die gemakkelijk aan de behoeften voldoet. Af en toe, is het echter nodig voor de output aan te passen. In dit hoofdstuk vindt u informatie over het maken van tabellen, lijsten, brede lijsten en zelfs het gebruik van een selecteerbare rasterweergave.
+
+###Creating a table
+![ALt text](http://i.imgur.com/FZ2g9Ov.png)
+
+###Creating a list
+![ALt text](http://i.imgur.com/1Nc1cv8.png)
+
+###Creating a wide display
+![ALt text](http://i.imgur.com/vPuBsym.png)
+
+###Creating an Out-GridView
+![ALt text](http://i.imgur.com/HJyRd59.png)
+
 
 <div id='8'/>
 ##Using regular expressions to parse text files + Filtering and comparisons
