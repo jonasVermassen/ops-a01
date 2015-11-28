@@ -8,7 +8,7 @@
 5. [The pipeline](#5)
 6. [Objects: data by another name](#6)
 7. [Formatting output](#7)
-8. [Using regular expressions to parse text files + Filtering and comparisons](#8)
+8. [Filtering + Working with files](#8)
 9. [Remoting](#9)
 10. [Variables](#10)
 11. [PowerShell ISE](#11)
@@ -138,9 +138,60 @@ Wanneer u met Windows PowerShell werkt, is het gebruikelijk om de output naar de
 
 
 <div id='8'/>
-##Using regular expressions to parse text files + Filtering and comparisons
+##Filtering + Working with files
 
-INSERT CONTENT
+###Filtering & Sorting
+Een van de taken waar Windows PowerShell in uitblinkt is inzicht bieden in gegevens. Dit houdt meestal verzenden van gegevens via de pipeline in. De Windows PowerShell-pipeline is een fundamenteel concept, en het is onlosmakelijk verbonden met het sorteren van gegevens, gegevens groeperen en filteren op specifieke informatie uit collecties. 
+
+####Filtering
+Bij filtering kan er gebruik gemaakt worden van de Where-Object cmdlet. Hierna kan je specifiëren op welke waarden je wilt filteren. In dit voorbeeld wordt "vm -gt 1000MB" gebruikt, dit wil zeggen alle objecten met als waarde voor VM groter dan 1000MB.
+![ALt text](http://i.imgur.com/SZ8OnMh.png)
+
+In onderstaand voorbeeld wordt er gebruik gemaakt van "-Match". Dit spreekt voor zich en zoekt alle objecten die voldoen aan de zoekstring.
+![ALt text](http://i.imgur.com/XoBEvEP.png)
+
+
+####Sorting
+In onderstaande afbeelding wordt gebruik gemaakt van de cmdlet Sort-Object. Hier wordt Get-Process gesorteerd volgens de Property "VM" in aflopende volgorde.
+![Alt text](http://i.imgur.com/AMwXKwv.png)
+
+Hier wordt de alias "sort" gebruikt in plaats van de cmdlet Sort-Object.
+![Alt text](http://i.imgur.com/UYWjUTg.png)
+
+Er kan ook gebruik gemaakt worden van groeperen. Dan kan er gebruik gemaakt worden van "count", dit om het aantal objecten te tellen. Maar kan er ook gebruik gemaakt worden van "group", dit om een group te specifiëren
+
+![Alt text](http://i.imgur.com/Y3oDrwx.png)
+
+###Working with files
+
+
+####Storing data in text files
+Bij onderstaand commando wordt de output van de cmdlet Get-Volume weggeschreven in c:\fso\volumeinfo.txt.
+
+<code></code><code>PowerShell
+Get-Volume >>c:\fso\volumeinfo.txt
+</code><code></code>
+
+
+
+####Storing data in CSV files
+Om data in een CSV file weg te schrijven kan men de cmdlet Export-Csv gebruiken en het pad meegeven met de Property -Path.
+Ook cmdlet Import-Csv kan gebruikt worden.
+![ALt text](http://i.imgur.com/kUzOt38.png)
+
+####Storing data in XML
+Hetzelfde kan gedaan worden om weg te schrijven in een XML file. Hier maakt men gebruik van de cmdlet Export-Clixml.
+
+<code></code><code>PowerShell
+Get-Process | Export-Clixml -Path c:\fso\processXML.xml
+</code><code></code>
+
+
+
+
+
+
+
 
 <div id='9'/>
 ##Remoting
