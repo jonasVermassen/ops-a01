@@ -30,9 +30,10 @@ Boek powershell hoofdstukken samenvatten
 
 ### Jarno
 
-* ...
+* Boek powershell remoting samenvatten.
+* Uitbouwen van packettracer labo
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/XQlnN2p.png)
 
 ### Jonas
 
