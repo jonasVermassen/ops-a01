@@ -7,7 +7,7 @@
 | <s>Working with providers</s> |   Jens   |     OK      |  ||
 | The pipeline   |  Jonas    |           |  ||
 | Objects: data by another name  |   Jonas   |           |  ||
-| <s>ormatting </s> |    Jens  |           |  ||
+| <s>Formatting </s> |    Jens  |    OK       |  ||
 | Using regular expressions to parse text files + Filtering and comparisons   |   Jens   |           |  ||
 | Remoting |    Jarno  |           ||
 | Variables  |  Jarno   |           | learn powershell 3 in a month of lunches (Jonas) ||
