@@ -5,11 +5,11 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Jens |       |           |
-| Jarno |       |           |
-| Jonas |       |           |
-| Karel |       |           |
-| Robin |       |           |
+| Jens |       |       geen begeleiding, maar samenkomst Gent    |
+| Jarno |   x    |    geen begeleiding, maar samenkomst Gent       |
+| Jonas |       |     geen begeleiding, maar samenkomst Gent      |
+| Karel |       |    geen begeleiding, maar samenkomst Gent       |
+| Robin |  x     |   geen begeleiding, maar samenkomst Gent        |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -17,14 +17,13 @@
 
 [Afbeelding huidige toestand Kanban-bord(en) invoegen]
 
-* ...
-* ...
+* HoGent Datacenter bekijken
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
 ### Jens
 
-* ...
+* Boek Powershell hoofdstukken samenvatten
 
 [Afbeelding individueel rapport tijdregistratie]
 
