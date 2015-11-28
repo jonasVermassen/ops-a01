@@ -11,7 +11,7 @@
 | <s>Filtering & Working with files</s>  |   Jens   |      OK     |  ||
 | Remoting |    Jarno  |           ||
 | Variables  |  Jarno   |           | learn powershell 3 in a month of lunches (Jonas) ||
-| PowerShell ISE  |   Jens   |           |  ||
+| <s>PowerShell ISE</s>  |   Jens   |      OK     |  ||
 | Scripting  |  Jens    |           |  ||
 | Handling errors  |   Robin   |           | Windows PowerShell 3.0 First Steps (Jens) ||
 | Using CIM  |  Karel    |           |  ||
