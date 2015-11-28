@@ -61,6 +61,7 @@
 
 ### Algemeen
 ### Jens
+Boek PowerShell verder samenvatten
 ### Jarno
 ### Jonas
 ### Karel
