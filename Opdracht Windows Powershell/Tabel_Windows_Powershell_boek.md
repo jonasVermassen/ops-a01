@@ -8,7 +8,7 @@
 | The pipeline   |  Jonas    |           |  ||
 | Objects: data by another name  |   Jonas   |           |  ||
 | <s>Formatting </s> |    Jens  |    OK       |  ||
-| Filtering, Sorting & Working with files  |   Jens   |           |  ||
+| <s>Filtering & Working with files</s>  |   Jens   |      OK     |  ||
 | Remoting |    Jarno  |           ||
 | Variables  |  Jarno   |           | learn powershell 3 in a month of lunches (Jonas) ||
 | PowerShell ISE  |   Jens   |           |  ||
