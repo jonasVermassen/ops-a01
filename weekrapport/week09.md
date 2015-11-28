@@ -5,11 +5,11 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Jens |       |           |
-| Jarno |       |           |
-| Jonas |       |           |
-| Karel |       |           |
-| Robin |       |           |
+| Jens |    x   |           |
+| Jarno |    x   |           |
+| Jonas |     x  |           |
+| Karel |      x |           |
+| Robin |       x|           |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -17,16 +17,16 @@
 
 [Afbeelding huidige toestand Kanban-bord(en) invoegen]
 
-* ...
-* ...
+* Packet tracer 7.2.2.5 fysiek uitbouwen
+* Packet tracer 6.2.3.8 fysiek uitbouwen
 
-[Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
+
 
 ### Jens
 
-* ...
+Boek powershell hoofdstukken samenvatten
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/vUKMC0i.png)
 
 ### Jarno
 
@@ -57,6 +57,7 @@
 
 ### Algemeen
 ### Jens
+Boek Powershell hoofdstukken samenvatten
 ### Jarno
 ### Jonas
 ### Karel
