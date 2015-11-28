@@ -161,7 +161,7 @@ In onderstaande afbeelding wordt gebruik gemaakt van de cmdlet Sort-Object. Hier
 Hier wordt de alias "sort" gebruikt in plaats van de cmdlet Sort-Object.
 ![Alt text](http://i.imgur.com/UYWjUTg.png)
 
-Er kan ook gebruik gemaakt worden van groeperen. Dan kan er gebruik gemaakt worden van "count", dit om het aantal objecten te tellen. Maar kan er ook gebruik gemaakt worden van "group", dit om een group te specifiëren
+Er kan ook gebruik gemaakt worden van groeperen. Dan kan er gebruik gemaakt worden van "count", dit om het aantal objecten te tellen. Maar kan er ook gebruik gemaakt worden van "group", dit om een group te specifiëren.
 
 ![Alt text](http://i.imgur.com/Y3oDrwx.png)
 
