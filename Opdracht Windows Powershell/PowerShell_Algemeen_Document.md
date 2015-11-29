@@ -3,24 +3,23 @@
 ##Inhoudstafel
 1. [Using the help system](#1)
 2. [Running commands](#2)
-3. [Adding commands](#3)
-4. [Working with providers](#4)
-5. [The pipeline](#5)
-6. [Objects: data by another name](#6)
-7. [Formatting output](#7)
-8. [Filtering + Working with files](#8)
-9. [Remoting](#9)
-10. [Variables](#10)
-11. [PowerShell ISE](#11)
-12. [Scripting](#12)
-13. [Handling errors](#13)
-14. [Using CIM](#14)
-15. [Enhancements to tab completion](#15)
-16. [Scheduling jobs](#16)
-17. [Managing Active Directory with PowerShell](#17)
-18. [Managing the Server with PowerShell](#18)
-19. [Working with functions + advanced functions](#19)
-20. [Managing Exchange server](#20)
+3. [Working with providers](#3)
+4. [The pipeline](#4)
+5. [Objects: data by another name](#5)
+6. [Formatting output](#6)
+7. [Filtering + Working with files](#7)
+8. [Remoting](#8)
+9. [Variables](#9)
+10. [PowerShell ISE](#10)
+11. [Scripting](#11)
+12. [Handling errors](#12)
+13. [Using CIM](#13)
+14. [Enhancements to tab completion](#14)
+15. [Scheduling jobs](#15)
+16. [Managing Active Directory with PowerShell](#16)
+17. [Managing the Server with PowerShell](#17)
+18. [Working with functions + advanced functions](#18)
+19. [Managing Exchange server](#19)
 
 <div id='1'/>
 ##Using the help system
@@ -200,12 +199,8 @@ Het is aan te raden zelf te oefenen met het Get-Help cmdlet, om het zo goed onde
 
 INSERT CONTENT
 
+
 <div id='3'/>
-##Adding commands
-
-INSERT CONTENT
-
-<div id='4'/>
 ##Working with providers
 
 Windows PowerShell providers laten je toe om dezelfde cmdlets, zoals Get-Item of Set-Item te gebruiken met verschillende types van data. Daardoor kan je meteen weten hoe je met verschillende data werkt. Bijvoorbeeld: je kan de Get-Item cmdlet gebruiken om informatie over een bestand te krijgen. U kunt echter de dezelfde cmdlet gebruiken om informatie over een alias, een certificaat, een functie, een omgevingsvariabele, een registersleutel of een variabele op te halen.
@@ -274,17 +269,17 @@ De Varaible provider biedt toegang tot de variabelen die zijn gedefinieerd in Wi
 
 
 
-<div id='5'/>
+<div id='4'/>
 ##The pipeline
 
 INSERT CONTENT
 
-<div id='6'/>
+<div id='5'/>
 ##Objects: data by another name
 
 INSERT CONTENT
 
-<div id='7'/>
+<div id='6'/>
 ##Formatting output
 
 
@@ -304,7 +299,7 @@ Wanneer u met Windows PowerShell werkt, is het gebruikelijk om de output naar de
 ![ALt text](http://i.imgur.com/HJyRd59.png)
 
 
-<div id='8'/>
+<div id='7'/>
 ##Filtering + Working with files
 
 ###Filtering & Sorting
@@ -363,17 +358,17 @@ Get-Process | Export-Clixml -Path c:\fso\processXML.xml
 
 
 
-<div id='9'/>
+<div id='8'/>
 ##Remoting
 
 INSERT CONTENT
 
-<div id='10'/>
+<div id='9'/>
 ##Variables
 
 INSERT CONTENT
 
-<div id='11'/>
+<div id='10'/>
 ##PowerShell ISE
 
 
@@ -397,47 +392,47 @@ IntelliSense biedt pop-up help en informatie. Wanneer u een cmdlet typt, levert 
 
 
 
-<div id='12'/>
+<div id='11'/>
 ##Scripting
 
 INSERT CONTENT
 
-<div id='13'/>
+<div id='12'/>
 ##Handling errors
 
 INSERT CONTENT
 
-<div id='14'/>
+<div id='13'/>
 ##Using CIM
 
 INSERT CONTENT
 
-<div id='15'/>
+<div id='14'/>
 ##Enhancements to tab completion
 
 INSERT CONTENT
 
-<div id='16'/>
+<div id='15'/>
 ##Scheduling jobs
 
 INSERT CONTENT
 
-<div id='17'/>
+<div id='16'/>
 ##Managing Active Directory with PowerShell
 
 INSERT CONTENT
 
-<div id='18'/>
+<div id='17'/>
 ##Managing the Server with PowerShell
 
 INSERT CONTENT
 
-<div id='19'/>
+<div id='18'/>
 ##Working with functions + advanced functions
 
 INSERT CONTENT
 
-<div id='20'/>
+<div id='19'/>
 ##Managing Exchange server
 
 INSERT CONTENT
