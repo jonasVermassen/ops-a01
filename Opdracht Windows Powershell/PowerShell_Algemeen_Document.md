@@ -438,7 +438,9 @@ De uitvoer zou er als volgt moeten uitzien.
 Standaard luisterd remoting naar poort 5985 for http en 5986 voor https. Dit kan je veranderen door het aanpassen  van
 ```
 wsman:\localhost\Listener\listener*\port
-``` naar een andere value te veranderen met set-item cmdlet.
+``` 
+
+naar een andere value te veranderen met set-item cmdlet.
 
 Volgende stap een trusted hosts toevoegen
 ----
