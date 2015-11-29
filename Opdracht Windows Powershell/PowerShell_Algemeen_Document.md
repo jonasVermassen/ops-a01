@@ -24,9 +24,176 @@
 
 <div id='1'/>
 ##Using the help system
-###tussentitel
+### Updateable Get-Help
 
-INSERT CONTENT
+Het microsoft powershell help systeem laat je toe commando's, en informatie over die commando's te ontdekken. Dit doe je door in de console het cmdlet Get-Help te gebruiken. 
+
+Powershell ondergaat vaak updates om het uit te breiden, het te verbeteren enzovoort, ook het Get-Help of help cmdlet wordt vaak geupdate. Het is een goede gewoonte om geregeld het volgende commando uit te voeren. 
+
+```PowerShell
+PS C:\> update-help
+```
+
+Dit commando zal, zoals je al kan raden, zorgen dat de output die je krijgt van dit commando up to date is. 
+
+### Get-Help Gebruiken
+
+Zoals eerder gezegd kan je met het Get-Help commando informatie ontdekken over een commando dat je al kent, of een voor jou onbekend commando ontdekken. Met Get-Help vind je commando's en wordt je uitgelegd hoe je ze kan gebruiken. 
+
+Stel. Je wil alle services die op je machine draaien te zien krijgen, en je weet het cmdlet daarvoor: Get-Service. Maar je weet niet hoe het te gebruiken. Get-Help staat paraat. Geef het Get-Help Commando in, gevolgd door het cmdlet waar je informatie over wil. Een voorbeeld:
+
+```PowerShell
+PS C:\> Get-Help Get-Service
+```
+
+Het Get-Help commando kan eigenlijk nog korter geschreven worden, men noemt dit aliasing. Het afgekorte cmdlet of alias voor Get-Help, is gewoon Help. 
+De volgende twee voorbeelden geven dus exact dezelfde output terug:
+
+```PowerShell
+PS C:\> Get-Help Get-Service
+```
+
+```PowerShell
+PS C:\> Help Get-Service
+```
+
+We hebben gezien hoe we Get-Help gebruiken als we het commando waarover we informatie willen al kennen, maar wat als we dit commando nog niet kennen?
+Stel. Je wil iets doen met logs van je machine, eender wat. Dan heb je één sleutelwoord: 'log'. Het volgende commando zal alles teruggeven waar het woord 'log' in voorkomt. 
+
+```PowerShell
+PS C:\> Help *log*
+```
+
+Maar waarom? De twee * rond het woord log betekenen dat eender welke tekst mag voorkomen. Moest er dus een functie: 'kazeazloglazdj' bestaan, zou het teruggegeven worden in de output. Natuurlijk bestaat die functie niet, de effectie output van het commando ziet er als volgt uit:
+
+```PowerShell
+Name                              Category  Module                    Synopsis                                                       
+----                              --------  ------                    --------                                                       
+Clear-EventLog                    Cmdlet    Microsoft.PowerShell.M... Deletes all entries from specified event logs on the local o...
+Get-EventLog                      Cmdlet    Microsoft.PowerShell.M... Gets the events in an event log, or a list of the event logs...
+Limit-EventLog                    Cmdlet    Microsoft.PowerShell.M... Sets the event log properties that limit the size of the eve...
+New-EventLog                      Cmdlet    Microsoft.PowerShell.M... Creates a new event log and a new event source on a local or...
+Remove-EventLog                   Cmdlet    Microsoft.PowerShell.M... Deletes an event log or unregisters an event source.           
+Show-EventLog                     Cmdlet    Microsoft.PowerShell.M... Displays the event logs of the local or a remote computer in...
+Write-EventLog                    Cmdlet    Microsoft.PowerShell.M... Writes an event to an event log.                               
+Get-AppxLog                       Function  Appx                      ...                                                            
+Export-BinaryMiLog                Cmdlet    CimCmdlets                Export-BinaryMiLog...                                          
+Import-BinaryMiLog                Cmdlet    CimCmdlets                Import-BinaryMiLog...                                          
+New-AutologgerConfig              Function  EventTracingManagement    ...                                                            
+Get-AutologgerConfig              Function  EventTracingManagement    ...                                                            
+Set-AutologgerConfig              Function  EventTracingManagement    ...                                                            
+Start-AutologgerConfig            Function  EventTracingManagement    ...                                                            
+Remove-AutologgerConfig           Function  EventTracingManagement    ...                                                            
+Get-DtcLog                        Function  MsDtc                     ...                                                            
+Reset-DtcLog                      Function  MsDtc                     ...                                                            
+Set-DtcLog                        Function  MsDtc                     ...                                                            
+Get-LogProperties                 Function  PSDiagnostics             ...                                                            
+Set-LogProperties                 Function  PSDiagnostics             ...                                                            
+Start-StorageDiagnosticLog        Function  Storage                   ...                                                            
+Stop-StorageDiagnosticLog         Function  Storage                   ...                                                            
+Get-WindowsUpdateLog              Function  WindowsUpdate             ...                                                            
+about_Eventlogs                   HelpFile                            Windows PowerShell creates a Windows event log that is         
+about_Logical_Operators           HelpFile                            Describes the operators that connect statements in Windows P...
+```
+
+
+### Get-Help Output Interpreteren
+
+Hierboven zag je al een output van een Get-Help cmdlet. Je ziet vier kolommen. Van links naar rechts zie je de eerst de synopsis. Dit geeft een korte samenvatting weer. Als tweede heb je de module, hier gaan we later dieper op in. De middelste kolom geeft de categorie aan. Dit kan een cmdlet zijn (zoals Get-Help) of een functie, een bestand,.. In de Linker kolom staat de naam, hierin staat - je raadt het - de naam. 
+
+Stel. Je wilt de EventLog legen, je voerde het help cmdlet in en je kreeg de ouput hierboven weer. Nu zoek je in de lijst van commando's en ziet het commando Clear-Eventlog, dit zou wel een kunnen doen wat je willen. Je wilt meer informatie over dit commando, dus gebruik je Help: 
+
+```PowerShell
+PS C:\> Help Clear-EventLog
+```
+
+Nu krijg je gedetailleerde uitleg over dat commando zelf. Dit is de output: 
+
+```PowerShell
+NAME
+    Get-EventLog
+    
+SYNOPSIS
+    Gets the events in an event log, or a list of the event logs, on the local or remote computers.
+    
+    
+SYNTAX
+    Get-EventLog [-LogName] <String> [[-InstanceId] [<Int64[]>]] [-After [<DateTime>]] [-AsBaseObject] [-Before [<DateTime>]] [-Compu
+    terName [<String[]>]] [-EntryType {Error | Information | FailureAudit | SuccessAudit | Warning}] [-Index [<Int32[]>]] [-Informati
+    onAction {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend}] [-InformationVariable [<System.String>]] [-Message [<
+    String>]] [-Newest [<Int32>]] [-Source [<String[]>]] [-UserName [<String[]>]] [<CommonParameters>]
+    
+    Get-EventLog [-AsString] [-ComputerName [<String[]>]] [-InformationAction {SilentlyContinue | Stop | Continue | Inquire | Ignore 
+    | Suspend}] [-InformationVariable [<System.String>]] [-List] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    The Get-EventLog cmdlet gets events and event logs on the local and remote computers.
+    
+    Use the parameters of Get-EventLog to search for events by using their property values. Get-EventLog gets only the events that ma
+    tch all of the specified property values.
+    
+    The cmdlets that contain the EventLog noun (the EventLog cmdlets) work only on classic event logs. To get events from logs that u
+    se the Windows Event Log technology in Windows Vista and later versions of Windows, use Get-WinEvent.
+    
+RELATED LINKS
+    Online Version: http://go.microsoft.com/fwlink/p/?linkid=290493 
+    Clear-EventLog 
+    Limit-EventLog 
+    New-EventLog 
+    Remove-EventLog 
+    Show-EventLog 
+    Write-EventLog 
+REMARKS
+    To see the examples, type: "get-help Get-EventLog -examples".
+    For more information, type: "get-help Get-EventLog -detailed".
+    For technical information, type: "get-help Get-EventLog -full".
+    For online help, type: "get-help Get-EventLog -online"
+```
+####Required en Optional Parameters
+
+Name en Synopsis spreekt voor zichzelf en zagen we al eerder. Een belangrijk onderdeel is Syntax. Hierin wordt gedefinieerd hoe je commando er syntactisch moet uitzien. Hoe het er zal uitzien hangt af van het aantal parameters dat je gebruikt. Een Parameter is een stuk informatie dat je meegeeft aan je commando, omdat het commando die informatie nodig heeft. 
+
+Als we kijken naar het syntax onderdeel van de ouput, zie je dat de eerste parameter van het Get-EventLog cmdlet -LogName is, en het van het type String moet zijn. de [vierkante haakjes rond -LogName] duiden erop dat dit onderdeel van de parameter optioneel is. De kleiner en groter dan tekens < > rond String duiden erop dat dit het type moet zijn van de parameter -LogName, hier staan echter wél [vierkante haakjes rond], wat wil zeggen dat de waarde van de parameter verplicht is in te geven. Ook merk je dat rond het geheel geen [vierkante haakjes staan], wat wil zeggen dat deze parameter verplicht mee te geven is bij het uitvoeren van het Get-EventLog cmdlet. 
+
+
+De tweede parameter is -InstanceId, dit is een optionele parameter. Dit zie je omdat hier wél [vierkante haakjes rond het geheel staan]. Het type hiervan is, zoals we kunnen zien een <Int64[]>. Er staan echter nog twee vierkante haakjes na Int64. Dit wil zeggen dat de parameter een array mag zijn, waarbij elk element in de array van het type Int64 is. 
+
+Aan de hand van de gegeven informatie kan je de volgende parametersyntax zelf begrijpen. Een extra is dat als je (zoals bij de parameter -EntryType) ziet dat er verschillende types gescheiden worden door |, je maximum van deze types mag en moet selecteren. Daar | vertaald kan worden door 'of'. 
+
+De onderdelen Description, Related Links en Remarks spreken voor zichzelf.
+
+####Positional Parameters
+
+Positionele parameters zijn parameters waarvan men weet dat ze heel erg vaak gebruikt worden, hierbij vereist men niet meer dat de naam van de parameter gevolgd wordt door de waarde van de parameter. Maar enkel de waarde volstaat. Hieronder enkele voorbeelden van het gebruik van parameters. De eerste parameter van Get-EventLog is een positionele parameter. Hier zie je enkele voorbeelden van het gebruik van parameters: 
+
+
+De Volgende twee commands geven dezelfde uitvoer, -Logname is een positionele parameter, de naam van de parameter is dus optioneel. 
+
+```PowerShell
+PS C:\> Get-EventLog -Logname System
+```
+
+```PowerShell
+PS C:\> Get-EventLog System
+```
+
+####Voorbeelden
+
+Hier specifiëren we de optionele parameter -After, de waarde van deze parameter is van het type datetime, hier worden dus alle System EventLogs van na 4 mei 2014 getoond. 
+
+```PowerShell
+PS C:\> Get-EventLog System -After 5/4/2014
+```
+
+Hier voegen we de extra parameter InformationAction toe, in de help output zie je dat we keuze hebben tussen de waarden: SilentlyContinue, Stop, Continue, Inquire, Ignore of Suspend.
+
+```PowerShell
+PS C:\> Get-EventLog System -After 5/4/2014 -InformationAction Stop
+```
+
+Het is aan te raden zelf te oefenen met het Get-Help cmdlet, om het zo goed onder de knie te krijgen. Het zal je helpen in de volgende hoofdstukken van dit boek, en om zelf meer te ontdekken over de mogelijkheden van powershell. 
+
 
 <div id='2'/>
 ##Running commands
