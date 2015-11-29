@@ -3,7 +3,6 @@
 | :---     | :---  | :---      | :---| :---|
 | Using the help system |  Jonas   |      OK     | learn powershell 3 in a month of lunches (Jonas) | |
 | Running commands  |  Robin    |           |  ||
-| Adding commands  |    Jonas  |           |  ||
 | <s>Working with providers</s> |   Jens   |     OK      |  ||
 | The pipeline   |  Jonas    |           |  ||
 | Objects: data by another name  |   Jonas   |           |  ||
