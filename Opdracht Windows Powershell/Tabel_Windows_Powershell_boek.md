@@ -8,7 +8,7 @@
 | Objects: data by another name  |   Jonas   |           |  ||
 | <s>Formatting </s> |    Jens  |    OK       |  ||
 | <s>Filtering & Working with files</s>  |   Jens   |      OK     |  ||
-| <s>Remoting</s> |    Jarno  |     OK      ||  Powershell 3 Advanced Administration Handbook
+| <s>Remoting</s> |    Jarno  |     OK      | Powershell 3 Advanced Administration Handbook |  
 | Variables  |  Jarno   |           | learn powershell 3 in a month of lunches (Jonas) ||
 | <s>PowerShell ISE</s>  |   Jens   |      OK     |  ||
 | Scripting  |  Jens    |           |  ||
