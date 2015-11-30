@@ -48,3 +48,16 @@ In de afbeelding hierboven wou ik als logname Security, als computername localho
 ```Powershell
 PS C:\Users\Robin> Get-EventLog -LogName Security -ComputerName localhost -Newest 50
 ```
+
+
+
+
+
+
+
+##Handling Errors
+
+
+
+
+
