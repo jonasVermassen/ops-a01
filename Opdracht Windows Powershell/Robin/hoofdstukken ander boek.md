@@ -39,7 +39,12 @@ Er moeten wel genoeg letters staan zodat elke afkorting ook uniek is.
 
 ###Show-command
 
+Als men problemen heeft met de syntax van een command, kan men de cmdlet "Show-Command" gebruiken.
 
+![show command](https://i.gyazo.com/0ddaa346c3342605d117e47b0306c017.png)
 
-
-##Handling errors
+De Show-Command cmdlet geeft een venster weer met al de parameters die men dan kan invullen van een cmdlet naar keuze.
+In de afbeelding hierboven wou ik als logname Security, als computername localhost en daarvan wou ik de laatste 50 entries zien. Als men dan op run klikt maakt PowerShell het onderstaande command: 
+```Powershell
+PS C:\Users\Robin> Get-EventLog -LogName Security -ComputerName localhost -Newest 50
+```
