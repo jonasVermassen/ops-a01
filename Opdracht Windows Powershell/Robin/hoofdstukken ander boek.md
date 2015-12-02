@@ -55,9 +55,74 @@ PS C:\Users\Robin> Get-EventLog -LogName Security -ComputerName localhost -Newes
 
 
 
-##Handling Errors
+##Errors voorkomen/oplossen
+
+Voor men fouten probeert te verbeteren in een script, moet men het gebruik van het script eerst begrijpen.
+Bij de meeste simpele scriptjes zoals bijvoorbeeld Get-Bios.ps1 valt er niet te veel te verbeteren, aangezien er geen inputs van de command line zitten in dit script.
+
+Get-Bios.ps1
+Get-WmiObject -class Win32_Bios
 
 
+###Ontbrekende parameters
+
+In het Get-BiosInformation.ps1 script is er een parameter computerName, dat toelaat om een pc te kiezen als doel van het script.
+Als het script geen waarde krijgt voor de computerName parameter, faalt het omdat Get-WmiObject een waarde voor de parameter nodig heeft.
+Om het probleem op te lossen gaat het script op zoek naar een $computerName variabele.
+Als deze variabele ontbreekt gaat het script een waarde proberen geven aan de variabele.
+De volgende lijn van het script zorgt hiervoor: 
+If(-not($computerName)) { $computerName = $env:computerName }
+
+Get-BiosInformation.ps1
+Param(
+  [string]$computerName
+) #end param
+
+Function Get-BiosInformation($computerName)
+{
+  Get-WmiObject -class Win32_Bios -computerName $computername
+} #end function Get-BiosName
+
+# *** Entry Point To Script ***
+If(-not($computerName)) { $computerName = $env:computerName }
+Get-BiosInformation -computerName $computername
 
 
+Men kan ook de parameters verplicht maken zodat de gebruiker een waarde voor de parameter moet voorzien.
+Om een parameter verplicht te maken gebruiken we Mandatory als parameter attribuut.
 
+Param(
+  [Parameter(Mandatory=$true)]
+  [string]$drive,
+  [string]$computerName = $env:computerName
+) #end param
+
+Als men dit script dan gaat runnen gaat powershell een waarde vragen voor de parameter drive.
+
+###Try/Catch/Finally
+
+Bij een Try/Catch/Finally blok, ga je in het Try gedeelte de commands die het script moet uitvoeren zetten.
+Als er een error is bij de commands, gaat het script naar het Catch gedeelte, waar de fout wordt opgevangen met een string, om te zeggen dat er een fout gebeurd is.
+Hetgeen dat in het Finally gedeelte staat wordt altijd uitgevoerd, ookal was er een error gegenereerd.
+In het algemeen zet men daar de "code cleanup", het stukje code dat ervoor gaat zorgen dat de niet gebruikte commands of commands waar er fouten stonden niet worden uitgevoerd.
+In het voorbeeldscript staat er een string om te zeggen dat het script beëindigd is.
+
+TestTryCatchFinally.ps1
+$obj1 = "Bad.Object"
+"Begin test"
+Try
+  {
+    "`tAttempting to create new object $obj1"
+    $a = new-object $obj1
+    "Members of the $obj1"
+    "New object $obj1 created"
+    $a | Get-Member
+  }
+Catch [system.exception]
+  {
+    "`tcaught a system exception"
+  }
+Finally
+  {
+    "end of script"
+  }
