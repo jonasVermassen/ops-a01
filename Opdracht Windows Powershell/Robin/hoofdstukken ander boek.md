@@ -60,8 +60,10 @@ PS C:\Users\Robin> Get-EventLog -LogName Security -ComputerName localhost -Newes
 Voor men fouten probeert te verbeteren in een script, moet men het gebruik van het script eerst begrijpen.
 Bij de meeste simpele scriptjes zoals bijvoorbeeld Get-Bios.ps1 valt er niet te veel te verbeteren, aangezien er geen inputs van de command line zitten in dit script.
 
+```Powershell
 Get-Bios.ps1
 Get-WmiObject -class Win32_Bios
+```
 
 
 ###Ontbrekende parameters
@@ -73,6 +75,7 @@ Als deze variabele ontbreekt gaat het script een waarde proberen geven aan de va
 De volgende lijn van het script zorgt hiervoor: 
 If(-not($computerName)) { $computerName = $env:computerName }
 
+```Powershell
 Get-BiosInformation.ps1
 Param(
   [string]$computerName
@@ -85,16 +88,19 @@ Function Get-BiosInformation($computerName)
 
 If(-not($computerName)) { $computerName = $env:computerName }
 Get-BiosInformation -computerName $computername
+```
 
 
 Men kan ook de parameters verplicht maken zodat de gebruiker een waarde voor de parameter moet voorzien.
 Om een parameter verplicht te maken gebruiken we Mandatory als parameter attribuut.
 
+```Powershell
 Param(
   [Parameter(Mandatory=$true)]
   [string]$drive,
   [string]$computerName = $env:computerName
 ) #end param
+```
 
 Als men dit script dan gaat runnen gaat powershell een waarde vragen voor de parameter drive.
 
@@ -106,6 +112,7 @@ Hetgeen dat in het Finally gedeelte staat wordt altijd uitgevoerd, ookal was er 
 In het algemeen zet men daar de "code cleanup", het stukje code dat ervoor gaat zorgen dat de niet gebruikte commands of commands waar er fouten stonden niet worden uitgevoerd.
 In het voorbeeldscript staat er een string om te zeggen dat het script beëindigd is.
 
+```Powershell
 TestTryCatchFinally.ps1
 $obj1 = "Bad.Object"
 "Begin test"
@@ -125,4 +132,4 @@ Finally
   {
     "end of script"
   }
-  
+```
