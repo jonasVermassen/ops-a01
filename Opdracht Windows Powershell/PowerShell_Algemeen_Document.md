@@ -1060,7 +1060,366 @@ INSERT CONTENT
 <div id='16'/>
 ##Managing Core Infrastructure with PowerShell
 
-INSERT CONTENT
+###Managing Core infrastructure With Powershell
+
+Het is mogelijk de default shell can command prompt aan te passen naar powershell.
+Hiervoor ga je naar het registry ```HKLM:\Software\Microsoft\Windows NT\CurrentVersion\winlogon``` en verander ```cmd.exe``` naar ```powershell.exe```. Dit kan je veranderen met gebruik van ```PS``` of ```regedit```.
+
+Voor powershell doe je het volgende commando:
+
+C:\Users\Administrator> PowerShell.exe
+PS > Set‑ItemProperty "HKLM:\Software\Microsoft\Windows NT\
+CurrentVersion\winlogon" Shell PowerShell.exe
+
+1 Veranderen van de computer naam
+---
+
+```PS > Rename-Computer –NewName HQ-DC-01```
+
+```PS > Restart-Computer```
+
+2 De tijd zone veranderen
+---
+
+Laat de huidige tijd zone zien
+
+```
+PS > TZutil /g
+```
+
+Geef een lijst van alle beschikbare tijd zones
+
+```
+PS > TZutil /l
+```
+
+Zet de nieuwe tijd zone
+
+```
+PS > TZutil /s "Greenwich Standard Time"
+```
+
+3 De NIC configureren met PS
+---
+
+Zet de DNS configuratie voor de client computer
+
+Maak een statisch IP Address 
+
+```
+PS > New‑NetIPAddress ‑IPAddress 192.168.0.2 ‑InterfaceAlias Ethernet
+‑DefaultGateway 192.168.0.1 ‑AddressFamily IPv4 ‑PrefixLength 24
+```
+
+Maak de Client DNS Settings
+
+```
+PS > Set‑DnsClientServerAddress ‑InterfaceAlias Ethernet
+‑ServerAddresses 192.168.0.1,192.168.0.2
+```
+
+Of als je DHCP alleen wilt gebruiken doe je deze cmdlets:
+
+Verwijder static IP Address Settings
+
+```
+PS > Remove‑NetIPAddress ‑InterfaceAlias Ethernet
+```
+
+Verwijder network route
+
+```
+PS > Remove‑NetRoute ‑InterfaceAlias Ethernet
+```
+
+Reset de  Client DNS Settings
+
+```
+PS > Set‑DnsClientServerAddress ‑ResetServerAddresses
+```
+
+Enable de DHCP option op de interface
+
+```
+PS > Set‑NetIPInterface ‑InterfaceAlias Ethernet ‑Dhcp Enabled
+```
+
+4 Managen van windows server roles en features
+---
+
+Je kan de ```Get‑WindowsFeature``` cmdlet gebruiken om alle geïnstalleerd rollen en features te bekijken.
+
+Geef een lijst van al de geïnstalleerde rollen en features
+
+```
+PS > Get-WindowsFeature | where Installed –eq $true
+```
+
+![Alt text](http://i.imgur.com/K0cLcFC.png)
+
+####Voor tools toe te voegen moet je deze cmdlets gebruiken:
+
+Deze cmdlet is voor subfeatures toe te voegen aan een role en ze 1 voor 1 wilt installeren.
+
+```
+‑IncludeAllSubFeature
+```
+
+Dit is voor extra tools toe te voegen zoals met de ISS feature die niet automatisch tools installeerd na het toevoegen van deze feature.
+
+```
+‑IncludeManagementTools
+```
+
+####Voorbeeld:
+
+Een web server role met alle subfeatures en managment tools.
+
+```
+PS > Install‑WindowsFeature Web‑Server ‑IncludeAllSubFeature
+‑IncludeManagementTools
+```
+
+####De ADDS of active directory domain service role toevoegen
+
+Een nieuwe AD forest installeren door gebruik van de ```Install-ADDSforest``` cmdlet.
+
+DomainName: De root domein naam
+
+DomainNetbiosName: De netbios naam voor het domein
+
+ForestMode: Het functionerings level van de forest
+
+DomainMode: Specifieerd de functies van het domein
+
+SafeModeAdministratorPassword: Administrator password definiëren. Dit is nodig voor AD restore mode.
+
+InstallDNS: Installeerd en configureerd een DNS server role.
+
+Dit kan met de volgende code:
+
+```
+PS > Install‑ADDSForest ‑DomainName contoso.local
+‑SafeModeAdministratorPassword (ConvertTo‑SecureString P@ssw0rd
+‑AsPlainText ‑Force) -DomainMode Win2012 ‑DomainNetbiosname Contoso
+‑ForestMode Win2012 ‑InstallDNS
+```
+
+####Een nieuw domein in een bestaande forest aanmaken
+
+NewDomainName: Nieuwe domein naam maken
+
+ParentDomainName: De parents naam voor het nieuwe domein
+
+DomainMode: Specifieërd de functie levels van het domein
+
+DomainType: Het domein type definiëren, dit kan ```Child``` of ```Tree``` zijn.
+
+Voorbeeld:
+
+```
+PS > Install‑ADDSDomain ‑NewDomainName corp ‑ParentDomainName contoso.```
+```local ‑SafeModeAdministratorPassword (ConvertTo‑SecureString P@ssw0rd```
+```‑AsPlainText ‑Force) ‑CreateDnsDelegation ‑Credential (Get‑Credential```
+```Contoso\Administrator) ‑DomainMode Win2012 ‑DomainType ChildDomain
+```
+
+####Een nieuwe domain controller aanmaken in een bestaand domein
+
+Met deze cmdlet kan de opdracht uitgevoerd worden ```Install‑ADDSdomaincontroller``` cmdlet.
+
+Voorbeeld:
+
+```
+PS > Install-ADDSDomainController -NoGlobalCatalog:$false```
+```‑CreateDnsDelegation:$false -Credential (Get-Credential)```
+```-DomainName "contoso.local" -InstallDns:$true -ReplicationSourceDC```
+```"DC01.contoso.local" -SiteName "Default-First-Site-Name"```
+```-SafeModeAdministratorPassword (ConvertTo-SecureString P@ssw0rd```
+```-AsPlainText -Force)
+```
+
+Configureren van de DNS role
+---
+
+####Configureren van DNS server records
+
+Een nieuw DNS server A resource record toevoegen
+
+```
+PS > Add-DnsServerResourceRecordA ‑Name FileServer ‑Ipv4Address
+192.168.1.20 ‑ZoneName Contoso.local
+```
+
+Een nieuw DNS server 'CName' Resource record toevoegen
+
+```
+PS > Add-DnsServerResourceRecordCName ‑Name OWA ‑HostNameAlias
+EXCH‑MBXCAS‑02.Contoso.local ‑ZoneName Contoso.local
+```
+
+Een nieuw DNS server 'MX' Resource record toevoegen
+
+```
+PS > Add-DnsServerResourceRecordMX ‑Name Mail ‑MailExchange
+EXCH‑HUB‑01.Contoso.local ‑ZoneName Contoso.local –Preference 10
+```
+
+####Maken van primary forward en reverse lookup zones
+
+Een DNS forward zone toevoegen
+
+```
+PS > Add-DnsServerPrimaryZone ‑Name 'Labs' ‑ReplicationScope Domain
+‑DynamicUpdate Secure
+```
+
+Een DNS server reverse lookup zone toevoegen
+
+```
+PS > Add-DnsServerPrimaryZone ‑NetworkId '192.168.1.0/24'
+‑ReplicationScope Forest ‑DynamicUpdate NonsecureAndSecure
+```
+
+Een DNS forwarder toevoegen
+
+```
+PS > Add-DnsServerForwarder –IPAddress '4.2.2.3','8.8.8.8'
+```
+
+Een DNS server zone exporteren
+
+```
+PS > ForEach($Zone in (Get-DnsServerZone | Where IsAutoCreated -eq
+$false))
+{
+Export-DnsServerZone -Name $Zone.ZoneName -FileName $Zone.ZoneName
+}
+```
+
+Een DHCP role toevoegen en host configureren
+---
+
+####1 Installeren van DHCP server role
+
+Server role en module toevoegen
+
+```
+PS > Add-WindowsFeature DHCP
+```
+
+####2 Een DHCP server scope opzetten voor ipv4
+
+DHCP scope met naam Contoso voor 192.168.0.0 subnet met een masker 255.255.255.0 en dan activeren.
+
+```
+PS > Add‑DhcpServerv4Scope ‑Name "Contoso" ‑StartRange 192.168.0.1
+‑EndRange 192.168.0.254 ‑SubnetMask 255.255.255.0 ‑State Active
+```
+
+####3 Configureren van de DHCP scope options
+
+DNS domain naam, DNS server address, win server en default gateway.
+
+```
+PS > Set‑DhcpServerv4OptionValue ‑DnsDomain contoso.local ‑DnsServer
+192.168.0.2 ‑Router 192.168.0.1
+```
+
+####4 Configureren van DHCP scope exclusions
+
+Dit wordt gebruikt wanneer je een range van specifieke addressen statisch voor toestellen wilt gebruiken.
+
+```
+PS > Add‑DhcpServerv4ExclusionRange ‑ScopeId 192.168.0.0 ‑StartRange
+192.168.0.100 -EndRange 192.168.0.130
+```
+
+####5 Configureren van DHCP scope reservaties
+
+Ip address 192.168.0.10 wordt gereserveerd voor het mac addres F4-DA-F1-78-00-6D van de netwerk printer. 
+
+```PS > Add‑DhcpServerv4Reservation ‑ScopeId 192.168.0.0 ‑IPAddress
+192.168.0.10 ‑ClientId F4-DA-F1-78-00-6D ‑Description "Multi-Function
+Network Printer in 3rd floor"```
+
+####6 Toestemming geven aan de AD met de DHCP server
+
+In dit voorbeeld wordt ```Add‑DhcpServerInDC``` cmdlet gebruikt om de DHCP server toe te voegen.
+
+```
+PS > Add‑DhcpServerInDC ‑DnsName "DhcpServer.contoso.local"
+```
+
+Het managen van de windows firewall
+---
+
+####1 Enablen of disablen van Windows firewall profiles
+
+Hier gebruiken we de cmdlet Set‑NetFirewallProfile voor om alle windows firewall profiles te disablen en dan het publieke profiel te enablen.
+
+Om alle profielen te disablen
+
+```
+PS > Set-NetFirewallProfile –All –Enabled False
+```
+
+Om alle profielen te enablen
+
+```
+PS > Set-NetFirewallProfile –Name Public –Enabled True
+```
+
+####2 Nieuwe firewall regels maken
+
+Voorbeeld 1 Al het uitgaand verkeer blokkeren voor alle FTP protocols:
+
+```PS > New-NetFirewallRule -Name "Block FTP" ‑DisplayName "Block FTP"
+‑Direction Outbound ‑Action Block ‑Protocol TCP ‑LocalPort FTP```
+
+Voorbeeld 2 Al het ingaande verkeer toelaten voor Skype:
+
+```
+PS > New‑NetFirewallRule ‑Name "Skype" ‑DisplayName "Skype" ‑Direction
+Inbound ‑Action Allow ‑Program "C:\Program Files (x86)\Skype\Phone\
+Skype.exe"```
+
+Best practice Analyzer
+---
+
+Blijkbaar heb je in powershell een soort tool die je server configuratie vergelijkt met de standaarden van Windows.
+
+####1 Alle lijsten van de BPA Models
+
+```
+PS > Get-BpaModel
+```
+
+Lijst van de laatste scan time
+
+```
+PS > Get-BpaModel | where LastScanTime –eq Never
+```
+
+####2 Een praktijk model oproepen
+
+Dit scant de server voor beste gebruik en complicaties die problemen geven voor de file services
+
+```
+PS > Invoke-BpaModel –ModelId Microsoft/Windows/FileServices
+```
+
+![Alt text](http://i.imgur.com/8eLONIq.png)
+
+####3 Beste resultaten laten zien
+
+Met de cmdlet Get-BpaResult kunnen we de resultaten laten zien van de beste praktijk scan dat was uitgevoerd in het vorige voorbeeld.
+
+```
+PS > Get-BpaResult –ModelId Microsoft/Windows/FileServices
+```
+
+![Alt text](http://i.imgur.com/S69MynU.png)
 
 <div id='17'/>
 ##Managing Active Directory with PowerShell
