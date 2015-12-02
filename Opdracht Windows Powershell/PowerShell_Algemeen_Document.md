@@ -16,10 +16,11 @@
 13. [Using CIM](#13)
 14. [Enhancements to tab completion](#14)
 15. [Scheduling jobs](#15)
-16. [Managing Active Directory with PowerShell](#16)
-17. [Managing the Server with PowerShell](#17)
-18. [Working with functions + advanced functions](#18)
-19. [Managing Exchange server](#19)
+16. [Managing Core Infrastructure with PowerShell](#16)
+17. [Managing Active Directory with PowerShell](#17)
+18. [Managing the Server with PowerShell](#18)
+19. [Working with functions + advanced functions](#19)
+20. [Managing Exchange server](#20)
 
 <div id='1'/>
 ##Using the help system
@@ -1057,21 +1058,26 @@ INSERT CONTENT
 INSERT CONTENT
 
 <div id='16'/>
-##Managing Active Directory with PowerShell
+##Managing Core Infrastructure with PowerShell
 
 INSERT CONTENT
 
 <div id='17'/>
-##Managing the Server with PowerShell
+##Managing Active Directory with PowerShell
 
 INSERT CONTENT
 
 <div id='18'/>
-##Working with functions + advanced functions
+##Managing the Server with PowerShell
 
 INSERT CONTENT
 
 <div id='19'/>
+##Working with functions + advanced functions
+
+INSERT CONTENT
+
+<div id='20'/>
 ##Managing Exchange server
 
 INSERT CONTENT
