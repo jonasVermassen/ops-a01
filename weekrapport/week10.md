@@ -29,9 +29,10 @@
 
 ### Jarno
 
-* ...
+* Samenvatting Remoting afgewerkt
+* Samenvatting Server roles en features toevoegen afgewerkt
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/iVZnxCA.png)
 
 ### Jonas
 
