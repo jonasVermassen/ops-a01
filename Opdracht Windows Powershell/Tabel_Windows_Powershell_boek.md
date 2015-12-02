@@ -16,7 +16,7 @@
 | Using CIM  |  Karel    |           |  ||
 | Enhancements to tab completion  |  Karel    |           |  ||
 | Scheduling jobs  |    Karel  |           |  ||
-| Managing Core Infrastructure with PowerShell | Jarno  |           |               ||
+| <s>Managing Core Infrastructure with PowerShell</s> | Jarno  |           |               ||
 | Managing Active Directory with PowerShell  |   Jarno   |           || BELANGRIJK!! |
 | Managing the Server with PowerShell  |   Robin   |           |  ||
 | Working with functions + advanced functions   |   Robin   |           |  ||
