@@ -1373,14 +1373,16 @@ PS > Set-NetFirewallProfile –Name Public –Enabled True
 Voorbeeld 1 Al het uitgaand verkeer blokkeren voor alle FTP protocols:
 
 ```PS > New-NetFirewallRule -Name "Block FTP" ‑DisplayName "Block FTP"
-‑Direction Outbound ‑Action Block ‑Protocol TCP ‑LocalPort FTP```
+‑Direction Outbound ‑Action Block ‑Protocol TCP ‑LocalPort FTP
+```
 
 Voorbeeld 2 Al het ingaande verkeer toelaten voor Skype:
 
 ```
 PS > New‑NetFirewallRule ‑Name "Skype" ‑DisplayName "Skype" ‑Direction
 Inbound ‑Action Allow ‑Program "C:\Program Files (x86)\Skype\Phone\
-Skype.exe"```
+Skype.exe"
+```
 
 Best practice Analyzer
 ---
