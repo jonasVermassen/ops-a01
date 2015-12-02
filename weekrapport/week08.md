@@ -65,6 +65,7 @@ Boek PowerShell verder samenvatten
 ### Jarno
 ### Jonas
 ### Karel
+Packet tracer oefening fysiek uitbouwen
 ### Robin
 fysieke opstelling van labo 6.2.3.8
 hoofdstukken samenvatten powershell boeken
