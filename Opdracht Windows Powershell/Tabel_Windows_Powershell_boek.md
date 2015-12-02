@@ -16,7 +16,7 @@
 | Using CIM  |  Karel    |           |  ||
 | Enhancements to tab completion  |  Karel    |           |  ||
 | Scheduling jobs  |    Karel  |           |  ||
-| <s>Server Roles en Features Configureren</s> | Jarno  |           |               ||
+| <s>Server Roles en Features Configureren</s> | Jarno  |           | Powershell 3 Advanced Administration Handbook              ||
 | Managing Active Directory with PowerShell  |   Jarno   |           || BELANGRIJK!! |
 | Managing the Server with PowerShell  |   Robin   |           |  ||
 | Working with functions + advanced functions   |   Robin   |           |  ||
