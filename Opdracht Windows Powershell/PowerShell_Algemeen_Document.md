@@ -1060,8 +1060,6 @@ INSERT CONTENT
 <div id='16'/>
 ##Managing Core Infrastructure with PowerShell
 
-###Managing Core infrastructure With Powershell
-
 Het is mogelijk de default shell can command prompt aan te passen naar powershell.
 Hiervoor ga je naar het registry ```HKLM:\Software\Microsoft\Windows NT\CurrentVersion\winlogon``` en verander ```cmd.exe``` naar ```powershell.exe```. Dit kan je veranderen met gebruik van ```PS``` of ```regedit```.
 
