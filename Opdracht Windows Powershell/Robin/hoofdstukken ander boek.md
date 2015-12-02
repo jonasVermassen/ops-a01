@@ -107,40 +107,22 @@ In het algemeen zet men daar de "code cleanup", het stukje code dat ervoor gaat 
 In het voorbeeldscript staat er een string om te zeggen dat het script beëindigd is.
 
 TestTryCatchFinally.ps1
-
 $obj1 = "Bad.Object"
-
 "Begin test"
-
 Try
-
   {
-  
     "`tAttempting to create new object $obj1"
-    
     $a = new-object $obj1
-    
     "Members of the $obj1"
-    
     "New object $obj1 created"
-    
     $a | Get-Member
-    
   }
-  
 Catch [system.exception]
-
   {
-  
     "`tcaught a system exception"
-    
   }
-  
 Finally
-
   {
-  
     "end of script"
-    
   }
   
