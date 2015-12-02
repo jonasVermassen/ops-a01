@@ -1372,7 +1372,8 @@ PS > Set-NetFirewallProfile –Name Public –Enabled True
 
 Voorbeeld 1 Al het uitgaand verkeer blokkeren voor alle FTP protocols:
 
-```PS > New-NetFirewallRule -Name "Block FTP" ‑DisplayName "Block FTP"
+```
+PS > New-NetFirewallRule -Name "Block FTP" ‑DisplayName "Block FTP"
 ‑Direction Outbound ‑Action Block ‑Protocol TCP ‑LocalPort FTP
 ```
 
