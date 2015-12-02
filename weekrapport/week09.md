@@ -43,9 +43,9 @@ Boek powershell hoofdstukken samenvatten
 
 ### Karel
 
-* ...
+* Packet tracer 7.4.3.5 opstellen
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](http://i.imgur.com/Sk9Hx0H.jpg)
 
 ### Robin
 
@@ -62,6 +62,7 @@ Boek Powershell hoofdstukken samenvatten
 ### Jarno
 ### Jonas
 ### Karel
+Boek Powershell samenvatten
 ### Robin
 
 
