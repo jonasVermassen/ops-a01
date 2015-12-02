@@ -16,7 +16,7 @@
 13. [Using CIM](#13)
 14. [Enhancements to tab completion](#14)
 15. [Scheduling jobs](#15)
-16. [Managing Core Infrastructure with PowerShell](#16)
+16. [Server Roles en Features Configureren](#16)
 17. [Managing Active Directory with PowerShell](#17)
 18. [Managing the Server with PowerShell](#18)
 19. [Working with functions + advanced functions](#19)
@@ -1058,7 +1058,7 @@ INSERT CONTENT
 INSERT CONTENT
 
 <div id='16'/>
-##Managing Core Infrastructure with PowerShell
+##Server Roles en Features Configureren
 
 Het is mogelijk de default shell can command prompt aan te passen naar powershell.
 Hiervoor ga je naar het registry ```HKLM:\Software\Microsoft\Windows NT\CurrentVersion\winlogon``` en verander ```cmd.exe``` naar ```powershell.exe```. Dit kan je veranderen met gebruik van ```PS``` of ```regedit```.
