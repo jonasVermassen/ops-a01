@@ -68,6 +68,7 @@
 ### Jarno
 ### Jonas
 Windows Powershell boek: Objects: data by another name afwerken en in algemeen document plaatsen
+load balancing taak afwerken 
 ### Karel
 ### Robin
 
