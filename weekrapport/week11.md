@@ -15,10 +15,11 @@
 
 ### Algemeen
 
-![Alt text](http://i.imgur.com/yuTBGPE.png)
+![Alt text](http://i.imgur.com/uZ00nKF.png)
 
 * Lamp-stack afwerken en verslag over maken
 * Multi-tier Lamp-stack opzetten
+* Opdracht powershell core installation AD voorbereiden
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
