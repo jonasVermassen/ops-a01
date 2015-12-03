@@ -15,7 +15,7 @@
 
 ### Algemeen
 
-![Alt text](http://i.imgur.com/xzyQ3Eb.png)
+![Alt text](http://i.imgur.com/BBWMbKm.png)
 
 * LAMP-stack geconfigureerd
 * Monitoring server geconfigureerd
