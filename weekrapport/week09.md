@@ -64,6 +64,8 @@ Boek powershell hoofdstukken samenvatten
 Boek Powershell hoofdstukken samenvatten
 ### Jarno
 ### Jonas
+boek powershell: the pipeline volledig afwerken
+multi-tier web server opzetten
 ### Karel
 Boek Powershell samenvatten
 ### Robin
