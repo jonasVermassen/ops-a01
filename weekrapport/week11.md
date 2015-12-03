@@ -5,11 +5,11 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Jens |       |           |
-| Jarno |       |           |
-| Jonas |       |           |
-| Karel |       |           |
-| Robin |       |           |
+| Jens |     x  |           |
+| Jarno |    x   |           |
+| Jonas |     x  |           |
+| Karel |      x |           |
+| Robin |     x  |           |
 
 ## Wat heb je deze week gerealiseerd?
 
