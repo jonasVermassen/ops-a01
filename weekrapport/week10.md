@@ -36,7 +36,9 @@
 
 ### Jonas
 
-* ...
+* Hoofdstuk The pipeline in mijn windows server boek samenvatten: deel 2 (Afgewerkt) 
+![Alt text](http://i.imgur.com/UuOf6f7.png)
+
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -59,6 +61,7 @@
 ### Jens
 ### Jarno
 ### Jonas
+Windows Powershell boek: Objects: data by another name samenvatten en in algemeen document plaatsen
 ### Karel
 ### Robin
 
