@@ -40,7 +40,10 @@
 
 ### Jonas
 
-* ...
+* Lamp stack en monitoring server configureren
+* Get-Help hoofdstuk samenvatten en in het algemeen document plaatsen
+
+![Alt text](http://i.imgur.com/qmXuZDf.png)
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -64,6 +67,8 @@
 Boek PowerShell verder samenvatten
 ### Jarno
 ### Jonas
+Verder werken aan de monitoring server
+The Pipeline samenvatten en deels toevoegen in het algemeen document
 ### Karel
 Packet tracer oefening fysiek uitbouwen
 ### Robin
