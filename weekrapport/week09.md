@@ -37,7 +37,10 @@ Boek powershell hoofdstukken samenvatten
 
 ### Jonas
 
-* ...
+* samen met de groep Packet tracer 7.2.2.5 fysiek uitbouwen
+* samen met de groep Packet tracer 6.2.3.8 fysiek uitbouwen
+![Alt text](http://i.imgur.com/Es5tOJo.png)
+
 
 [Afbeelding individueel rapport tijdregistratie]
 
