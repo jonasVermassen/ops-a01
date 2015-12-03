@@ -15,7 +15,7 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Alt text](http://i.imgur.com/BBWMbKm.png)
 
 * Packet tracer 7.2.2.5 fysiek uitbouwen
 * Packet tracer 6.2.3.8 fysiek uitbouwen
