@@ -25,7 +25,7 @@
 
 * Boek Powershell hoofdstukken samenvatten
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/MsnjqjI.png)
 
 ### Jarno
 
