@@ -39,7 +39,12 @@
 
 ### Jonas
 
-* ...
+* lamp stack met monitoring: afwerken
+* lamp stack met monitoring: verslag maken
+* alles klaarzetten om volgende week multi-tier web server op te zetten met load balancing
+
+![Alt text](http://i.imgur.com/DwDBpR4.png)
+
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -62,13 +67,15 @@
 ### Jens
 ### Jarno
 ### Jonas
+Windows Powershell boek: Objects: data by another name afwerken en in algemeen document plaatsen
 ### Karel
 ### Robin
 
 
 ## Waar hebben jullie nog problemen mee?
 
-* ...
+(jonas) De linux taak ivm monitoring en load balancing. Hopelijk gaat het volgende week beter met dit tutorial: 
+Load balancing server for dummies: http://www.servermom.org/load-balancing-guide/1411/
 * ...
 
 ## Feedback technisch luik
