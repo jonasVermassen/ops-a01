@@ -15,16 +15,18 @@
 
 ### Algemeen
 
-[Afbeelding huidige toestand Kanban-bord(en) invoegen]
+![Alt text](http://i.imgur.com/yuTBGPE.png)
 
-* ...
-* ...
+* Lamp-stack afwerken en verslag over maken
+* Multi-tier Lamp-stack opzetten
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
 ### Jens
 
-* ...
+* Github en HuBoard in orde zetten
+* Lamp-stack afwerken en verslag over maken
+* Multi-tier Lamp-stack opzetten
 
 [Afbeelding individueel rapport tijdregistratie]
 
