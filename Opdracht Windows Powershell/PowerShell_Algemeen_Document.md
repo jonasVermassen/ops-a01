@@ -894,7 +894,7 @@ IntelliSense biedt pop-up help en informatie. Wanneer u een cmdlet typt, levert 
 <div id='11'/>
 ##Scripting
 
-UITLEG
+
 
 
 ###Scripting fundamentals
