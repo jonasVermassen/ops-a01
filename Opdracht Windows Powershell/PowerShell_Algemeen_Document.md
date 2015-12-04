@@ -899,24 +899,103 @@ UITLEG
 
 ###Scripting fundamentals
 
+Waarschijnlijk is de belangrijkste reden om een Windows PowerShell-script te schrijven om terugkerende handelingen te doen. Bijvoorbeeld, de eenvoudige cmdlet Get-ChildItem heeft een goede werking, maar nadat u hebt besloten om de lijst te sorteren en te filteren uit alleen bestanden van een bepaalde grootte, eindig je met de volgende opdracht:
 
+```PowerShell
+Get-ChildItem c:\fso | Where-Object Length -gt 1000 | Sort-Object -Property name
+```
+Even if you use tab completion, the previous command requires a bit of typing. One way
+to shorten it is to create a user-defined function. We will examine that technique later in this chapter. For now, the easiest solution is to write a Windows PowerShell script. The following example shows the DirectoryListWithArguments.ps1 script:
+
+Zelfs als u tab completion gebruikt, vereist de vorige opdracht wel wat typwerk. Een manier om te verkorten het is het creëren van een door de gebruiker gedefinieerde functie. Die techniek verderop in dit hoofdstuk zullen we onderzoeken. Voor nu is de eenvoudigste oplossing om een Windows PowerShell-script te schrijven. In het volgende voorbeeld ziet u het DirectoryListWithArguments.ps1 script:
+
+```PowerShell
+DirectoryListWithArguments.ps1
+foreach ($i in $args)
+{Get-ChildItem $i | Where-Object length -gt 1000 |
+Sort-Object -property name}
+```
+
+###Variabels
+
+Wanneer u werkt met Windows PowerShell, hoeft u geen variabelen vóór gebruik declareren. Wanneer de variabelen gegevens bevatten, worden ze gedeclareerd. Alle namen van variabelen moeten worden voorafgegaan door een dollarteken ($). Het volgende voorbeeld wordt een variabele om te houden van de resultaten van de cmdlet Get-proces maken. 
+
+```PowerShell
+PS C:\> $process = Get-Process
+```
 
 ###While statement
 
+In onderstaand codeblok wordt de in while-clausule geïtereerd tot de variabele $i niet meer kleiner dan 5 is.
 
-###Do...While statement
-
-
-###Do...Until statement
-
+```PowerShell
+DemoWhileLessThan.ps1
+$i = 0
+While ($i -lt 5)
+{
+"`$i equals $i. This is less than 5"
+$i++
+} #end while $i lt 5
+```
 
 ###For statement
 
+In onderstaand codeblok word de for-clausule uitgelegd. Deze is vrijwel gelijk aan de syntax van andere programmeertalen, zoals bv Java.
+
+```PowerShell
+DemoForLoop.ps1
+For($i = 0; $i -le 5; $i++)
+{
+‘$i equals ‘ + $i
+}
+```
 
 ###If statement
 
+In onderstaand codeblok word de if-clausule uitgelegd. Deze is vrijwel gelijk aan de syntax van andere programmeertalen, zoals bv Java.
 
-###Switch statement
+```PowerShell
+DemoIf.ps1
+$a = 5
+If($a -eq 5)
+{
+‘$a equals 5’
+}
+```
+
+###Vergelijkende Operatoren
+
+Hieronder een tabel met de operatoren voor vergelijking die gebruikt worden in allerhande situaties.
+
+![Alt text](http://i.imgur.com/axzLPSn.png)
+
+###Working with functions
+
+Er kunnen ook zelf functies geschreven worden in PowerShell. Deze kunnen dan gebruikt worden als gewone cmdlet. 
+
+```PowerShell
+Get-OperatingSystemVersion.ps1
+Function Get-OperatingSystemVersion
+{
+(Get-WmiObject -Class Win32_OperatingSystem).Version
+} #end Get-OperatingSystemVersion
+"This OS is version $(Get-OperatingSystemVersion)"
+```
+Zoals blijkt uit het voorgaande voorbeeld, zijn de accolades geopend, gevolgd door de code. Om  een exemplaar van de Win32_OperatingSystem WMI-klasse op te halen  gebruikt de code de cmdlet Get-WmiObject. Omdat deze WMI-klasse alleen een enkel exemplaar retourneert, zijn de eigenschappen van de klasse direct toegankelijk. De versie is de eigenschap in kwestie, en dus tussen haakjes kracht de evaluatie van de code binnen. Het geretourneerde beheer-object wordt gebruikt voor het uitzenden van de versie-waarde. De accolades zijn gebruikt om de functie te omsluiten. De versie van het besturingssysteem wordt teruggestuurd naar de code die de functie aanroept. In dit voorbeeld wordt een tekenreeks die schrijft "This OS is version" gebruikt. De versie van het besturingssysteem wordt teruggestuurd naar de plaats van waar de functie werd opgeroepen.
+
+In onderstaand voorbeeld wordt er gebruik gemaakt van meerder parameters. Deze kunnen eenvoudig gedefinieerd worden binnen de functie door deze binnen Param() te zetten.
+
+```PowerShell
+Function Function-Name
+{
+Param(
+[int]$Parameter1,
+[String]$Parameter2 = "DefaultValue",
+$Parameter3
+)
+#Function code goes here
+} #end Function-Name
+```
 
 
 ###Voorbeelden
@@ -1034,7 +1113,6 @@ Enable-PSRemoting -Force
 
 
 ```
-
 
 
 <div id='12'/>
