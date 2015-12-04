@@ -11,7 +11,7 @@
 | <s>Remoting</s> |    Jarno  |     OK      | Powershell 3 Advanced Administration Handbook |  
 | Variables  |  Jarno   |           | learn powershell 3 in a month of lunches (Jonas) ||
 | <s>PowerShell ISE</s>  |   Jens   |      OK     |  ||
-| Scripting  |  Jens    |           |  ||
+| <s>Scripting</s>  |  Jens    |   OK        |  ||
 | Handling errors  |   Robin   |           | Windows PowerShell 3.0 First Steps (Jens) ||
 | Using CIM  |  Karel    |           |  ||
 | Enhancements to tab completion  |  Karel    |           |  ||
