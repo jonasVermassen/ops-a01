@@ -309,13 +309,16 @@ PS C:\> Get-Process | Stop-Process
 Bekijk de volgende 3 voorbeelden en probeer te bepalen wat deze commando's zullen doen, als je een commando niet kent, gebruik dan Get-Help om er informatie over te vinden. 
 
 
-1.```PowerShell
+1. 
+```PowerShell
 PS C:\> Get-Process -name Notepad | Stop-Process
 ```
-2.```PowerShell
+2.
+```PowerShell
 PS C:\> Get-Process Note* | Stop-Process
 ```
-3.```PowerShell
+3.
+```PowerShell
 PS C:\> Get-Service Browser | Restart-Service
 ```
 
