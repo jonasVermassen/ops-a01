@@ -424,7 +424,52 @@ What if: Performing the operation "Stop-Service" on target "Smart Card (SCardSvr
 <div id='5'/>
 ##Objects: data by another name
 
-INSERT CONTENT
+Misschien heb je al van objecten gehoord, ze worden namelijk niet alleen in powershell gebruikt, maar ook in verschillende programmeertalen. Een object is een representatie van iets. Het bestaat uit verschillende delen, en het kan verschillende dingen. Dit is allemaal erg abstract, daarom een voorbeeld.
+
+Als je volgend cmdlet runt, krijgt je de bijhorende output.
+
+```PowerShell
+PS C:\ Get-Service
+
+Status   Name               DisplayName                           
+------   ----               -----------                           
+Stopped  AJRouter           AllJoyn Router Service                
+Stopped  ALG                Application Layer Gateway Service     
+Stopped  AppIDSvc           Application Identity
+...		 ...	            ...
+    
+```
+
+Een process is een object. Het heeft verschillende properties en methoden.
+Hier zie je een aantal properties van bepaalde Services (Status, Name, DisplayName), er zijn er echter heel wat meer, die niet weergegeven worden. Basismethoden van processen zijn bevoorbeeld start en stop. 
+
+In het volgende voorbeeld maken we een variabale aan en stoppen we er een proces in, genaamd XboxNetApiSvc. 
+
+```PowerShell
+PS C:\> $MyVar = Get-Service -Name XboxNetApiSvc
+```
+
+Vervolgens willen we weten wat de naam is van dit object. De naam wordt als volgt terug gegeven. Het is mogelijk om andere properties terug te geven met dezelfde methode.
+
+```PowerShell
+PS C:\> $var.Name
+XboxNetApiSvc
+```
+
+Ook kan je methoden van het object oproepen. Je kan starten, stoppen, het type opvragen, en meer. Dit gebeurd als volgt. 
+
+```PowerShell
+PS C:\> $var.GetType()
+
+IsPublic     IsSerial     Name                 BaseType                                                                  
+--------     --------     ----                 --------                                                                  
+True         False        ServiceController    System.ComponentModel.Component
+```
+
+Objecten is het gene wat windows powershell onderscheidt met bevoorbeeld een traditionele linux shell als bash. Het biedt veel mogelijkheden, en is op zich niet moeilijk te beheersen, het vraagt enkel wat tijd om het abstracte concept te begrijpen. 
+
+
+
 
 <div id='6'/>
 ##Formatting output
