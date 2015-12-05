@@ -273,6 +273,154 @@ De Varaible provider biedt toegang tot de variabelen die zijn gedefinieerd in Wi
 <div id='4'/>
 ##The pipeline
 
+De pipeline is een erg handige tool binnen powershell, het laat je toe de output van het initiële commando te bewerken. Hieronder zie je een voorbeeld van het cmdlet Get-Process. Stel nu dat je alle processen wilt, maar neerwaarts geordend op naam. Dan kan je dmv de output van het commando sorteren
+
+```PowerShell
+PS C:\> Get-Process 
+```
+
+```PowerShell
+PS C:\> Get-Process | Sort Name –Descending 
+```
+
+
+###Bestanden exporten
+
+Een handig gebruik van de pipeline is het exporteren van je output. Zo kan je het exporteren naar een CSV bestand, hieronder exporteren we alle processen naar een CSV bestand dat procs.csv heet. 
+
+```PowerShell
+PS C:\> Get-Process | Export-CSV procs.csv  
+```
+
+Exporteren naar en XML bestand is ook mogelijk, dat zie je hieronder. 
+
+```PowerShell
+PS C:\> Get-Process | Export-Clixml c:\scripts\test.xml
+```
+
+###Services beheren
+
+De pipeline laat je toe services te starten, stoppen,.. Een mooi voorbeeld is het eerstvolgende. Eerst wil je een lijst van alle processen, vervolgens zal je op die lijst het Stop-Process cmdlet uitvoeren. Wat als resultaat heeft dat alle processen stopgezet kunnen worden. Voer dit commando dus zeker nooit uit.
+
+```PowerShell
+PS C:\> Get-Process | Stop-Process
+```
+
+Bekijk de volgende 3 voorbeelden en probeer te bepalen wat deze commando's zullen doen, als je een commando niet kent, gebruik dan Get-Help om er informatie over te vinden. 
+
+
+1.```PowerShell
+PS C:\> Get-Process -name Notepad | Stop-Process
+```
+2.```PowerShell
+PS C:\> Get-Process Note* | Stop-Process
+```
+3.```PowerShell
+PS C:\> Get-Service Browser | Restart-Service
+```
+
+### Pipeline input ByValue & ByPropertyName
+
+Wat gebeurt bij een pipeline is dat het eerste commando een output doorgeeft aan het tweede commando. 
+
+```PowerShell
+PS C:\> Get-Content .\Documents\Computers.txt | Get-Service  
+```
+
+Hier geeft het eerste cmdlet (Get-Content) de inhoud van MyTextFile.txt door aan het tweede cmdlet (Get-Service). Maar wat als het eerste commando iets doorgeeft (een parameter) aan het tweede, waarmee de tweede niets aan kan vangen? Dan krijg je een error. 
+
+Maar hoe kom je te weten welk type parameters een cmdlet kan accepteren via de pipeline? hier komt het cmdlet get-member goed van pas. Hier zie je een voorbeeld waarbij get-member gebruikt wordt. 
+
+```PowerShell
+PS C:\> Get-Content .\Documents\ Computers.txt | Get-Member
+
+
+   TypeName: System.String
+
+Name             MemberType            Definition                                                                                    
+----             ----------            ----------                                                                                    
+Clone            Method                System.Object Clone(),...                                     
+CompareTo        Method                int CompareTo(),...
+...				 ...				   ...
+```
+
+Je ziet aan de output dat het Get-Content commando een String teruggeeft (TypeName:System.String). Nu je dit weet ga je dieper kijken naar het tweede cmdlet, om te zoeken of het een parameter aanvaard die van het type String is. We gebruiken eerst de optie ByValue, waarmee het type String bedoelt wordt. Hiervoor gebruik je de full optie van het Get-Help cmdlet. Hier een voorbeeld
+
+```PowerShell
+PS C:\> Help Get-Service -full
+
+...
+
+-Name <String>
+        Specifies the services to be retrieved. Wildcards are permitted. 
+        By default, Get-Service gets all of the services on the computer.   
+              
+        Required?                    false
+        Position?                    1
+        Default value                All services
+        Accept pipeline input?       true (ByValue, ByPropertyName)
+        Accept wildcard characters?  true
+        
+...
+
+```
+
+Hier vind je, tussen de volledige output, bovenstaande output. Merk op dat het commando dus pipeline input aanvaard ByValue. Er is echter een probleem. We hebben te maken met de 'Name' Parameter, die 'Specifies the services to be retrieved'. We gaan dus geen computerNames terugkrijgen, maar service names. Dit is een veel voorkomende fout bij ByValue. ByValue is echter nog altijd erg handig, maar in gevallen als deze gaan we met ByPropertyName werken. 
+
+Een nieuw voorbeeld, met ByPropertyName.
+
+```PowerShell
+PS C:\> Get-Service -Name s* | Stop-Process
+```
+
+Eerst kijken we naar de output van het eerste cmdlet, door het gebruik van Get-Member.
+
+```PowerShell
+PS C:\> Get-Service -Name s* | Get-Member
+
+
+TypeName: System.ServiceProcess.ServiceController
+
+Name                   MemberType    Definition                                                                                   
+----                   ----------    ----------                                                                                   
+Name                   AliasProperty Name = ServiceName                                                                           
+RequiredServices       AliasProperty RequiredServices = ServicesDependedOn                                                        
+...		               ...	         ...
+
+```
+
+We kijken echter niet langer naar de TypeName, maar of het cmdlet Get-Service een property heeft dat overeenkomt met een parameter van het cmdlet Stop-Process. We zien dat Get-Service een property Name heeft, en hieronder zie je dat Stop-Process een parameter met naam Name aanvaard.
+
+```PowerShell
+PS C:\> Get-Help Stop-Process -full
+
+...
+
+-Name <String[]>
+        Specifies the process names of the processes to be stopped. You can type multiple process names (separated by commas) or use 
+        wildcard characters.
+        
+        Required?                    true
+        Position?                    named
+        Default value                none
+        Accept pipeline input?       true (ByPropertyName)
+        Accept wildcard characters?  false
+        
+...
+```
+
+Je ziet ook dat het ByPropertyName mag zijn. Wat betekend dat dit zal werken. Test het commando echter niet uit, want je zal alle processen beginnend met een s stoppen, wat je natuurlijk niet wil doen. Je kan echter wel de whatif optie gebruiken. 
+
+
+```PowerShell
+PS C:\> Get-Service -Name s* | Stop-Service -WhatIf
+
+What if: Performing the operation "Stop-Service" on target "Security Accounts Manager (SamSs)".
+What if: Performing the operation "Stop-Service" on target "Smart Card (SCardSvr)".
+...
+...
+```
+
 INSERT CONTENT
 
 <div id='5'/>
