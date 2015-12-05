@@ -420,7 +420,6 @@ What if: Performing the operation "Stop-Service" on target "Smart Card (SCardSvr
 ...
 ```
 
-INSERT CONTENT
 
 <div id='5'/>
 ##Objects: data by another name
