@@ -4,8 +4,8 @@
 | Using the help system |  Jonas   |      OK     | learn powershell 3 in a month of lunches (Jonas) | |
 | Running commands  |  Robin    |           |  ||
 | <s>Working with providers</s> |   Jens   |     OK      |  ||
-| The pipeline   |  Jonas    |           |  ||
-| Objects: data by another name  |   Jonas   |           |  ||
+| The pipeline   |  Jonas    |      OK    | learn powershell 3 in a month of lunches (Jonas) ||
+| Objects: data by another name  |   Jonas   |      OK    | learn powershell 3 in a month of lunches (Jonas) ||
 | <s>Formatting </s> |    Jens  |    OK       |  ||
 | <s>Filtering & Working with files</s>  |   Jens   |      OK     |  ||
 | <s>Remoting</s> |    Jarno  |     OK      | Powershell 3 Advanced Administration Handbook |  
