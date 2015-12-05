@@ -44,9 +44,9 @@
 
 ### Karel
 
-* ...
+* Hoofdstuk 5 Boek Samenvatten
 
-[Afbeelding individueel rapport tijdregistratie]
+![Afbeelding individueel rapport tijdregistratie](http://i.imgur.com/kpAHEzD.jpg)
 
 ### Robin
 
@@ -63,6 +63,7 @@
 ### Jonas
 Windows Powershell boek: Objects: data by another name samenvatten en in algemeen document plaatsen
 ### Karel
+Samenvatten Powershell boek
 ### Robin
 Samenvatting windows server boeken afwerken
 
