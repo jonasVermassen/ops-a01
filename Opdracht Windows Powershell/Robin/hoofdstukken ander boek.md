@@ -137,23 +137,48 @@ Finally
 
 ##Server beheren
 
-###Server Manager cmdlets
-
-* Roles of features toevoegen
-  PowerShell laat ons toe om features te installeren op onze Windows Server 2012.
-  Om deze features te zoeken gebruikt men het GET-WindowsFeature cmdlet.
-  De checkboxes met een X duiden aan welke features reeds geïnstalleerd zijn.
-  Men kan features installeren of verwijderen met de cmdlets INSTALL-WindowFeature en UNINSTALL-WindowsFeature.
-
-  Om te werken met deze cmdlets moet men wel eerst de Server Manager Module laden in PowerShell.
-  Dat doet men via het commando:
-  ```Powershell
-  Import-Module Servermanager
-  ```
+###Server Manager cmdlets 
+PowerShell laat ons toe om features te installeren op onze Windows Server 2012.
+Om te werken met de server manager cmdlets moet men eerst de Server Manager Module laden in PowerShell.
+Dat doet men via het commando:
+```Powershell
+Import-Module Servermanager
+```
+Om deze features te zoeken gebruikt men het "GET-WindowsFeature" cmdlet.
+De checkboxes met een X duiden aan welke features reeds geïnstalleerd zijn.
+Men kan features installeren of verwijderen met de cmdlets "INSTALL-WindowFeature" en "UNINSTALL-WindowsFeature".
+Men kan ook een pipe line gebruiken om meerdere features te installeren.
+Het volgende voorbeeld installeert alle features die beginnen met "web-".
+```Powershell
+Get-WindowsFeature web-* |Install-WindowsFeature
+```
+Je kan het ook met een komma doen, zoals in het volgende voorbeeld:
+```Powershell
+Install-WindowsFeature Telnet-Server,Hyper-V
+```
 
 ###Netwerkbeheer met PowerShell
-
-
+Om alle interfaces op onze server te bekijken gebruiken we het cmdlet "GET-NetIPInterface". (Men kan de parameter -InterfaceAlias gebruiken om een specifiek interface te gebruiken)
+Als we dan een nieuwe interface willen toevoegen, moeten we het cmdlet "NEW-NetIPInterface" gebruiken met de nodige parameters,
+zoals de interface alias, het adres, soort van ip-adres en de prefix van het subnet mask.
+Hieronder een voorbeeld waarbij ik een interface genaamd Ethernet 2 aanmaak.
+```Powershell
+New-NetIPInterface -InterfaceAlias "Ethernet 2" -IPAddress 192.168.10.20 `
+-AddressFamily IPv4 -PrefixLength 24
+```
+Men kan ook bindings inschakelen en uitschakelen met Powershell.
+Om de bindings van een interface te bekijken gebruikt men:
+```Powershell
+GET-NetwerkAdapterBinding -InterfaceAlias "Ethernet 2"
+```
+Om bijvoorbeeld de binding ms_lltdio uit te schakelen gebruikt men het commando:
+```Powershell
+Disable-NetAdapterBinding -Name "Ethernet 2" -ComponentID ms_lltdio
+```
+En natuurlijk kan men ook de netwerkadapter zelf uitschakelen door middel van het commando:
+```Powershell
+Disable-NetAdapter -Name "Ethernet 2"
+```
 
 ###Group Policy beheer met PowerShell
 
