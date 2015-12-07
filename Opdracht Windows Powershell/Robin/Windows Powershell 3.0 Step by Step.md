@@ -98,4 +98,54 @@ $wshShell = New-Object -comobject "wscript.shell"
 
 ##Chapter 20: Managing Exchange Server
 
+###Exchange 2010 cmdlets
+De makkelijkste manier om de Exchange cmdlets te bekijken is de "GET-ExCommand" functie.
+Als men deze cmdlet probeert, ziet men dat men meer dan 600 functies heeft voor een Exchange server te beheren.
+Het enige dat je niet kan doen is gebruikers en groepen aanmaken.
 
+Natuurlijk kan men bij Get-ExCommand weer pipelines gebruiken om specifieker te zoeken:
+```Powershell
+Get-ExCommand | Where-Object { $_.name -match 'statistics'} |
+Foreach-Object { get-help $_.name | select-object -expandProperty syntax}
+```
+Dit commando geeft een lijst van commands dat informatie geven in verband met statistics.
+Dit is de voorbeeldoutput van het commando:
+```Powershell
+Get-ActiveSyncDeviceStatistics -Identity <ActiveSyncDeviceIdParameter> [-DomainController
+<Fqdn>] [-GetMailboxLog
+<SwitchParameter>] [-NotificationEmailAddresses <MultiValuedProperty>] [-ShowRecoveryPassword
+<SwitchParameter>]
+[<CommonParameters>]
+Get-ActiveSyncDeviceStatistics -Mailbox <MailboxIdParameter> [-DomainController <Fqdn>]
+[-GetMailboxLog
+<SwitchParameter>] [-NotificationEmailAddresses <MultiValuedProperty>] [-ShowRecoveryPassword
+<SwitchParameter>]
+[<CommonParameters>]
+```
+
+
+###remote Exchange servers
+
+
+
+###Eigenschappen van de ontvangers configureren
+
+
+
+###Opslag beheren
+
+
+
+###Logging beheren
+
+
+
+###Auditing beheren
+
+
+
+###Audit XML bestand
+
+
+
+###Gebruikers aanmaken
