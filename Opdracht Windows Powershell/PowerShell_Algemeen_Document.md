@@ -1,29 +1,29 @@
 #Windows Powershell
 
 ##Inhoudstafel
-1. [Using the help system](#1)
-2. [Running commands](#2)
-3. [Working with providers](#3)
-4. [The pipeline](#4)
-5. [Objects: data by another name](#5)
+1. [Help-systeem](#1)
+2. [Gebruiken van commands](#2)
+3. [Werken met providers](#3)
+4. [De pipeline](#4)
+5. [Objects](#5)
 6. [Formatting output](#6)
-7. [Filtering + Working with files](#7)
+7. [Filteren + Werken met files](#7)
 8. [Remoting](#8)
-9. [Variables](#9)
+9. [Variabelen](#9)
 10. [PowerShell ISE](#10)
 11. [Scripting](#11)
-12. [Handling errors](#12)
-13. [Using CIM](#13)
-14. [Enhancements to tab completion](#14)
-15. [Scheduling jobs](#15)
+12. [Errors afhandelen](#12)
+13. [Gebruik maken van de CIM](#13)
+14. [Verbetering van Tab Completion](#14)
+15. [Plannen van jobs](#15)
 16. [Server Roles en Features Configureren](#16)
-17. [Managing Active Directory with PowerShell](#17)
-18. [Managing the Server with PowerShell](#18)
-19. [Working with functions + advanced functions](#19)
-20. [Managing Exchange server](#20)
+17. [Beheer Active Directory met PowerShell](#17)
+18. [Beheer van een server met PowerShell](#18)
+
+20. [Beheer van Exchange server](#20)
 
 <div id='1'/>
-##Using the help system
+##Help-systeem
 ### Updateable Get-Help
 
 Het microsoft powershell help systeem laat je toe commando's, en informatie over die commando's te ontdekken. Dit doe je door in de console het cmdlet Get-Help te gebruiken. 
@@ -196,13 +196,13 @@ Het is aan te raden zelf te oefenen met het Get-Help cmdlet, om het zo goed onde
 
 
 <div id='2'/>
-##Running commands
+##Gebruiken van commands
 
 INSERT CONTENT
 
 
 <div id='3'/>
-##Working with providers
+##Werken met providers
 
 Windows PowerShell providers laten je toe om dezelfde cmdlets, zoals Get-Item of Set-Item te gebruiken met verschillende types van data. Daardoor kan je meteen weten hoe je met verschillende data werkt. Bijvoorbeeld: je kan de Get-Item cmdlet gebruiken om informatie over een bestand te krijgen. U kunt echter de dezelfde cmdlet gebruiken om informatie over een alias, een certificaat, een functie, een omgevingsvariabele, een registersleutel of een variabele op te halen.
 
@@ -271,7 +271,7 @@ De Varaible provider biedt toegang tot de variabelen die zijn gedefinieerd in Wi
 
 
 <div id='4'/>
-##The pipeline
+##De pipeline
 
 De pipeline is een erg handige tool binnen powershell, het laat je toe de output van het initiële commando te bewerken. Hieronder zie je een voorbeeld van het cmdlet Get-Process. Stel nu dat je alle processen wilt, maar neerwaarts geordend op naam. Dan kan je dmv de output van het commando sorteren
 
@@ -422,7 +422,7 @@ What if: Performing the operation "Stop-Service" on target "Smart Card (SCardSvr
 
 
 <div id='5'/>
-##Objects: data by another name
+##Objects
 
 Misschien heb je al van objecten gehoord, ze worden namelijk niet alleen in powershell gebruikt, maar ook in verschillende programmeertalen. Een object is een representatie van iets. Het bestaat uit verschillende delen, en het kan verschillende dingen. Dit is allemaal erg abstract, daarom een voorbeeld.
 
@@ -492,7 +492,7 @@ Wanneer u met Windows PowerShell werkt, is het gebruikelijk om de output naar de
 
 
 <div id='7'/>
-##Filtering + Working with files
+##Filteren + Werken met files
 
 ###Filtering & Sorting
 Een van de taken waar Windows PowerShell in uitblinkt is inzicht bieden in gegevens. Dit houdt meestal verzenden van gegevens via de pipeline in. De Windows PowerShell-pipeline is een fundamenteel concept, en het is onlosmakelijk verbonden met het sorteren van gegevens, gegevens groeperen en filteren op specifieke informatie uit collecties. 
@@ -1054,7 +1054,7 @@ Je kan de ```Unregister-PSSessionConfiguration``` cmdlet gebruiken om een vorige
 
 
 <div id='9'/>
-##Variables
+##Variabelen
 
 INSERT CONTENT
 
@@ -1307,12 +1307,12 @@ Enable-PSRemoting -Force
 
 
 <div id='12'/>
-##Handling errors
+##Errors afhandelen
 
 INSERT CONTENT
 
 <div id='13'/>
-##Using CIM
+##Gebruik maken van de CIM
 
 ### CIM Gebruiken
 
@@ -1491,12 +1491,12 @@ PS C:\> Get-Command *WMI* -Type Cmdlet
 
 
 <div id='14'/>
-##Enhancements to tab completion
+##Verbetering van Tab Completion
 
 INSERT CONTENT
 
 <div id='15'/>
-##Scheduling jobs
+##Plannen van jobs
 
 INSERT CONTENT
 
@@ -1866,22 +1866,17 @@ PS > Get-BpaResult –ModelId Microsoft/Windows/FileServices
 ![Alt text](http://i.imgur.com/S69MynU.png)
 
 <div id='17'/>
-##Managing Active Directory with PowerShell
+##Beheer Active Directory met PowerShell
 
 INSERT CONTENT
 
 <div id='18'/>
-##Managing the Server with PowerShell
-
-INSERT CONTENT
-
-<div id='19'/>
-##Working with functions + advanced functions
+##Beheer van een server met PowerShell
 
 INSERT CONTENT
 
 <div id='20'/>
-##Managing Exchange server
+##Beheer van Exchange server
 
 INSERT CONTENT
 
