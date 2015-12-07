@@ -180,20 +180,67 @@ En natuurlijk kan men ook de netwerkadapter zelf uitschakelen door middel van he
 Disable-NetAdapter -Name "Ethernet 2"
 ```
 
-###Group Policy beheer met PowerShell
 
+###Group Policy beheer met PowerShell
+Voor men Group Policy cmdlets kan gebruiken moet men de Group Policy Management Console installeren, dit doen we zo:
+```Powershell
+Import-Module ServerManager
+```
+```Powershell
+Add-WindowsFeature GPMC
+```
+Om al de Commandos binnen deze module te bekijken, gebruiken we:
+```Powershell
+Get-Command -Module GroupPolicy
+```
+Om Group Policy Objects (GPO) te bekijken gebruiken we het cmdlet "GET-GPO" waarbij men natuurlijk ook parameters kan gebruiken.
+Men kan ook GPO's maken met het cmdlet "NEW-GPO", hieronder een beter voorbeeld: 
+```Powershell
+New-GPO -Name TestGPO -Comment "This is a GPO for testing purposes"
+```
 
 
 ###IIS beheer met PowerShell
-
+Hier ook, om te kunnen werken met de Web Administration cmdlets, moet men de module importeren:
+```Powershell
+Import-Module WebAdministration
+```
+Om een website aan te maken gebruiken we het cmdlet "NEW-Website" met de nodige parameters:
+```Powershell
+New-Website -Name testsite -Port 80 -HostHeader testsite -PhysicalPath
+c:\temp
+```
+Web Binding instellen:
+```Powershell
+Set-WebBinding -Name 'Default Web Site' -BindingInformation "*:80:"
+-PropertyName Port -Value 1234
+```
+Men kan ook een FTP site maken:
+```Powershell
+New-WebFtpSite -Name testFtpSite -Port 21 -PhysicalPath c:\test
+-HostHeader mySite -IPAddress 127.0.0.1
+```
+Of een virtuele directory:
+```Powershell
+New-WebVirtualDirectory -Site "Default Web Site" -Name TestVDir
+-PhysicalPath c:\inetpub\virtualdirectory
+```
+PowerShell kan ook een back-up nemen van de webconfiguratie of die weer herstellen.
+Om een back-up te nemen gebruik je "Backup-WebConfiguration" met -Name als parameter.
+Als je een back-up wil herstellen gebruik je "Restore-WebConfiguration" met de naam als parameter.
 
 
 ###DNS server beheer met PowerShell
+Om een lijst te krijgen van de zones op een DNS server gebruikt men het "GET-DnsServerZone" cmdlet.
+Als je de records van een bepaalde zone wilt bekijken gebruikt men het "Get-DnsServerResourceRecord" cmdlet, met de nodige parameter.
+```Powershell
+Get-DnsServerResourceRecord -ZoneName Test.com
+```
+Om een resource record toe te voegen gebruikt men het gepaste commando, afgaand van het record type, 
+voor een record van type a is het bijvoorbeeld:
+```Powershell
+Add-DnsServerResourceRecordA -IPv4Address 192.168.2.1 -Name gateway
+-ZoneName Test.com
+```
 
 
-
-###Hyper-V met PoerShell
-
-
-
-###AppLocker beheer met PowerShell
