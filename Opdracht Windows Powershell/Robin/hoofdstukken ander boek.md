@@ -133,3 +133,42 @@ Finally
     "end of script"
   }
 ```
+
+
+##Server beheren
+
+###Server Manager cmdlets
+
+* Roles of features toevoegen
+  PowerShell laat ons toe om features te installeren op onze Windows Server 2012.
+  Om deze features te zoeken gebruikt men het GET-WindowsFeature cmdlet.
+  De checkboxes met een X duiden aan welke features reeds geïnstalleerd zijn.
+  Men kan features installeren of verwijderen met de cmdlets INSTALL-WindowFeature en UNINSTALL-WindowsFeature.
+
+  Om te werken met deze cmdlets moet men wel eerst de Server Manager Module laden in PowerShell.
+  Dat doet men via het commando:
+  ```Powershell
+  Import-Module Servermanager
+  ```
+
+###Netwerkbeheer met PowerShell
+
+
+
+###Group Policy beheer met PowerShell
+
+
+
+###IIS beheer met PowerShell
+
+
+
+###DNS server beheer met PowerShell
+
+
+
+###Hyper-V met PoerShell
+
+
+
+###AppLocker beheer met PowerShell
