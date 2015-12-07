@@ -2,7 +2,7 @@
 | Hoofdstuk Boek  | Verantwoordelijke | Insert in algemeen document? | Boek | Opmerkingen |
 | :---     | :---  | :---      | :---| :---|
 | Using the help system |  Jonas   |      OK     | learn powershell 3 in a month of lunches (Jonas) | |
-| Running commands  |  Robin    |           |  ||
+| Running commands  |  Robin    |     OK      |  ||
 | <s>Working with providers</s> |   Jens   |     OK      |  ||
 | The pipeline   |  Jonas    |      OK    | learn powershell 3 in a month of lunches (Jonas) ||
 | Objects: data by another name  |   Jonas   |      OK    | learn powershell 3 in a month of lunches (Jonas) ||
@@ -12,11 +12,11 @@
 | Variables  |  Jarno   |           | learn powershell 3 in a month of lunches (Jonas) ||
 | <s>PowerShell ISE</s>  |   Jens   |      OK     |  ||
 | <s>Scripting</s>  |  Jens    |   OK        |  ||
-| Handling errors  |   Robin   |           | Windows PowerShell 3.0 First Steps (Jens) ||
+| Handling errors  |   Robin   |      OK     | Windows PowerShell 3.0 First Steps (Jens) ||
 | Using CIM  |  Karel    |     OK      | Microsoft Windows PowerShell 3.0 First Look ||
 | Enhancements to tab completion  |  Karel    |           | Microsoft Windows PowerShell 3.0 First Look ||
 | Scheduling jobs  |    Karel  |           | Microsoft Windows PowerShell 3.0 First Look ||
 | <s>Server Roles en Features Configureren</s> | Jarno  |     OK      | Powershell 3 Advanced Administration Handbook              ||
 | Managing Active Directory with PowerShell  |   Jarno   |           || BELANGRIJK!! |
-| Managing the Server with PowerShell  |   Robin   |           |  ||
+| Managing the Server with PowerShell  |   Robin   |      OK     |  ||
 | Managing Exchange server   |  Robin    |           |  ||
