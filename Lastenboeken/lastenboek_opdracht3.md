@@ -1,28 +1,36 @@
-## Lastenboek Taak 1: (titel)
+# Lastenboek Taak 1: (titel)
 
-* Verantwoordelijke uitvoering: `studentx`
-* Verantwoordelijke testen: `studenty`
+* Verantwoordelijke uitvoering: `Jens`
+* Verantwoordelijke testen: `Jarno`
 
-### Deliverables
+## Deliverables
 
-* ...
+* Deeltaak 1: Packet tracers met labo (<a href="https://github.com/HoGentTIN/ops-a01/tree/master/Opdracht%20Cisco">link</a>)
+* Deeltaak 2: Demo fysieke opstelling
 
-### Deeltaken
+## Deeltaken
 
-* PKT
-
-### Kanban-bord
-
-(schermafbeeldingen van de toestand van het Kanban-bord invoegen elke week voor de samenkomst met de begeleider, tot oplevering van de opdracht)
+### Deeltaak 1 
 
 ### Tijdbesteding
 
 | Student  | Geschat | Gerealiseerd |
 | :---     |    ---: |         ---: |
-| Jens |         |              |
+| Jens |    30min     |        45min      |
 | Jarno |         |              |
-| Jonas |         |              |
-| Karel |         |              |
+| Jonas |    45min     |      40min        |
+| Karel |    2u     |     2u30min      |
 | Robin |         |              |
 
-(na oplevering van de taak een schermafbeelding toevoegen van rapport tijdbesteding voor deze taak)
+### Deeltaak 2
+
+### Tijdbesteding
+
+| Student  | Geschat | Gerealiseerd |
+| :---     |    ---: |         ---: |
+| Jens |    2u     |       2u       |
+| Jarno |         |              |
+| Jonas |    2u     |       2u       |
+| Karel |    2u     |       2u       |
+| Robin |         |              |
+
