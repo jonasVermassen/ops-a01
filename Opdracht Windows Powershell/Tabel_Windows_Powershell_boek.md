@@ -8,7 +8,7 @@
 | Objects: data by another name  |   Jonas   |      OK    | learn powershell 3 in a month of lunches (Jonas) ||
 | <s>Formatting </s> |    Jens  |    OK       |  ||
 | <s>Filtering & Working with files</s>  |   Jens   |      OK     |  ||
-| <s>Remoting</s> |    Jarno  |     OK      | Powershell 3 Advanced Administration Handbook |  
+| <s>Remoting</s> |    Jarno  |     OK      | Powershell 3 Advanced Administration Handbook (Jarno)  |  
 | Variables  |  Jarno   |           | learn powershell 3 in a month of lunches (Jonas) ||
 | <s>PowerShell ISE</s>  |   Jens   |      OK     |  ||
 | <s>Scripting</s>  |  Jens    |   OK        |  ||
@@ -16,7 +16,7 @@
 | Using CIM  |  Karel    |     OK      | Microsoft Windows PowerShell 3.0 First Look ||
 | Enhancements to tab completion  |  Karel    |           | Microsoft Windows PowerShell 3.0 First Look ||
 | Scheduling jobs  |    Karel  |           | Microsoft Windows PowerShell 3.0 First Look ||
-| <s>Server Roles en Features Configureren</s> | Jarno  |     OK      | Powershell 3 Advanced Administration Handbook              ||
-| Managing Active Directory with PowerShell  |   Jarno   |           || BELANGRIJK!! |
+| <s>Server Roles en Features Configureren</s> | Jarno  |     OK      | Powershell 3 Advanced Administration Handbook (Jarno)   ||
+| Managing Active Directory with PowerShell  |   Jarno   |           | Powershell 3 Advanced Administration Handbook (Jarno) ||
 | Managing the Server with PowerShell  |   Robin   |      OK     |  ||
 | Managing Exchange server   |  Robin    |    OK       |  ||
