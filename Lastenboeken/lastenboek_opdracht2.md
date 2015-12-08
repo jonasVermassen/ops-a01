@@ -1,28 +1,45 @@
-## Lastenboek Taak 1: (titel)
+# Lastenboek opdracht 2: Linux
 
-* Verantwoordelijke uitvoering: `studentx`
-* Verantwoordelijke testen: `studenty`
+* Verantwoordelijke uitvoering: `Jonas Vermassen`
+* Verantwoordelijke testen: `Karel Willems`
 
-### Deliverables
+## Deliverables
 
-* ...
+* Een demo geven.
+* Github/Bitbucket repository met alle code
+* Verslag 
+* Raw data
 
-### Deeltaken
 
-* LINUX
+## Deeltaken
 
-### Kanban-bord
+* Deeltaak 1: Eenvoudige LAMP stack
+* Deeltaak 2: Multi-tier webserver
 
-(schermafbeeldingen van de toestand van het Kanban-bord invoegen elke week voor de samenkomst met de begeleider, tot oplevering van de opdracht)
 
-### Tijdbesteding
+### Deeltaak 1: 
+
+#### Tijdbesteding
+
+| Student  | Geschat | Gerealiseerd | 
+| :---     |    ---: |         ---: |
+| Jens |   6u00min |       4u00min       |
+| Jonas |    6u00min    |      13u20min       |
+| Karel |    5u00min    |      6u00min      |
+| Jarno |         |              |
+| Robin |         |              |
+
+
+
+
+#### Deeltaak 2: 
+
+#### Tijdbesteding
 
 | Student  | Geschat | Gerealiseerd |
 | :---     |    ---: |         ---: |
-| Jens |         |              |
-| Jarno |         |              |
-| Jonas |         |              |
-| Karel |         |              |
-| Robin |         |              |
+| Jens |    10u     |              |
+| Jonas |    9u    |            |
+| Karel |    10u   |              |
 
 (na oplevering van de taak een schermafbeelding toevoegen van rapport tijdbesteding voor deze taak)
