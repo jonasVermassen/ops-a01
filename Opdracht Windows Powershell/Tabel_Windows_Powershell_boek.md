@@ -19,4 +19,4 @@
 | <s>Server Roles en Features Configureren</s> | Jarno  |     OK      | Powershell 3 Advanced Administration Handbook              ||
 | Managing Active Directory with PowerShell  |   Jarno   |           || BELANGRIJK!! |
 | Managing the Server with PowerShell  |   Robin   |      OK     |  ||
-| Managing Exchange server   |  Robin    |           |  ||
+| Managing Exchange server   |  Robin    |    OK       |  ||
