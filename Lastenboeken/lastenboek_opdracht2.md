@@ -32,7 +32,7 @@
 
 
 
-#### Deeltaak 2: 
+### Deeltaak 2: 
 
 #### Tijdbesteding
 
