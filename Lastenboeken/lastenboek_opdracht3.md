@@ -9,7 +9,7 @@
 
 ### Deeltaken
 
-* POWERSHELL
+* PKT
 
 ### Kanban-bord
 
