@@ -9,7 +9,7 @@
 
 ### Deeltaken
 
-* ...
+* LINUX
 
 ### Kanban-bord
 
