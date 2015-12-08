@@ -1,36 +1,57 @@
-# Lastenboek Taak 1: (titel)
+# Lastenboek opdracht 2: Windows
 
-* Verantwoordelijke uitvoering: `Jens`
-* Verantwoordelijke testen: `Jarno`
+* Verantwoordelijke uitvoering: `Jarno Raes`
+* Verantwoordelijke testen: `Robin Van Wesemael`
 
 ## Deliverables
 
-* Deeltaak 1: Packet tracers met labo (<a href="https://github.com/HoGentTIN/ops-a01/tree/master/Opdracht%20Cisco">link</a>)
-* Deeltaak 2: Demo fysieke opstelling
+* Een demo geven van de windows server
+* aantonen dat we de wva tutorial bekeken hebben door te antwoorden op verschillende vragen
+* bijhouden van scripts en andere interessante vergaarde informatie
+
 
 ## Deeltaken
 
-### Deeltaak 1 
+* Deeltaak 1: wva: getting started with powershell 3.0 jump start
+* Deeltaak 2: windows individueel boek lezen
+* Deeltaak 3: windows server 2012 deployment met powershell
 
-### Tijdbesteding
 
-| Student  | Geschat | Gerealiseerd |
+
+### Deeltaak 1: 
+
+#### Tijdbesteding
+
+| Student  | Geschat | Gerealiseerd | 
 | :---     |    ---: |         ---: |
-| Jens |    30min     |        45min      |
+| Jens |  8u  |   7u     |
+| Jonas |   6u30     |      7u      |
+| Karel |        |            |
 | Jarno |         |              |
-| Jonas |    45min     |      40min        |
-| Karel |    2u     |     2u30min      |
 | Robin |         |              |
 
-### Deeltaak 2
 
-### Tijdbesteding
 
-| Student  | Geschat | Gerealiseerd |
+
+### Deeltaak 2: 
+
+#### Tijdbesteding
+
+| Student  | Geschat | Gerealiseerd | 
 | :---     |    ---: |         ---: |
-| Jens |    2u     |       2u       |
+| Jens |  5u  |       7u       |
+| Jonas |    15u    |      15u25       |
+| Karel |        |            |
 | Jarno |         |              |
-| Jonas |    2u     |       2u       |
-| Karel |    2u     |       2u       |
 | Robin |         |              |
 
+### Deeltaak 2: 
+
+#### Tijdbesteding
+
+| Student  | Geschat | Gerealiseerd | 
+| :---     |    ---: |         ---: |
+| Jarno |         |              |
+| Robin |         |              |
+
+(na oplevering van de taak een schermafbeelding toevoegen van rapport tijdbesteding voor deze taak)
