@@ -9,7 +9,7 @@
 | <s>Formatting </s> |    Jens  |    OK       |  ||
 | <s>Filtering & Working with files</s>  |   Jens   |      OK     |  ||
 | <s>Remoting</s> |    Jarno  |     OK      | Powershell 3 Advanced Administration Handbook (Jarno)  |  
-| Variables  |  Jarno   |           | learn powershell 3 in a month of lunches (Jonas) ||
+| <s>Variables</s>  |  Jarno   |     OK      | learn powershell 3 in a month of lunches (Jonas) ||
 | <s>PowerShell ISE</s>  |   Jens   |      OK     |  ||
 | <s>Scripting</s>  |  Jens    |   OK        |  ||
 | Handling errors  |   Robin   |      OK     | Windows PowerShell 3.0 First Steps (Jens) ||
