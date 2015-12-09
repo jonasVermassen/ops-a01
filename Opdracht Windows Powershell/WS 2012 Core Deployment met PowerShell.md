@@ -102,6 +102,12 @@ PS C:\Windows\system32> New-ADUser -SamAccountName "FrankA"
 Surname "Assengraaf" -DisplayName "Frank Assengraaf"
 ```
 
+Security Group toevoegen aan AD en ou
+
+```
+NEW-ADGroup –name “Beheer” –groupscope Global –path “OU=Beheer,DC=Assengraaf,DC=nl”
+```
+
 Handige sites:
 
 http://www.tomsitpro.com/articles/powershell-active-directory-cmdlets,2-801.html
@@ -109,3 +115,5 @@ http://www.tomsitpro.com/articles/powershell-active-directory-cmdlets,2-801.html
 https://technet.microsoft.com/en-us/library/ee617253.aspx
 
 http://blogs.technet.com/b/heyscriptingguy/archive/2012/10/30/powertip-single-line-powershell-command-to-list-all-users-in-an-ou.aspx
+
+https://social.technet.microsoft.com/Forums/scriptcenter/en-US/2ff646e0-1b1a-489a-8562-3f7bd21b7518/powershell-script-add-users-from-an-ou-to-an-ad-security-group?forum=ITCG
