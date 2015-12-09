@@ -45,13 +45,13 @@
 | Jarno |         |              |
 | Robin |         |              |
 
-### Deeltaak 2: 
+### Deeltaak 3: 
 
 #### Tijdbesteding
 
 | Student  | Geschat | Gerealiseerd | 
 | :---     |    ---: |         ---: |
-| Jarno |         |              |
+| Jarno |    10     |       10:30:19       |
 | Robin |         |              |
 
 (na oplevering van de taak een schermafbeelding toevoegen van rapport tijdbesteding voor deze taak)
