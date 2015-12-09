@@ -108,6 +108,10 @@ Security Group toevoegen aan AD en ou
 NEW-ADGroup –name “Beheer” –groupscope Global –path “OU=Beheer,DC=Assengraaf,DC=nl”
 ```
 
+Maak user rechtsstreeks in een bestaande OU
+
+![ALt text](http://i.imgur.com/nBDk8iy.png)
+
 Handige sites:
 
 http://www.tomsitpro.com/articles/powershell-active-directory-cmdlets,2-801.html
