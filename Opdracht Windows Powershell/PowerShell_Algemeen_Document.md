@@ -1104,7 +1104,301 @@ Je kan de ```Unregister-PSSessionConfiguration``` cmdlet gebruiken om een vorige
 <div id='9'/>
 ##Variabelen
 
-INSERT CONTENT
+#### Storing Variabelen
+
+Alles in Powershell wordt behandeld als een object. Zelfs voor een simpele string van karakters, zoals de computernaam, wordt gezien als een object. Zoals dat piping van een string om ```Get-Member``` laat zien dat een object 
+type ```System.String``` is en dat het veel goede methoden heeft waarmee je kan werken. 
+
+Powershell bewaard deze values dat je bij een object kan opvragen allemaal in variabelen. Om dit te doen, moet je de variabele specifiëren en het gelijkaan teken operator gebruiken, gevolgd door alles dat je in de variabele wilt zetten.
+
+Bijvoorbeeld:
+
+```
+PS C:\> $var = "SERVER-R2"
+```
+
+Het is belangrijk om te weten dat het dollar teken geen deel uitmaakt van de naam van de variabele. In dit voorbeeld is de variabele naam ```var```. Het dollar teken is een cue naar de shell dat volgt door wat de variabele naam gaat worden en we willen de inhoud van die variabele. In dit voorbeeld gaan we de inhoud van de variabele zetten.
+
+* Een paar hoofdpunten die je in je hoofd moet houden bij de namen van variabelen:
+* Variabele namen houden meestal letters, nummers en underscores in. En het is heel voorkoment om te beginnen met een letter of een underscore.
+* Variabele namen houden spaties in, maar de naam moet zonder in "curly braces" . Bv. ```${My Variable}``` is hoe je een variabele toont met de naam "My variable". Persoonlijk, houden we niet van variabele namen die spaties inhouden omdat deze meer typwerk inhouden en moeilijker te lezen zijn.
+* Variabelen blijven niet tussen powershell sessies. Wanneer je de shell dicht doet, gaat elke variabele die je gemaakt hebt weg.
+* Variabele namen kunnen vrij lang zijn, lang genoeg dat je geen zorgen moet maken over hoe lang ze zijn. Probeer variabele namen duidelijk te maken. Bv. Als je een een computer naam in een variabele zet, gebruik ```computername``` als variabele naam. Als een variabele veel processes inhoud, dan is ```processes``` een goede variabele naam.
+* Behalve voor mensen met een VBScript background, powershelll gebruikers gaan meestal geen variabele naam prefixen om aan te duiden wat er in bewaard wordt. Bv. in VBScript, strComputerName was een veel gebruikte type van een variabele naam, aanduidend dat het een string bewaard (Str). Powershell vind het niet erg als je dat doet, maar het wordt niet meer zo graag gebruikt in de grote community.
+
+Om de inhoud van een variabele terug te vinden, gebruik het dollar teken gevolgd door de variabele naam, zoals getoont in het voorbeeld. Opnieuw, het dollar teken verteld shell dat je toegang wilt tot de inhoud van een variabele. Gevolgd door een variabele naam dat verteld welke variabele je probeerd toegang tot te krijgen.
+
+```
+PS C:\> $var
+SERVER-R2
+```
+
+Je kan variabelen gebruiken in een plaats van waarden in bijna elke situatie. Bv. Wanneer je WMI gebruikt heb je een optie om een computernaam te spcifiëren. Het commando zal er waarschijnlijk zo uit zien:
+
+
+```PS C:\> get-wmiobject win32_computersystem -comp SERVER-R2```
+```Domain : company.pri```
+```Manufacturer : VMware, Inc.```
+```Model : VMware Virtual Platform```
+```Name : SERVER-R2```
+```PrimaryOwnerName : Windows User```
+```TotalPhysicalMemory : 3220758528```
+
+Var is een vrij standaard variabele naam. Normaal gebruiken we computernaam, maar in dit specifiek voorbeeld plannen we van $var in verschillende situaties te hergebruiken. Dus hebben we besloten van het generiek te houden. Laat dit je niet tegenhouden van andere logische variabele namen te gebruiken. 
+We zullen een string in $var steken om mee te beginnen, maar dit kunnen we elk moment veranderen.
+
+We willen:
+
+
+```PS C:\> $var = 5```
+```PS C:\> $var | gm```
+```TypeName: System.Int32```
+```Name MemberType Definition```
+
+
+```---- ---------- ----------```
+```CompareTo Method int CompareTo(System.Object value), int CompareT...```
+```Equals Method bool Equals(System.Object obj), bool Equals(int ...```
+```GetHashCode Method int GetHashCode()```
+```GetType Method type GetType()```
+```GetTypeCode Method System.TypeCode GetTypeCode()```
+```ToString Method string ToString(), string ToString(string format...```
+
+In het vorige voorbeeld, plaatsen we een integer in de $var, en dan hebben we een pipe gebruikt $var naar Gm. Je kan zien dat shell $var herkend als een System.Int32 of een 32 bit integer.
+
+#### Variabelen gebruiken: truks met quotes
+
+We adviseren gewoonlijk een enclosed string te gebruiken binnen single quotes marks. De reden hiervan is dat Powershell alles behandeld in een single quotatie mark als een letterlijke string. 
+
+Voorbeeld:
+
+```
+PS C:\> $var = 'What does $var contain?'
+PS C:\> $var
+What does $var contain?
+```
+
+In de voorgaande voorbeelden, kan je zien dat $var binnen de single quotes behandeld wordt als letterlijk.
+
+Maar binnen dubbele quotation marks (") is dit niet het geval. 
+
+Kijk naar de volgende truk:
+
+```PS C:\> $computername = 'SERVER-R2'```
+```PS C:\> $phrase = "The computer name is $computername"```
+```PS C:\> $phrase```
+```The computer name is SERVER-R2```
+
+We waren gestart met ons voorbeeld in SERVER-R2 te bewaren, in de variabele $computername. Daarna hebben we "The computer name is ```$computername"``` in de variabele ```$phrase``` gestoken. Wanneer we did deden hebben we dubbele quotation marks gebruikt. Ps gaat automatisch naar dollar tekens zoeken binnen de double quotes, en vervangt elke variabele dat hij vind in de inhoud. Omdat we de inhoud van $phrase hebben laten zien was 
+ ```$computername``` vervangen met ```SERVER-R2```, de inhoud van deze variabele. 
+
+De vervangende actie gebeurd alleen wanneer de shell gedeelde de string initializeerd. Bij dit punt, $phrase houd dit in "The computer name is ```SERVER-R2"``` het houd niet de ```"$computername"``` string in. We kunnen dit testen door de inhoud proberen te veranderen van $computername on te zien of $phrase het update.
+
+```PS C:\> $computername = 'SERVER1'```
+```PS C:\> $phrase```
+```The computer name is SERVER-R2```
+
+Zoals je kan zien blijft $phrase variabele het zelfde.
+
+Nu over dit (`) karakter, het verwijderd elke speciale betekenis het misschien zou geassocieerd worden met het karakter erachter of in sommige gevallen voegt het een speciale betekenis toe aan het volgende karakter. 
+
+Bijvoorbeeld:
+
+```PS C:\> $computername = 'SERVER-R2'```
+```PS C:\> $phrase = "`$computername contains $computername"```
+```PS C:\> $phrase```
+```$computername contains SERVER-R2```
+
+Wanneer we de string hebben geassocieerd aan $phrase, gebruikten we de $computername dubbel. De eerste keer hebben we het dollar teken voorbij gestoken met een tik van achter. Als je dit doet neem je het dollars teken speciale betekenis weg, als een variabele indicator en maak je het een letterlijk dollar teken. Je kan dit zien aan de vorige uitvoer. Op de laatste lijn, dat $computername was bewaard in deze variabele. We gebruikten deze "backtick" niet voor een 2e keer. Dus $computername was vervangen met de inhoud van deze variabele.
+
+Een 2e manier van hoe een "backtick" kan werken:
+
+```PS C:\> $phrase = "`$computername`ncontains`n$computername"```
+```PS C:\> $phrase```
+```$computername```
+```contains```
+```SERVER-R2```
+
+Als je goed kijkt, merk je op dat we (`n) 2 keer hebben gebruikt in de zin. 1 keer na de eerste $computername en 1 keer na contains. In dit voorbeeld, voegt de backtick speciale betekenis toe. Normaal is "n" een letter, maar met de "backtick" ervoor, wordt het een "carriage return" en lijn feed ( denk "n" voor "nieuwe lijn").
+
+Run ```help about_escape``` voor meer informatie, dit houd een lijst in met andere speciale escape karakters. 
+Je kan, bijvoorbeeld, gebruik maken van een escaped "t" om een tab toe te voegen, of een escaped "a" om de computer te laten beepen (zie "a" als "alert").
+
+#### Veel objecten bewaren in een variabele
+
+Dit punt, hebben we vooral gezien dat variabelen een single object inhouden, en deze objecten hebben allemaal simpele waarden. We hebben gewerkt direct aan de objecten zelf, eerder dan hun eigenschappen of methoden. Laten we nu proberen een hoop objecten in een enkele variabele te plaatsen.
+
+Een manier om dit te doen is om een comma-gescheiden lijst te gebruiken, omdat PowerShell herkent dat deze lijsten als een collectie van objecten wordt gezien:
+
+```PS C:\> $computers = 'SERVER-R2','SERVER1','localhost'```
+```PS C:\> $computers```
+```SERVER-R2```
+```SERVER1```
+```Localhost```
+
+Kijk goed hoe we in het vorige voorbeeld commas buiten de quotation marks hebben gezet. Als we ze binnen zouden zetten, zouden we een single object hebben dat commas en 3 computer namen inhoud. Met deze methode, kunnen we 3 objecten van elkaar onderscheiden, allemaal met het Type String. Zoals u kunt zien hebben we de inhoud van goed onderzocht van deze variabele. Ps laat elk object op zijn eigen lijn zien.
+
+#### Werken met single objecten in een variabele
+
+Je kan ook individuele elementen in een variabele opnemen, 1 per keer. Om dit te doen moet je een index nummer specifiëren voor het object dat je wilt, tussen vierkante haaken. Het eerste object is altijd aan index nummer 0m de 2e aan index nummer 1 en zo voort. Je kan altijd een index van -1 gebruiken voor aan het laatste object te kunnen, -2 voor het 1 na laatste object en zo voort.
+
+Een voorbeeld:
+
+```PS C:\> $computers[0]```
+```SERVER-R2```
+```PS C:\> $computers[1]```
+```SERVER1```
+```PS C:\> $computers[-1]```
+```localhost```
+```PS C:\> $computers[-2]```
+```SERVER1```
+
+De variabele zelf heeft een eigenschap dat laat zien hoebeel objecten er zijn in 
+
+```
+PS C:\> $computers.count
+3
+```
+
+Je kan altijd aan eigenschappen en methoden van een object binnen een variabele als de eigenschappen en methoden in de variabele zelf. Het is zo makkelijker om te zien, aan het begin of een variabele een single object inhoud.
+
+```PS C:\> $computername.length
+9```
+```PS C:\> $computername.toupper()```
+```SERVER-R2```
+```PS C:\> $computername.tolower()```
+```server-r2```
+```PS C:\> $computername.replace('R2','2008')```
+```SERVER-2008```
+```PS C:\> $computername```
+```SERVER-R2```
+
+In het vorige voorbeeld, gebruiken we de $computername variable dat we eerder hadden gemaakt. Dit variabele houd een object in van het type System.String en je zou de complete lijst van eigenschappen en methoden van dit type wanneer je piped naar een string voor Gm. We gebruikten de Length eigenschap, als de ToUpper(), ToLower(), en Replace() methoden. In elke voorbeeld, hadden we deze om de methode naam te volgen met toevoegsels, zelf geen van de ToUpper() of de ToLower() hebben een parameter nodig in deze toevoegsels. Ook geen van deze methoden veranderen wat er binnen de variabele was, je kan dit zien op de laatste lijn. In de plaats, elke methode heeft een new String gebasseerd op de originele, als modificatie door deze methode.
+
+#### Properties en methoden in Powershell 3 uitrollen
+
+In powershell v1 en v2 had je geen toegang tot de eigenschappen en methoden wanneer een variabele meerdere objecten inhoud dit was verwarrend voor v1 en v2 gebruikers. Zo verwarrend dat ze in v3 een belangrijke verandering hadden toegepast, genaamd ```automatic unrolling```. Basically, betekent dit dat je nu toegang hebt tot de eigenschappen en methoden gebruikt door een variabele die meerdere objecten inhoud.
+
+```$services = Get-Service```
+
+```$services.Name```
+
+Powershell ziet dit als dat je probeerd toegang te krijgen tot een object. 
+
+Het ziet ook dat je collecties in $services geen naam eigenschap heeft, maar dat de individuele objecten binnen de collecties wel hebben. Dus het enumerates of unrolls het object en neemt de Naam eigenschap van elk object. Dit is gelijk aan:
+
+```
+Get-Service | ForEach-Object { Write-Output $_.Name }
+```
+
+En hetzelfde voor:
+
+```
+Get-Service | Select-Object –ExpandProperty Name
+```
+
+Het zelfde werkt voor methoden:
+
+
+```$objects = Get-WmiObject –class Win32_Service –filter "name='BITS'"```
+
+
+```$objects.ChangeStartMode('Disabled')```
+
+#### Een type van een variabele declareren
+
+Powershell heeft geen interesse welk soort objecten je gebruikt, maar wij wel. 
+
+Bijvoorbeeld, je hebt een variabele dat je verwacht een nummer te hebben.
+
+Je plant om iets arithmetische te doen met dat nummer, en je vraagt een gebruiker omdat nummer in te geven.
+
+Bijvoorbeeld:
+
+
+```PS C:\> $number = Read-Host "Enter a number"```
+```Enter a number: 100```
+```PS C:\> $number = $number * 10```
+```PS C:\> $number```
+```100100100100100100100100100100```
+
+Dit geeft als uitvoer 100100100100100100100100100100. Hoe kan dit?
+
+Als je goed kijkt zie je wat er gebeurd. In de plaats van 100 te vermenigvuldigen met 10, gaat Ps de 100 string, 10 keer duppliceren. Met als resultaat dat de string 100, 10 keer op een rij wordt weergeven.
+
+Dus de shell gebruikt dit als een string:
+
+```PS C:\> $number = Read-Host "Enter a number"```
+```Enter a number: 100```
+```PS C:\> $number | gm```
+```TypeName: System.String```
+```Name MemberType Definition```
+```---- ---------- ----------```
+```Clone Method System.Object Clone()```
+```CompareTo Method int CompareTo(System.Object valu...```
+```Contains Method bool Contains(string value)```
+
+Door $nummer te pipen naar Gm, laat zien dat de shell het als een System.String ziet, geen System.Int32. Er zijn een aantal manieren om dit te fixen.
+
+De beste methode is deze:
+
+Eerst vertel je shell dat $number variabele een integer moet inhouden, wat de shell forceerd van het te proberen converteren van elke invoer naar een echt getal. 
+
+Eerst specifieer je het data type, int tussen vierkante haken, direct bij het eerste gebruik van de variabele.
+
+Dit doe je aan de hand van het volgende voorbeeld:
+
+
+![Alt text](http://i.imgur.com/lmNxsyh.png)
+
+
+In het vorige voorbeeld hebben we, [INT] gebruikt om $number te forceren om integers te hebben (1). Na het ingeven van de input, pipen we $number naar Gm om zeker te zijn dat het inderdaad een integer is en geen string (2). Aan het einde kan je zien dat de variabele werd gezien als een nummer en een echte vermenigvuldiging (3).
+Een ander voordeel hiervanb is dat wanneer shell een error geeft het niet kan converteren naar een nummer, omdat bij $number alleen mogelijk is van integers te bewaren. 
+
+```PS C:\> [int]$number = Read-Host "Enter a number"```
+```Enter a number: Hello```
+```Cannot convert value "Hello" to type "System.Int32". Error: "Input string```
+```was not in a correct format."```
+```At line:1 char:13```
+```+ [int]$number <<<< = Read-Host "Enter a number"```
+```+ CategoryInfo : MetadataError: (:) [], ArgumentTransformationMetadataException```
+```+ FullyQualifiedErrorId : RuntimeException```
+
+Dit is een mooi voorbeeld van hoe je problemen later kan voorkomen, omdat je zeker bent dat $number een exact type zal zijn van data dat je verwacht.
+
+Je kan vele nieuwe object types gebruiken in de plaats van [INT], de volgende lijst zijn die dat je het meest gaat gebruiken:
+
+* [int]—Integer numbers
+* [single] and [double]—Single-precision and double-precision floating numbers
+(numbers with a decimal portion)
+* [string]—A string of characters
+* [char]—Exactly one character (as in, [char]$c = 'X')
+* [xml]—An XML document; whatever string you assign to this will be parsed to
+make sure it contains valid XML markup (for example, [xml]$doc = Get-Content
+MyXML.xml)
+* [adsi]—An Active Directory Service Interfaces (ADSI) query; the shell will execute
+the query and place the resulting object or objects into the variable (such
+as [adsi]$user = "WinNT:\\MYDOMAIN\Administrator,user")
+
+Specifiëren van een object tpye voor een variabele is een goede manier om te voorkomen dat rare errors voorkomen in meer complexe scripts. 
+
+#### Commando's voor het werken met variabelen
+
+* New-Variable
+* Set-Variable
+* Remove-Variable
+* Get-Variable
+* Clear-Variable
+
+Je bent niet verplicht deze te gebruiken behalve misschien Remove-Variable, die gebruikt wordt om een variabele permanent te deleten.
+
+Als je deze cmdlets toch wilt gebruiken geef je variabele naam aan de cmdlets een -name parameter. Dit is alleen de naam dit houd geen dollar teken ($) in. 
+
+#### Enkele tips 
+
+* Houd variabelen betekenisvol, maar kort zoals $computername, maar niet bv. $c dat is te kort.
+* Gebruik geen spaties in variabele namen.
+* Als de variabele maar 1 soort object gaat inhouden, dan declareer je dat wanneer je de eerste keer de variabele gebruikt. Dit helpt errors te voorkomen.
 
 <div id='10'/>
 ##PowerShell ISE
