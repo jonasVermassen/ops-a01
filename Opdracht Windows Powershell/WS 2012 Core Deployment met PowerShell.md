@@ -76,3 +76,4 @@ Vervolgens de virtualbox service beëindigen
 hierna .\VboxTray.exe runnen in system32, even geduld hebben en guest additions werkt weer.
 ```
 
+Perongeluk exit gedaan of prompt kwijt ga naar task manager en klik in de rechterboven hoek op new task en typ powershell.exe
