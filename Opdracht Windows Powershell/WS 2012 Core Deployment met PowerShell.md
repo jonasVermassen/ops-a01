@@ -82,3 +82,7 @@ Mijn account toevoegen aan Domein Admins
 
 
 ```Add-ADGroupMember -Identity "Domain Admins" -Member "JarnoR" ```
+
+Handige sites:
+
+http://www.tomsitpro.com/articles/powershell-active-directory-cmdlets,2-801.html
