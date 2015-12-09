@@ -1135,48 +1135,34 @@ SERVER-R2
 
 Je kan variabelen gebruiken in een plaats van waarden in bijna elke situatie. Bv. Wanneer je WMI gebruikt heb je een optie om een computernaam te spcifiëren. Het commando zal er waarschijnlijk zo uit zien:
 
-
-```PS C:\> get-wmiobject win32_computersystem -comp SERVER-R2```
-
-```Domain : company.pri```
-
-```Manufacturer : VMware, Inc.```
-
-```Model : VMware Virtual Platform```
-
-```Name : SERVER-R2```
-
-```PrimaryOwnerName : Windows User```
-
-```TotalPhysicalMemory : 3220758528```
+```
+PS C:\> get-wmiobject win32_computersystem -comp SERVER-R2
+Domain : company.pri
+Manufacturer : VMware, Inc.
+Model : VMware Virtual Platform
+Name : SERVER-R2
+PrimaryOwnerName : Windows User
+TotalPhysicalMemory : 3220758528
+```
 
 Var is een vrij standaard variabele naam. Normaal gebruiken we computernaam, maar in dit specifiek voorbeeld plannen we van $var in verschillende situaties te hergebruiken. Dus hebben we besloten van het generiek te houden. Laat dit je niet tegenhouden van andere logische variabele namen te gebruiken. 
 We zullen een string in $var steken om mee te beginnen, maar dit kunnen we elk moment veranderen.
 
 We willen:
 
-
-```PS C:\> $var = 5```
-
-```PS C:\> $var | gm```
-
-```TypeName: System.Int32```
-
-```Name MemberType Definition```
-
-
-```---- ---------- ----------```
-```CompareTo Method int CompareTo(System.Object value), int CompareT...```
-
-```Equals Method bool Equals(System.Object obj), bool Equals(int ...```
-
-```GetHashCode Method int GetHashCode()```
-
-```GetType Method type GetType()```
-
-```GetTypeCode Method System.TypeCode GetTypeCode()```
-
-```ToString Method string ToString(), string ToString(string format...```
+```
+PS C:\> $var = 5
+PS C:\> $var | gm
+TypeName: System.Int32
+Name MemberType Definition
+---- ---------- ----------
+CompareTo Method int CompareTo(System.Object value), int CompareT...
+Equals Method bool Equals(System.Object obj), bool Equals(int ...
+GetHashCode Method int GetHashCode()
+GetType Method type GetType()
+GetTypeCode Method System.TypeCode GetTypeCode()
+ToString Method string ToString(), string ToString(string format...
+```
 
 
 In het vorige voorbeeld, plaatsen we een integer in de $var, en dan hebben we een pipe gebruikt $var naar Gm. Je kan zien dat shell $var herkend als een System.Int32 of een 32 bit integer.
@@ -1187,13 +1173,11 @@ We adviseren gewoonlijk een enclosed string te gebruiken binnen single quotes ma
 
 Voorbeeld:
 
-
-```PS C:\> $var = 'What does $var contain?'```
-
-```PS C:\> $var```
-
-```What does $var contain?```
-
+```
+PS C:\> $var = 'What does $var contain?
+PS C:\> $var
+What does $var contain?
+```
 
 In de voorgaande voorbeelden, kan je zien dat $var binnen de single quotes behandeld wordt als letterlijk.
 
@@ -1201,24 +1185,23 @@ Maar binnen dubbele quotation marks (") is dit niet het geval.
 
 Kijk naar de volgende truk:
 
-```PS C:\> $computername = 'SERVER-R2'```
-
-```PS C:\> $phrase = "The computer name is $computername"```
-
-```PS C:\> $phrase```
-
-```The computer name is SERVER-R2```
+```
+PS C:\> $computername = 'SERVER-R2'
+PS C:\> $phrase = "The computer name is $computername"
+PS C:\> $phrase
+The computer name is SERVER-R2
+```
 
 We waren gestart met ons voorbeeld in SERVER-R2 te bewaren, in de variabele $computername. Daarna hebben we "The computer name is ```$computername"``` in de variabele ```$phrase``` gestoken. Wanneer we did deden hebben we dubbele quotation marks gebruikt. Ps gaat automatisch naar dollar tekens zoeken binnen de double quotes, en vervangt elke variabele dat hij vind in de inhoud. Omdat we de inhoud van $phrase hebben laten zien was 
  ```$computername``` vervangen met ```SERVER-R2```, de inhoud van deze variabele. 
 
 De vervangende actie gebeurd alleen wanneer de shell gedeelde de string initializeerd. Bij dit punt, $phrase houd dit in "The computer name is ```SERVER-R2"``` het houd niet de ```"$computername"``` string in. We kunnen dit testen door de inhoud proberen te veranderen van $computername on te zien of $phrase het update.
 
-```PS C:\> $computername = 'SERVER1'```
-
-```PS C:\> $phrase```
-
-```The computer name is SERVER-R2```
+```
+PS C:\> $computername = 'SERVER1'
+PS C:\> $phrase```
+The computer name is SERVER-R2
+```
 
 Zoals je kan zien blijft $phrase variabele het zelfde.
 
@@ -1226,27 +1209,23 @@ Nu over dit (`) karakter, het verwijderd elke speciale betekenis het misschien z
 
 Bijvoorbeeld:
 
-```PS C:\> $computername = 'SERVER-R2'```
-
-```PS C:\> $phrase = "`$computername contains $computername"```
-
-```PS C:\> $phrase```
-
-```$computername contains SERVER-R2```
+```
+PS C:\> $computername = 'SERVER-R2'
+PS C:\> $phrase = "`$computername contains $computername"
+PS C:\> $phrase
+$computername contains SERVER-R2
+```
 
 Wanneer we de string hebben geassocieerd aan $phrase, gebruikten we de $computername dubbel. De eerste keer hebben we het dollar teken voorbij gestoken met een tik van achter. Als je dit doet neem je het dollars teken speciale betekenis weg, als een variabele indicator en maak je het een letterlijk dollar teken. Je kan dit zien aan de vorige uitvoer. Op de laatste lijn, dat $computername was bewaard in deze variabele. We gebruikten deze "backtick" niet voor een 2e keer. Dus $computername was vervangen met de inhoud van deze variabele.
 
 Een 2e manier van hoe een "backtick" kan werken:
 
-```PS C:\> $phrase = "`$computername`ncontains`n$computername"```
-
-```PS C:\> $phrase```
-
-```$computername```
-
-```contains```
-
-```SERVER-R2```
+```
+PS C:\> $phrase = "`$computername`ncontains`n$computername"
+PS C:\> $phrase
+$computername
+contains
+SERVER-R2
 ```
 
 Als je goed kijkt, merk je op dat we (`n) 2 keer hebben gebruikt in de zin. 1 keer na de eerste $computername en 1 keer na contains. In dit voorbeeld, voegt de backtick speciale betekenis toe. Normaal is "n" een letter, maar met de "backtick" ervoor, wordt het een "carriage return" en lijn feed ( denk "n" voor "nieuwe lijn").
@@ -1260,15 +1239,12 @@ Dit punt, hebben we vooral gezien dat variabelen een single object inhouden, en 
 
 Een manier om dit te doen is om een comma-gescheiden lijst te gebruiken, omdat PowerShell herkent dat deze lijsten als een collectie van objecten wordt gezien:
 
-```PS C:\> $computers = 'SERVER-R2','SERVER1','localhost'```
-
-```PS C:\> $computers```
-
-```SERVER-R2```
-
-```SERVER1```
-
-```Localhost```
+```
+PS C:\> $computers = 'SERVER-R2','SERVER1','localhost'
+PS C:\> $computers
+SERVER-R2
+SERVER1
+Localhost
 ```
 
 Kijk goed hoe we in het vorige voorbeeld commas buiten de quotation marks hebben gezet. Als we ze binnen zouden zetten, zouden we een single object hebben dat commas en 3 computer namen inhoud. Met deze methode, kunnen we 3 objecten van elkaar onderscheiden, allemaal met het Type String. Zoals u kunt zien hebben we de inhoud van goed onderzocht van deze variabele. Ps laat elk object op zijn eigen lijn zien.
@@ -1279,22 +1255,15 @@ Je kan ook individuele elementen in een variabele opnemen, 1 per keer. Om dit te
 
 Een voorbeeld:
 
-```PS C:\> $computers[0]```
-
-```SERVER-R2```
-
-```PS C:\> $computers[1]```
-
-```SERVER1```
-
-```PS C:\> $computers[-1]```
-
-```localhost```
-
-```PS C:\> $computers[-2]```
-
-```SERVER1```
-
+```
+PS C:\> $computers[0]
+SERVER-R2
+PS C:\> $computers[1]
+SERVER1
+PS C:\> $computers[-1]
+localhost
+PS C:\> $computers[-2]
+SERVER1
 ```
 
 De variabele zelf heeft een eigenschap dat laat zien hoebeel objecten er zijn in 
@@ -1306,23 +1275,17 @@ PS C:\> $computers.count
 
 Je kan altijd aan eigenschappen en methoden van een object binnen een variabele als de eigenschappen en methoden in de variabele zelf. Het is zo makkelijker om te zien, aan het begin of een variabele een single object inhoud.
 
-```PS C:\> $computername.length
-9```
-```PS C:\> $computername.toupper()```
-
-```SERVER-R2```
-
-```PS C:\> $computername.tolower()```
-
-```server-r2```
-
-```PS C:\> $computername.replace('R2','2008')```
-
-```SERVER-2008```
-
-```PS C:\> $computername```
-
-```SERVER-R2```
+```
+PS C:\> $computername.length
+9
+PS C:\> $computername.toupper()
+SERVER-R2
+PS C:\> $computername.tolower()
+server-r2
+PS C:\> $computername.replace('R2','2008')
+SERVER-2008
+PS C:\> $computername
+SERVER-R2
 ```
 
 In het vorige voorbeeld, gebruiken we de $computername variable dat we eerder hadden gemaakt. Dit variabele houd een object in van het type System.String en je zou de complete lijst van eigenschappen en methoden van dit type wanneer je piped naar een string voor Gm. We gebruikten de Length eigenschap, als de ToUpper(), ToLower(), en Replace() methoden. In elke voorbeeld, hadden we deze om de methode naam te volgen met toevoegsels, zelf geen van de ToUpper() of de ToLower() hebben een parameter nodig in deze toevoegsels. Ook geen van deze methoden veranderen wat er binnen de variabele was, je kan dit zien op de laatste lijn. In de plaats, elke methode heeft een new String gebasseerd op de originele, als modificatie door deze methode.
@@ -1331,9 +1294,9 @@ In het vorige voorbeeld, gebruiken we de $computername variable dat we eerder ha
 
 In powershell v1 en v2 had je geen toegang tot de eigenschappen en methoden wanneer een variabele meerdere objecten inhoud dit was verwarrend voor v1 en v2 gebruikers. Zo verwarrend dat ze in v3 een belangrijke verandering hadden toegepast, genaamd ```automatic unrolling```. Basically, betekent dit dat je nu toegang hebt tot de eigenschappen en methoden gebruikt door een variabele die meerdere objecten inhoud.
 
-```$services = Get-Service```
-
-```$services.Name```
+```
+$services = Get-Service
+$services.Name
 ```
 
 Powershell ziet dit als dat je probeerd toegang te krijgen tot een object. 
@@ -1352,11 +1315,9 @@ Get-Service | Select-Object –ExpandProperty Name
 
 Het zelfde werkt voor methoden:
 
-
-```$objects = Get-WmiObject –class Win32_Service –filter "name='BITS'"```
-
-
-```$objects.ChangeStartMode('Disabled')```
+```
+$objects = Get-WmiObject –class Win32_Service –filter "name='BITS'"
+$objects.ChangeStartMode('Disabled')
 ```
 
 #### Een type van een variabele declareren
