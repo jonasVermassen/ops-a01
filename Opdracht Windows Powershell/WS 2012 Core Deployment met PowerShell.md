@@ -68,4 +68,11 @@ Active Directory Domain Service rol toevoegen
 Install‑ADDSForest ‑DomainName Assengraaf.nl ‑SafeModeAdministratorPassword (ConvertTo‑SecureString Test123 ‑AsPlainText ‑Force) -DomainMode Win2012 ‑DomainNetbiosname Assengraaf ‑ForestMode Win2012 ‑InstallDNS
 ```
 
+Troubleshooting geen copy paste optie door virtualbox guest additions die bugged bij wcore server. 
+
+```
+ctrl + shift + esc om task manager te starten
+Vervolgens de virtualbox service beëindigen
+hierna .\VboxTray.exe runnen in system32, even geduld hebben en guest additions werkt weer.
+```
 
