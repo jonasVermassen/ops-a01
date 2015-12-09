@@ -2224,15 +2224,13 @@ C:\Users\Administrator> PowerShell.exe
 PS > Set‑ItemProperty "HKLM:\Software\Microsoft\Windows NT\
 CurrentVersion\winlogon" Shell PowerShell.exe
 
-1 Veranderen van de computer naam
----
+### 1 Veranderen van de computer naam
 
 ```PS > Rename-Computer –NewName HQ-DC-01```
 
 ```PS > Restart-Computer```
 
-2 De tijd zone veranderen
----
+### 2 De tijd zone veranderen
 
 Laat de huidige tijd zone zien
 
@@ -2252,8 +2250,7 @@ Zet de nieuwe tijd zone
 PS > TZutil /s "Greenwich Standard Time"
 ```
 
-3 De NIC configureren met PS
----
+### 3 De NIC configureren met PS
 
 Zet de DNS configuratie voor de client computer
 
@@ -2297,8 +2294,7 @@ Enable de DHCP option op de interface
 PS > Set‑NetIPInterface ‑InterfaceAlias Ethernet ‑Dhcp Enabled
 ```
 
-4 Managen van windows server roles en features
----
+### 4 Managen van windows server roles en features
 
 Je kan de ```Get‑WindowsFeature``` cmdlet gebruiken om alle geïnstalleerd rollen en features te bekijken.
 
@@ -2310,7 +2306,7 @@ PS > Get-WindowsFeature | where Installed –eq $true
 
 ![Alt text](http://i.imgur.com/K0cLcFC.png)
 
-####Voor tools toe te voegen moet je deze cmdlets gebruiken:
+#### Voor tools toe te voegen moet je deze cmdlets gebruiken:
 
 Deze cmdlet is voor subfeatures toe te voegen aan een role en ze 1 voor 1 wilt installeren.
 
@@ -2324,7 +2320,7 @@ Dit is voor extra tools toe te voegen zoals met de ISS feature die niet automati
 ‑IncludeManagementTools
 ```
 
-####Voorbeeld:
+#### Voorbeeld:
 
 Een web server role met alle subfeatures en managment tools.
 
@@ -2333,7 +2329,7 @@ PS > Install‑WindowsFeature Web‑Server ‑IncludeAllSubFeature
 ‑IncludeManagementTools
 ```
 
-####De ADDS of active directory domain service role toevoegen
+#### De ADDS of active directory domain service role toevoegen
 
 Een nieuwe AD forest installeren door gebruik van de ```Install-ADDSforest``` cmdlet.
 
@@ -2358,7 +2354,7 @@ PS > Install‑ADDSForest ‑DomainName contoso.local
 ‑ForestMode Win2012 ‑InstallDNS
 ```
 
-####Een nieuw domein in een bestaande forest aanmaken
+#### Een nieuw domein in een bestaande forest aanmaken
 
 NewDomainName: Nieuwe domein naam maken
 
@@ -2371,31 +2367,30 @@ DomainType: Het domein type definiëren, dit kan ```Child``` of ```Tree``` zijn.
 Voorbeeld:
 
 ```
-PS > Install‑ADDSDomain ‑NewDomainName corp ‑ParentDomainName contoso.```
-```local ‑SafeModeAdministratorPassword (ConvertTo‑SecureString P@ssw0rd```
-```‑AsPlainText ‑Force) ‑CreateDnsDelegation ‑Credential (Get‑Credential```
-```Contoso\Administrator) ‑DomainMode Win2012 ‑DomainType ChildDomain
+PS > Install‑ADDSDomain ‑NewDomainName corp ‑ParentDomainName contoso
+local ‑SafeModeAdministratorPassword (ConvertTo‑SecureString P@ssw0r
+‑AsPlainText ‑Force) ‑CreateDnsDelegation ‑Credential (Get‑Credenti`
+Contoso\Administrator) ‑DomainMode Win2012 ‑DomainType ChildDomain
 ```
 
-####Een nieuwe domain controller aanmaken in een bestaand domein
+#### Een nieuwe domain controller aanmaken in een bestaand domein
 
 Met deze cmdlet kan de opdracht uitgevoerd worden ```Install‑ADDSdomaincontroller``` cmdlet.
 
 Voorbeeld:
 
 ```
-PS > Install-ADDSDomainController -NoGlobalCatalog:$false```
-```‑CreateDnsDelegation:$false -Credential (Get-Credential)```
-```-DomainName "contoso.local" -InstallDns:$true -ReplicationSourceDC```
-```"DC01.contoso.local" -SiteName "Default-First-Site-Name"```
-```-SafeModeAdministratorPassword (ConvertTo-SecureString P@ssw0rd```
-```-AsPlainText -Force)
+PS > Install-ADDSDomainController -NoGlobalCatalog:$false
+‑CreateDnsDelegation:$false -Credential (Get-Credential)
+-DomainName "contoso.local" -InstallDns:$true -ReplicationSourceDC
+"DC01.contoso.local" -SiteName "Default-First-Site-Name"
+-SafeModeAdministratorPassword (ConvertTo-SecureString P@ssw0rd
+-AsPlainText -Force)
 ```
 
-Configureren van de DNS role
----
+### Configureren van de DNS role
 
-####Configureren van DNS server records
+#### Configureren van DNS server records
 
 Een nieuw DNS server A resource record toevoegen
 
@@ -2418,7 +2413,7 @@ PS > Add-DnsServerResourceRecordMX ‑Name Mail ‑MailExchange
 EXCH‑HUB‑01.Contoso.local ‑ZoneName Contoso.local –Preference 10
 ```
 
-####Maken van primary forward en reverse lookup zones
+#### Maken van primary forward en reverse lookup zones
 
 Een DNS forward zone toevoegen
 
@@ -2450,10 +2445,9 @@ Export-DnsServerZone -Name $Zone.ZoneName -FileName $Zone.ZoneName
 }
 ```
 
-Een DHCP role toevoegen en host configureren
----
+### Een DHCP role toevoegen en host configureren
 
-####1 Installeren van DHCP server role
+#### 1 Installeren van DHCP server role
 
 Server role en module toevoegen
 
@@ -2461,7 +2455,7 @@ Server role en module toevoegen
 PS > Add-WindowsFeature DHCP
 ```
 
-####2 Een DHCP server scope opzetten voor ipv4
+#### 2 Een DHCP server scope opzetten voor ipv4
 
 DHCP scope met naam Contoso voor 192.168.0.0 subnet met een masker 255.255.255.0 en dan activeren.
 
@@ -2470,7 +2464,7 @@ PS > Add‑DhcpServerv4Scope ‑Name "Contoso" ‑StartRange 192.168.0.1
 ‑EndRange 192.168.0.254 ‑SubnetMask 255.255.255.0 ‑State Active
 ```
 
-####3 Configureren van de DHCP scope options
+#### 3 Configureren van de DHCP scope options
 
 DNS domain naam, DNS server address, win server en default gateway.
 
@@ -2479,7 +2473,7 @@ PS > Set‑DhcpServerv4OptionValue ‑DnsDomain contoso.local ‑DnsServer
 192.168.0.2 ‑Router 192.168.0.1
 ```
 
-####4 Configureren van DHCP scope exclusions
+#### 4 Configureren van DHCP scope exclusions
 
 Dit wordt gebruikt wanneer je een range van specifieke addressen statisch voor toestellen wilt gebruiken.
 
@@ -2488,7 +2482,7 @@ PS > Add‑DhcpServerv4ExclusionRange ‑ScopeId 192.168.0.0 ‑StartRange
 192.168.0.100 -EndRange 192.168.0.130
 ```
 
-####5 Configureren van DHCP scope reservaties
+#### 5 Configureren van DHCP scope reservaties
 
 Ip address 192.168.0.10 wordt gereserveerd voor het mac addres F4-DA-F1-78-00-6D van de netwerk printer. 
 
@@ -2496,7 +2490,7 @@ Ip address 192.168.0.10 wordt gereserveerd voor het mac addres F4-DA-F1-78-00-6D
 192.168.0.10 ‑ClientId F4-DA-F1-78-00-6D ‑Description "Multi-Function
 Network Printer in 3rd floor"```
 
-####6 Toestemming geven aan de AD met de DHCP server
+#### 6 Toestemming geven aan de AD met de DHCP server
 
 In dit voorbeeld wordt ```Add‑DhcpServerInDC``` cmdlet gebruikt om de DHCP server toe te voegen.
 
@@ -2504,10 +2498,9 @@ In dit voorbeeld wordt ```Add‑DhcpServerInDC``` cmdlet gebruikt om de DHCP ser
 PS > Add‑DhcpServerInDC ‑DnsName "DhcpServer.contoso.local"
 ```
 
-Het managen van de windows firewall
----
+### Het managen van de windows firewall
 
-####1 Enablen of disablen van Windows firewall profiles
+#### 1 Enablen of disablen van Windows firewall profiles
 
 Hier gebruiken we de cmdlet Set‑NetFirewallProfile voor om alle windows firewall profiles te disablen en dan het publieke profiel te enablen.
 
@@ -2523,7 +2516,7 @@ Om alle profielen te enablen
 PS > Set-NetFirewallProfile –Name Public –Enabled True
 ```
 
-####2 Nieuwe firewall regels maken
+#### 2 Nieuwe firewall regels maken
 
 Voorbeeld 1 Al het uitgaand verkeer blokkeren voor alle FTP protocols:
 
@@ -2540,12 +2533,11 @@ Inbound ‑Action Allow ‑Program "C:\Program Files (x86)\Skype\Phone\
 Skype.exe"
 ```
 
-Best practice Analyzer
----
+### Best practice Analyzer
 
 Blijkbaar heb je in powershell een soort tool die je server configuratie vergelijkt met de standaarden van Windows.
 
-####1 Alle lijsten van de BPA Models
+#### 1 Alle lijsten van de BPA Models
 
 ```
 PS > Get-BpaModel
@@ -2557,7 +2549,7 @@ Lijst van de laatste scan time
 PS > Get-BpaModel | where LastScanTime –eq Never
 ```
 
-####2 Een praktijk model oproepen
+#### 2 Een praktijk model oproepen
 
 Dit scant de server voor beste gebruik en complicaties die problemen geven voor de file services
 
@@ -2567,7 +2559,7 @@ PS > Invoke-BpaModel –ModelId Microsoft/Windows/FileServices
 
 ![Alt text](http://i.imgur.com/8eLONIq.png)
 
-####3 Beste resultaten laten zien
+#### 3 Beste resultaten laten zien
 
 Met de cmdlet Get-BpaResult kunnen we de resultaten laten zien van de beste praktijk scan dat was uitgevoerd in het vorige voorbeeld.
 
