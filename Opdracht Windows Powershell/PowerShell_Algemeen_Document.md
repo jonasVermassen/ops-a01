@@ -1411,12 +1411,19 @@ In het vorige voorbeeld hebben we, [INT] gebruikt om $number te forceren om inte
 Een ander voordeel hiervanb is dat wanneer shell een error geeft het niet kan converteren naar een nummer, omdat bij $number alleen mogelijk is van integers te bewaren. 
 
 ```PS C:\> [int]$number = Read-Host "Enter a number"```
+
 ```Enter a number: Hello```
+
 ```Cannot convert value "Hello" to type "System.Int32". Error: "Input string```
+
 ```was not in a correct format."```
+
 ```At line:1 char:13```
+
 ```+ [int]$number <<<< = Read-Host "Enter a number"```
+
 ```+ CategoryInfo : MetadataError: (:) [], ArgumentTransformationMetadataException```
+
 ```+ FullyQualifiedErrorId : RuntimeException```
 
 Dit is een mooi voorbeeld van hoe je problemen later kan voorkomen, omdat je zeker bent dat $number een exact type zal zijn van data dat je verwacht.
