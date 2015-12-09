@@ -85,12 +85,14 @@ Mijn account toevoegen aan Domein Admins
 
 DHCP scope Instellen
 
-```add-dhcpserverv4Scope
+```
+add-dhcpserverv4Scope
 ```
 
 DHCP SuperScope instellen
 
-```add-dhcpserverv4SuperScope
+```
+add-dhcpserverv4SuperScope
 ```
 
 Handige sites:
