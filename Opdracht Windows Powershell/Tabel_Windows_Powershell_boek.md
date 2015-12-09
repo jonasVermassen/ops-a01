@@ -15,7 +15,7 @@
 | Handling errors  |   Robin   |      OK     | Windows PowerShell 3.0 First Steps (Jens) ||
 | Using CIM  |  Karel    |     OK      | Microsoft Windows PowerShell 3.0 First Look ||
 | Enhancements to tab completion  |  Karel    |     OK      | Microsoft Windows PowerShell 3.0 First Look ||
-| Scheduling jobs  |    Karel  |           | Microsoft Windows PowerShell 3.0 First Look ||
+| Scheduling jobs  |    Karel  |      OK     | Microsoft Windows PowerShell 3.0 First Look ||
 | <s>Server Roles en Features Configureren</s> | Jarno  |     OK      | Powershell 3 Advanced Administration Handbook (Jarno)   ||
 | Managing Active Directory with PowerShell  |   Jarno   |           | Powershell 3 Advanced Administration Handbook (Jarno) ||
 | Managing the Server with PowerShell  |   Robin   |      OK     |  ||
