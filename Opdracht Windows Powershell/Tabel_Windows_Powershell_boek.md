@@ -17,6 +17,6 @@
 | Enhancements to tab completion  |  Karel    |     OK      | Microsoft Windows PowerShell 3.0 First Look ||
 | Scheduling jobs  |    Karel  |      OK     | Microsoft Windows PowerShell 3.0 First Look ||
 | <s>Server Roles en Features Configureren</s> | Jarno  |     OK      | Powershell 3 Advanced Administration Handbook (Jarno)   ||
-| Managing Active Directory with PowerShell  |   Jarno   |           | Powershell 3 Advanced Administration Handbook (Jarno) ||
-| Managing the Server with PowerShell  |   Robin   |      OK     |  ||
+| <s>Managing Active Directory with PowerShell</s>  |   Jarno   |    OK       | Powershell 3 Advanced Administration Handbook (Jarno) ||
+| Managing the Server with PowerShell  |   Robin   |      OK     | Powershell 3 Advanced Administration Handbook (Jarno) ||
 | Managing Exchange server   |  Robin    |    OK       |  ||
