@@ -1218,6 +1218,7 @@ Een 2e manier van hoe een "backtick" kan werken:
 ```$computername```
 ```contains```
 ```SERVER-R2```
+```
 
 Als je goed kijkt, merk je op dat we (`n) 2 keer hebben gebruikt in de zin. 1 keer na de eerste $computername en 1 keer na contains. In dit voorbeeld, voegt de backtick speciale betekenis toe. Normaal is "n" een letter, maar met de "backtick" ervoor, wordt het een "carriage return" en lijn feed ( denk "n" voor "nieuwe lijn").
 
@@ -1235,6 +1236,7 @@ Een manier om dit te doen is om een comma-gescheiden lijst te gebruiken, omdat P
 ```SERVER-R2```
 ```SERVER1```
 ```Localhost```
+```
 
 Kijk goed hoe we in het vorige voorbeeld commas buiten de quotation marks hebben gezet. Als we ze binnen zouden zetten, zouden we een single object hebben dat commas en 3 computer namen inhoud. Met deze methode, kunnen we 3 objecten van elkaar onderscheiden, allemaal met het Type String. Zoals u kunt zien hebben we de inhoud van goed onderzocht van deze variabele. Ps laat elk object op zijn eigen lijn zien.
 
@@ -1252,6 +1254,7 @@ Een voorbeeld:
 ```localhost```
 ```PS C:\> $computers[-2]```
 ```SERVER1```
+```
 
 De variabele zelf heeft een eigenschap dat laat zien hoebeel objecten er zijn in 
 
@@ -1272,6 +1275,7 @@ Je kan altijd aan eigenschappen en methoden van een object binnen een variabele 
 ```SERVER-2008```
 ```PS C:\> $computername```
 ```SERVER-R2```
+```
 
 In het vorige voorbeeld, gebruiken we de $computername variable dat we eerder hadden gemaakt. Dit variabele houd een object in van het type System.String en je zou de complete lijst van eigenschappen en methoden van dit type wanneer je piped naar een string voor Gm. We gebruikten de Length eigenschap, als de ToUpper(), ToLower(), en Replace() methoden. In elke voorbeeld, hadden we deze om de methode naam te volgen met toevoegsels, zelf geen van de ToUpper() of de ToLower() hebben een parameter nodig in deze toevoegsels. Ook geen van deze methoden veranderen wat er binnen de variabele was, je kan dit zien op de laatste lijn. In de plaats, elke methode heeft een new String gebasseerd op de originele, als modificatie door deze methode.
 
@@ -1282,6 +1286,7 @@ In powershell v1 en v2 had je geen toegang tot de eigenschappen en methoden wann
 ```$services = Get-Service```
 
 ```$services.Name```
+```
 
 Powershell ziet dit als dat je probeerd toegang te krijgen tot een object. 
 
@@ -1304,6 +1309,7 @@ Het zelfde werkt voor methoden:
 
 
 ```$objects.ChangeStartMode('Disabled')```
+```
 
 #### Een type van een variabele declareren
 
@@ -1321,6 +1327,7 @@ Bijvoorbeeld:
 ```PS C:\> $number = $number * 10```
 ```PS C:\> $number```
 ```100100100100100100100100100100```
+```
 
 Dit geeft als uitvoer 100100100100100100100100100100. Hoe kan dit?
 
