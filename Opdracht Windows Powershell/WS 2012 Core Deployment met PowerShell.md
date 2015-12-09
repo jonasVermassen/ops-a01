@@ -83,6 +83,16 @@ Mijn account toevoegen aan Domein Admins
 
 ```Add-ADGroupMember -Identity "Domain Admins" -Member "JarnoR" ```
 
+DHCP scope Instellen
+
+```add-dhcpserverv4Scope
+```
+
+DHCP SuperScope instellen
+
+```add-dhcpserverv4SuperScope
+```
+
 Handige sites:
 
 http://www.tomsitpro.com/articles/powershell-active-directory-cmdlets,2-801.html
