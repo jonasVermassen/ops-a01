@@ -682,8 +682,7 @@ wsman:\localhost\Listener\listener*\port
 
 naar een andere value te veranderen met set-item cmdlet.
 
-Volgende stap een trusted hosts toevoegen
-----
+### Volgende stap een trusted hosts toevoegen
 
 Om alle workgroup-joined computers aan de lijst van trusted hosts toe te voegen doe je. ```Set-item wsman:localhost\client\trustedhosts -value *```
 
@@ -696,8 +695,7 @@ Je kan ook WinRM batch script toevoegen aan een computer lijst.
 
 Niet vergeten ```Enable-PSRemoting``` uit te voeren hierna voor de veranderingen.
 
-Remote management door winRM laten.
-----
+### Remote management door winRM laten.
 
 Een GPO maken door de volgende stappen uit te voeren.
 
@@ -718,8 +716,7 @@ start automatisch en luisterd op het netwerk de HTTP requests op poort
 
 ![Alt text](http://i.imgur.com/H4P0BXr.png)
 
-Windows Remote Management door de Windows Firewall laten
-----
+### Windows Remote Management door de Windows Firewall laten
 
 1) Vind computer configuration > Policies > Windows Settings > Security
 Settings > Windows Firewall with Advanced Security > Windows
@@ -741,8 +738,7 @@ Firewall > Inbound Rules
 
 ![Alt text](http://i.imgur.com/QN9K1Ay.png)
 
-Service Windows Remote Management(WS-Management) aanzetten 
-----
+### Service Windows Remote Management(WS-Management) aanzetten 
 
 De remote service instellen zodat deze automatisch start. Ga naar Computer Configuration > Policies > Windows Settings > Security Settings > System Services.
 
@@ -767,19 +763,18 @@ Open de recovery tab en stel alle failure settings in als restart the service.
 
 ![Alt text](http://i.imgur.com/3ODkXMa.png)
 
-Een Group Policy Update uitvoeren
-----
+### Een Group Policy Update uitvoeren
 
 Open een command promt als administrator en voer gpudate /force uit om de veranderingen door te voeren.
 
-Remoting uitschakelen
-----
+### Remoting uitschakelen
+
 Je kan ```Disable-PSRemoting``` gebruiken om de remote session configuratie uit te schakelen. Enable-PSRemoting alle veranderen door dit commando zullen niet verwijderd worden.
 
 Als geen andere service of component op de lokale pc, de WinRM service nodig heeft kan je de service disablen door het volgende commando uit te voeren ```Set-Service winrm -StartupType Manual``` en ```Stop-Service winrm```.
 
-De remoting commands uitvoeren
-----
+### De remoting commands uitvoeren
+
 Wanneer we bezig zijn met remoting kunnen we commando's en scripts uitvoeren op een paar manieren.
 De ```Invoke-Command``` cmdlet en interactieve remoting sessies. Een keer dat je remoting hebt geactiveerd op alle computers, kan je de ```Invoke-Command``` cmdlet gebruiken om commando's en scripts te runnen. 
 
@@ -789,8 +784,8 @@ Voorbeeld hiervan:
 
 Wanneer we het ip adress naar de -ComputerName parameter sturen en -ScriptBlock parameter als Get-Process, dan zal de uitvoer terug gestuurd worden naar de lokale pc.
 
-ScriptBlock draaien op een remote computer
-----
+### ScriptBlock draaien op een remote computer
+
 Je kan dit commando uitvoeren met de volgende methode ```Invoke-Command -ComputerName Win-8 -ScriptBlock {Get-Service}```
 
 Script block parameter kan gebruikt worden om een lijst te specifiëren dat je wilt draaien op de remote computer.
@@ -809,8 +804,7 @@ Als je scripts of commands runned, dan kan je het Invoke-Command het laten lezen
 ```Invoke-Command -ComputerName Win-8,Win-8-Client –filePath
 c:\Scripts\Tasks.ps1```
 
-Een persistente sessie maken met de Invoke-Command
-----
+### Een persistente sessie maken met de Invoke-Command
 
 Run ```Invoke-Command``` met de ```-ComputerName``` parameter, deze specifieerd de naam van de remote computer.
 
@@ -834,8 +828,7 @@ We kunnen de ```$fileCount``` variabele alleen gebruiken omdat we een persistent
 
 ![Alt text](http://i.imgur.com/kCvA7rU.png)
 
-Specifiëren van login gegevens om te remoten
-----
+### Specifiëren van login gegevens om te remoten
 
 In een domein omgeving, kunnen we inloggen als gebruikers alleen als we administrator gegevens hebben om toegang te krijgen tot een pc in een domein. Maar, in een werkgroep, moeten we gegevens doorspelen te samen met het ```invoke-command```.
 
@@ -849,8 +842,7 @@ $cred
 
 In dit voorbeeld ```Get-Credential``` prompt voor de credentials om toegang te geven aan de remote computer en gebruikt dezelfde bij het oproepen van de Invoke-Command cmdlet. Wanneer je ```Get-Credentials``` cmdlet uitvoert krijg je een venster waar je username en password wordt gevraagd. Wanneer je inlog gegevens invult, gaat de cndlet een ```PSCrendential``` object aanmaken die de inlog gegevens van een gebruiker bewaard in het ```$cred``` . 
 
-Een interactieve remote sessie starten
-----
+### Een interactieve remote sessie starten
 
 ```Enter-PSSession``` en ```Exit-Pssesion``` zijn de cmdlets gebruikt voor star/exit een interactieve remoting sessie. Om in te loggen op een remote sessie gebruiken we het  volgende commando.
 
@@ -870,13 +862,11 @@ Met ipconfig kan je checken of je verbonden bent.
 
 Wanneer verbonden met een interactieve remote sessie kan je elk commando uitvoeren zoals met Telnet.
 
-Uit een interactieve sessie gaan
-----
+### Uit een interactieve sessie gaan
 
 ```Exit-PSSession``` Je moet opletten voor parameters als -ComputerName want de Enter-PSSession cmdlet start maar tijdelijk een powershell sessie en geen permanente. Alle variabelen dat je gemaakt hebt en je commando geschiedenis zal verwijderd worden.
 
-Een persistente (volhoudende) sessie starten met interactieve remoting
-----
+### Een persistente (volhoudende) sessie starten met interactieve remoting
 
 Je kan een persistente sessie starten met ```Enter-PSSession``` voor de sessie te beginnen en met het gebruik van ```Get-PSSession``` cmdlet kan je zien welke beschikbare open PS sessies er zijn.
 
@@ -909,8 +899,7 @@ $session=Get-PSSession -Id 3
 Enter-PSSession -Session $session
 ```
 
-Disconnecten en reconnecten van sessies
-----
+### Disconnecten en reconnecten van sessies
 
 In powershell v3 kan je disconnecten met het ```Disconnect-PSSession``` en verbinden met het ```Connect-Pssession``` cmdlet. Deze commands accepteren elk een sessie object, die je maakt met het ```New-PSSession``` cmdlet.
 
@@ -924,8 +913,7 @@ Daarna log je in op een andere machine als de zelfde user van op de andere sessi
 
 Met ```Remove-PSSession``` kan een remote sessie permanent worden afgezet.
 
-Een remote sessie opslaan op de hardeschijf
-----
+### Een remote sessie opslaan op de hardeschijf
 
 Met het ```Export-PSSession``` cmdlet kunnen we commands exporteren van een remote sessie en ze opslaan in een powershell module op de lokale schijf. Deze cmdlet bewaard cmdlets, functies, aliasen en amdere commando's in een PS module.
 
@@ -943,8 +931,7 @@ Als de ```Export-PSSession``` cmdlet gelukt is, krijgen we een gelijkaardig inpu
 
 De modules worden gegenereerd onder de .psm1, .psd1 extensies. Nu kan je de modules laden om aan de remote commands te kunnen.
 
-Importeren van een module opgeslagen op een schijf
-----
+### Importeren van een module opgeslagen op een schijf
 
 Je hebt geen specifiek pad nodig voor de module. Het volgende commando importeerd alle remote commands verkrijgbaar in een module op de lokale sessie:
 
@@ -954,8 +941,7 @@ Import-Module RemoteCommands
 
 Dan voeren we het remote commando uit, om een remote sessie te starten, uitvoeren van commandos in de remote sessie en de uitvoer weergeven. Dit gebeurt allemaal als je gelijk welke remoting gerelateerde cmdlet gebruikt.
 
-Limieten van Export-PSSession
-----
+### Limieten van Export-PSSession
 
 - Je kan geen programma starten met de user interface omdat het toegang nodig heeft met een interactieve desktop. 
 
@@ -963,8 +949,7 @@ Limieten van Export-PSSession
 
 - Je kan geen PowerShell provider exporteren
 
-Het gebruik van sessie configuraties
-----
+### Het gebruik van sessie configuraties
 
 ```Invoke-Command, Enter-PSSession``` en ``` New-PSSession``` cmdlets hebben een ```-ConfigurationName``` parameter waarmee je een verschillende sessie kan configureren dan de standaard.
 
@@ -1002,8 +987,7 @@ Set-PSSessionConfiguration
 Get-PSSessionConfiguration
 ```
 
-Nieuwe sessie configuraties maken
-----
+### Nieuwe sessie configuraties maken
 
 Met ```Register-PSSessionConfiguratie``` cmdlet kan je een nieuwe sessie configuratie maken. Met powershell scripts kan je het opstarten v an een sessie configureren. 
 
@@ -1026,8 +1010,7 @@ Uitvoer:
 
 Je krijgt een prompt om de actie te bevestigen, aan het einde van het herstarten van de WinRM service op de lokale pc. Je moet eerst script uitvoeren enablen op de lokale pc om de mogelijkheid te hebben van startup scripts te gebruiken als onderdeel van de sessie configuratie.
 
-Alle beschikbare sessie configuraties lijsten
-----
+### Alle beschikbare sessie configuraties lijsten
 
 Met het ```Get-PSSessionConfiguration``` cmdlet lijst je alle beschikbare sessie configuraties op de lokale pc.
 
@@ -1048,8 +1031,7 @@ Dit laat alle configuratie namen zien die beschikbaar zijn op een remote compute
 
 Je moet toegang hebben tot de sessie configuratie op de remote pc om dit te kunnen gebruiken in PS remoting.
 
-Custom permissies en PS sessie configuraties
-----
+### Custom permissies en PS sessie configuraties
 
 Je kan ```Get-PSSessionConfiguration``` gebruiken om toegang te krijgen voor de nieuwe sessie.
 
@@ -1065,8 +1047,7 @@ Dit opent een nieuw venster.
 
 Nu kan je schrijf en lees rechten aanvinken voor de gebruikers en administrator groepen.
 
-Een custom sessie configuratie oproepen
-----
+### Een custom sessie configuratie oproepen
 
 De volgende code snippets laten 3 manieren zien om een remote sessie op te roepen met een custom sessie configuratie naam:
 
@@ -1085,8 +1066,7 @@ Invoke-Command -ComputerName win-8 -ConfigurationName NetTCPIP
 
 We gebruiken het ```Invoke-Command``` om de active directory module in een persistente sessie te laden en dan importeren van NetTCPIP cmdlets in de lokale sessie. Alle NetTCPIP cmdlets zullen beschikbaar zijn wanneer AD module als startup script wordt gebruikt.
 
-Uitschakelen van een sessie configuratie
-----
+### Uitschakelen van een sessie configuratie
 
 Gebruik ```Disable-PSSessionConfiguration``` om een bestaande configuratie te disablen en gebruikers te stoppen van te connecteren vanaf hun lokale pc door gebruik van een sessie configuratie. Met de ```-Name``` parameter kan je specifiëren welke sessie configuratie je wilt uitschakelen. Als je geen configuratie specifieerd zal de default microsoft sessie configuratie uitgeschakeld worden.
 
@@ -1096,8 +1076,8 @@ De ```Disable-PSRemoting``` cmdlet zal alle PS sessie configuraties uitschakelen
 
 De ```Enable-PSSessionConfiguration``` cmdlet kan gebruikt worden voor het inschakelen of uitschakelen van de configuratie. Met de -Name parameter kan je specifiëren welke configuratie je wilt inschakelen.
 
-Verwijderen van een sessie configuratie
-----
+### Verwijderen van een sessie configuratie
+
 Je kan de ```Unregister-PSSessionConfiguration``` cmdlet gebruiken om een vorige gedefiniëerde sessie configuratie te verwijderen. Let op als je ```Enable-PSRemoting``` opnieuw uitvoert wordt de default sessie configuratie weer aangemaakt.
 
 
