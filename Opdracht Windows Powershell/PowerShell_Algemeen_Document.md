@@ -2132,7 +2132,127 @@ PS C:\> Set-ExecutionPolicy –ExecutionPolicy AllSigned
 <div id='15'/>
 ##Plannen van jobs
 
-INSERT CONTENT
+
+PowerShell 2.0 introduceerde het concept van een job. Een job is een eenheid van werk dat onafhankelijk kan lopen van wat er gaande is met de opdrachtregel of de rest van het script.
+Dit laat toe om gelijktijdige jobs te laten draaien op hetzelfde moment. Veel jobs kunnen
+worden gepland; alle werkzaamheden draaien op de achtergrond terwijl de opdrachtregel
+blijft functioneren of het script blijft draaien. Dit was een enorme verbetering
+over wat Windows-beheerders hadden in het verleden. Liever dan
+te hoeven wachten op een eenheid van het werk, kunnen we talrijke
+acties tegelijk verwerken. Dit bespaarde tijd en liet de beheerder toe om te werken aan iets
+anders. Daarnaast kunnen jobs op afstand worden uitgevoerd, verspreid over de gehele infrastructuur.
+
+Het is mogelijk om het uitvoeren van een script te plannen met de
+PowerShell executable met het volgende commando:
+
+```PowerShell
+powershell.exe –File C:\CleanOldUsers.ps1' "
+```
+
+Dit commando kan op de Windows Task Scheduler worden toegevoegd als een fundamentele taak.
+
+![Jobs Task scheduler](https://i.gyazo.com/bf5df3e300acd9c6acaa84595de9759c.png)
+
+
+
+#### Het creëren van een job trigger
+
+De eerste stap bij het plannen van een nieuwe job is een object dat het schema definieert creëren
+waarop de taak zal starten. Dit staat ook bekend als een job trigger.
+
+```PowerShell
+PS C:\> New-JobTrigger -At 1:00AM -Daily
+```
+
+![Jobs Trigger](https://i.gyazo.com/10ceccebda4120d0811e950c032cf11e.png)
+
+De New-JobTrigger cmdlet vereist dat de parameter op worden gespecificeerd. de At
+parameter accepteert een DateTime object.
+
+
+Om jobs te compenseren kunnen we zelfs de parameter RandomDelay opgeven. Deze
+parameter accepteert een TimeSpan object.
+
+```PowerShell
+PS C:\> New-JobTrigger -Daily -At 1:00PM -RandomDelay (New-TimeSpan
+-Minutes 1)
+```
+
+Om het nieuw-JobTrigger cmdlet nuttig te maken, is het noodzakelijk om het resultaat van de
+cmdlet naar de Register-ScheduledJob cmdlet te sturen. Dit is het meest eenvoudig te doen door gebruik te maken van een variabele:
+
+```PowerShell
+PS C:\ > $DailyTrigger = New-JobTrigger -At 1:00AM –Daily
+```
+
+De $DailyTrigger variabele kan nu worden doorgegeven aan de Register-ScheduledJob
+cmdlet om onze job te plannen met behulp van volgend commando:
+
+```PowerShell
+PS C:\ > Register-ScheduledJob -Name RestartFaultyService -ScriptBlock {
+Restart-Service FaultyService }
+-Trigger $DailyTrigger
+```
+
+Dit levert de volgende output:
+
+![Jobs Register](https://i.gyazo.com/3fc556f77096fc745d0019d5edfd9fd0.png)
+
+Als we de Get-ScheduledJob cmdlet runnen zal onze nieuwe job geretourneerd worden:
+
+```PowerShell
+PS C:\ > Get-ScheduledJob
+```
+
+In de tweede methode, de Get-ScheduledJob cmdlet aanvaardt zowel de naam en ID als 
+input, zodat alleen bepaalde jobs geretourneerd worden:
+
+```PowerShell
+PS C:\ > Get-ScheduledJob -Name RestartFaultyService
+```
+
+#### Geplande taken bekijken in de Windows-Taakplanner
+
+![Jobs Task scheduler UI](https://i.gyazo.com/44f58025534fadf4ba79d9bb89cb51bd.png)
+
+Alle geplande PowerShell jobs kunnen worden gevonden onder
+**Microsoft \ Windows \ PowerShell \ ScheduledJobs**
+
+De Get-Job cmdlet zal het voltooide of lopende geplande taken als volgt teruggeven:
+
+```PowerShell
+PS C:\ > Get-Job
+```
+
+Output:
+
+![Jobs Get-job](https://i.gyazo.com/3b753e911030cb63a4cfca0979392ce6.png)
+
+Net als bij een in-sessie job, kunnen we het resultaat van de opgegeven jobs ontvangen. Dir
+commando leest de resultaten van de geplande jobs.
+
+```PowerShell
+PS C:\ > Receive-Job 2
+```
+
+Net als bij de Windows Taakplanner, is het mogelijk om met behulp van de command line jobs uit te schakelen. Dit kan worden bereikt met behulp van de Disable-ScheduledJob cmdlet:
+
+```PowerShell
+PS C:\> Disable-ScheduledJob –Name RestartFaultyService
+```
+
+Willen we de job opnieuw inschakelen gebruiken we alleen de Enable-ScheduledJob cmdlet:
+
+```PowerShell
+PS C:\> Enable-ScheduledJob –Name RestartFaultyService
+```
+
+Wanneer we niet langer een job nodig hebben, kunnen we het te verwijderen met de
+Unregister-ScheduledJob cmdlet:
+
+```PowerShell
+PS C:\> Unregister-ScheduledJob –Name RestartFaultyService
+```
 
 <div id='16'/>
 ##Server Roles en Features Configureren
