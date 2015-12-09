@@ -1369,12 +1369,12 @@ Je plant om iets arithmetische te doen met dat nummer, en je vraagt een gebruike
 
 Bijvoorbeeld:
 
-
-```PS C:\> $number = Read-Host "Enter a number"```
-```Enter a number: 100```
-```PS C:\> $number = $number * 10```
-```PS C:\> $number```
-```100100100100100100100100100100```
+```
+PS C:\> $number = Read-Host "Enter a number"
+Enter a number: 100
+PS C:\> $number = $number * 10
+PS C:\> $number
+100100100100100100100100100100
 ```
 
 Dit geeft als uitvoer 100100100100100100100100100100. Hoe kan dit?
