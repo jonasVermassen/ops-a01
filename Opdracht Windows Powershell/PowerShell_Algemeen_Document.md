@@ -1383,15 +1383,17 @@ Als je goed kijkt zie je wat er gebeurd. In de plaats van 100 te vermenigvuldige
 
 Dus de shell gebruikt dit als een string:
 
-```PS C:\> $number = Read-Host "Enter a number"```
-```Enter a number: 100```
-```PS C:\> $number | gm```
-```TypeName: System.String```
-```Name MemberType Definition```
-```---- ---------- ----------```
-```Clone Method System.Object Clone()```
-```CompareTo Method int CompareTo(System.Object valu...```
-```Contains Method bool Contains(string value)```
+```
+PS C:\> $number = Read-Host "Enter a number"
+Enter a number: 100
+PS C:\> $number | gm
+TypeName: System.String
+Name MemberType Definition
+---- ---------- ----------
+Clone Method System.Object Clone()
+CompareTo Method int CompareTo(System.Object valu...
+Contains Method bool Contains(string value)
+```
 
 Door $nummer te pipen naar Gm, laat zien dat de shell het als een System.String ziet, geen System.Int32. Er zijn een aantal manieren om dit te fixen.
 
@@ -1410,21 +1412,16 @@ Dit doe je aan de hand van het volgende voorbeeld:
 In het vorige voorbeeld hebben we, [INT] gebruikt om $number te forceren om integers te hebben (1). Na het ingeven van de input, pipen we $number naar Gm om zeker te zijn dat het inderdaad een integer is en geen string (2). Aan het einde kan je zien dat de variabele werd gezien als een nummer en een echte vermenigvuldiging (3).
 Een ander voordeel hiervanb is dat wanneer shell een error geeft het niet kan converteren naar een nummer, omdat bij $number alleen mogelijk is van integers te bewaren. 
 
-```PS C:\> [int]$number = Read-Host "Enter a number"```
-
-```Enter a number: Hello```
-
-```Cannot convert value "Hello" to type "System.Int32". Error: "Input string```
-
-```was not in a correct format."```
-
-```At line:1 char:13```
-
-```+ [int]$number <<<< = Read-Host "Enter a number"```
-
-```+ CategoryInfo : MetadataError: (:) [], ArgumentTransformationMetadataException```
-
-```+ FullyQualifiedErrorId : RuntimeException```
+```
+PS C:\> [int]$number = Read-Host "Enter a number"
+Enter a number: Hello
+Cannot convert value "Hello" to type "System.Int32". Error: "Input string
+was not in a correct format."
+At line:1 char:13
++ [int]$number <<<< = Read-Host "Enter a number"
++ CategoryInfo : MetadataError: (:) [], ArgumentTransformationMetadataException
++ FullyQualifiedErrorId : RuntimeException
+```
 
 Dit is een mooi voorbeeld van hoe je problemen later kan voorkomen, omdat je zeker bent dat $number een exact type zal zijn van data dat je verwacht.
 
