@@ -108,6 +108,8 @@ Security Group toevoegen aan AD en ou
 NEW-ADGroup –name “Beheer” –groupscope Global –path “OU=Beheer,DC=Assengraaf,DC=nl”
 ```
 
+![ALt text](http://i.imgur.com/JXf4665.png)
+
 Maak user rechtsstreeks in een bestaande OU
 
 ![ALt text](http://i.imgur.com/nBDk8iy.png)
