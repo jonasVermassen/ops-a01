@@ -95,6 +95,17 @@ DHCP SuperScope instellen
 add-dhcpserverv4SuperScope
 ```
 
+Users toevoegen aan AD
+
+```
+PS C:\Windows\system32> New-ADUser -SamAccountName "FrankA"
+Surname "Assengraaf" -DisplayName "Frank Assengraaf"
+```
+
 Handige sites:
 
 http://www.tomsitpro.com/articles/powershell-active-directory-cmdlets,2-801.html
+
+https://technet.microsoft.com/en-us/library/ee617253.aspx
+
+http://blogs.technet.com/b/heyscriptingguy/archive/2012/10/30/powertip-single-line-powershell-command-to-list-all-users-in-an-ou.aspx
