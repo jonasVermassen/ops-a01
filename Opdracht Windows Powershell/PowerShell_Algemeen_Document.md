@@ -1974,7 +1974,160 @@ PS C:\> Get-Command *WMI* -Type Cmdlet
 <div id='14'/>
 ##Verbetering van Tab Completion
 
-INSERT CONTENT
+Tab completion is de functie waarmee u begint met het typen van een commando,
+drukt u op de Tab-toets en de PowerShell engine de
+mogelijke overeenkomsten invult. Dit bespaart duizenden key
+strokes, voor een typische beheerder een dag. Het kan ook nuttig zijn voor cmdlets te ontdekken.
+
+In PowerShell 3.0 heeft Microsoft de ervaring versterkt en een probleem verholpen waarmee de beheerder kampte. De vervelende kwestie werd vastgesteld als **midline tabbing**. Als de gebruiker begon met het typen van een commando, of eventueel kopiëren van een
+commando in een opdrachtprompt en de cursor naar het midden van de lijn zou bewegen zou
+de opdrachtprompt alles na de voltooide parameter verwijderen.
+
+Neem bijvoorbeeld de volgende command:
+
+```PowerShell
+PS C:\> Start-job -ScriptBlock { Get-WmiObject -Class Win32_Process }
+```
+
+Dit commando zal een job starten die alle exemplaren van de Win32_Process zal terugkeren beginnen de
+WMI klasse. Als we begonnen met het typen van de parameter,
+dan op de Tab-toets drukten (zoals aangegeven door de <tab> syntax in het volgende commando)
+zou de command-line de rest van de lijn, achter de parameter verwijderen:
+
+```PowerShell
+PS C:\> Start-job –N<tab> -ScriptBlock { Get-WmiObject -Class
+Win32_Process }
+```
+
+Het vorige commando in PS 2.0:
+
+```PowerShell
+PS C:\> Start-job –Name
+```
+
+In PS 3.0:
+
+```PowerShell
+PS C:\> Start-job –Name -ScriptBlock { Get-WmiObject -Class Win32_Process
+}
+```
+
+Deze eenvoudige verbetering was zeer nodig. Hetzelfde tab completion
+gedrag is beschikbaar voor de geneste script blok gevonden in onze start-Job
+command line oproep in dit voorbeeld. Bijvoorbeeld, het toevoegen van een computer naam aan de
+Get-WMIObject oproep voor de parameter klasse leidt niet tot het schrappen van de
+rest van de opdrachtregel:
+
+```PowerShell
+PS C:\> Start-job –Name -ScriptBlock { Get-WmiObject –Co<tab> -Class
+Win32_Process }
+```
+
+De eerdere opdrachtregel resulteert in de volgende:
+
+
+```PowerShell
+PS C:\> Start-job –Name -ScriptBlock { Get-WmiObject –ComputerName -Class
+Win32_Process }
+```
+
+In PowerShell 2.0 was het mogelijk om het tab completion gedrag aan te passen. U
+kon gewoon voorrang geven op de default function **TabExpansion** met uw eigen versie.
+In PowerShell 3.0 is er niet langer een default function **TabExpansion** maar een
+default function **TabExpansion2**. We kunnen dit zien door het volgende commando aan te roepen:
+
+```PowerShell
+PS C:\> Get-Command TabExpansion*
+```
+
+![Tab Expansion](https://i.gyazo.com/bd22007a271c216ded4ee8a12da369f6.png)
+
+
+Het is nog steeds mogelijk om het tab completion gedrag te overschrijven door het gebruik van de
+originele TabExpansion functie. PowerShell zal de aangepaste, door de gebruiker gedefinieerde TabExpansion functie gebruiken als het
+bestaat in de huidige sessie. De functie tab completion moet een array van
+mogelijke waarden **of $null** teruggeven:
+
+```PowerShell
+PS C:\> function TabExpansion { "Get-ChildItem" }
+```
+
+Deze tab completion functie is een slecht idee omdat alle tab expansions zullen resulteren in het
+cmdlet **Get-ChildItem** , maar het laat zien hoe makkelijk het is om onze eigen tab completion gedrag te creëren. Met onze nieuwe, slecht ontworpen tab
+completion functie kunnen we beginnen met het typen van een reeks commando's:
+
+```PowerShell
+PS C:\> Set<tab>
+```
+
+Dit zou resulteren in het volgende:
+
+```PowerShell
+PS C:\> Get-ChildItem
+```
+
+Niet de meest bruikbare tab expansion gedrag! Om onze aangepaste tab completion te verwijderen
+kunnen we de functie provider die wordt geleverd in PowerShell gebruiken. De commando
+sequence zal het tab completion gedrag weer terugzetten. De
+volgende command geeft dit:
+
+```PowerShell
+PS C:\> Remove-Item function:\TabExpansion
+```
+
+Het is mogelijk om de vooraf gedefinieerde functie TabExpansion2 te verwijderen met dezelfde
+methode, maar dit tab completion helemaal uitschakelen. Naast de
+verbeteringen voor midline tabbing zullen de core modules ondersteuning bieden voor betere completion van
+parameterwaarden, zelfs wanneer er geen parameters worden gespecificeerd. Voorheen een cmdlet
+zoals Stop-proces, zou je de naam van een lopend proces moeten typen
+voordat u het als een parameter waarde kon doorsturen:
+
+```PowerShell
+PS C:\> Stop-Process Notepad
+```
+
+In PowerShell 3,0, ondersteunen veel van de kern cmdlets parameterwaarde completion.
+Je kan nu het volgende typen:
+
+```PowerShell
+PS C:\> Stop-Process N<tab>
+```
+
+Dit zou resulteren in terug te keren van een proces startende
+met een N als we drukken op de Tab-toets. Als **Notepad** het enige lopend proces was, zou dit leiden tot:
+
+```PowerShell
+PS C:\> Stop-Process Notepad
+```
+
+De cmdlets dat het ondersteunen kunen de functie op meerdere eigenschappen gebruiken. Bijvoorbeeld, de Get-Job
+cmdlet ondersteunt zowel **ID** als **Name** parameterwaarde expansie. Enkele andere cmdlets
+dat dit type uitbreiding ondersteunen zijn **Get-EventLog** voor log namen en **Get-Service** voor dienst namen:
+
+```PowerShell
+PS C:\ > start-job -Name test -ScriptBlock { Get-Process }
+```
+
+![Tab Get-service](https://i.gyazo.com/6448d71b9b8c3f5c74f27482646acf5b.png)
+
+```PowerShell
+PS C:\> Get-Job <tab>
+```
+
+Dit zou het volgende opleveren:
+
+```PowerShell
+PS C:\> Get-Job 2
+```
+
+De laatste uitbreiding op het gebied van tab completion is de mogelijkheid om enumerated
+values te expanderen:
+
+
+```PowerShell
+PS C:\> Set-ExecutionPolicy –ExecutionPolicy <tab>
+PS C:\> Set-ExecutionPolicy –ExecutionPolicy AllSigned
+```
 
 <div id='15'/>
 ##Plannen van jobs
