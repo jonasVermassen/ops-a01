@@ -2622,7 +2622,364 @@ PS > Get-BpaResult –ModelId Microsoft/Windows/FileServices
 <div id='17'/>
 ##Beheer Active Directory met PowerShell
 
-INSERT CONTENT
+### Active Directory-verwante concepten
+
+#### Introductie op Active Directory
+
+Active Directory (AD) verschaft informatie over het opslag netwerk object en maakt deze informatie beschikbaar voor gebruikers en netwerk beheerders die de Active Directory services gebruiken.
+Active Directory kan allerlei soorten informatie over het object opslaan en eenvoudig toegankelijk maken. 
+Het gebruikt informatie van de gestructureerde data opslag directory als de logische structuur van het fundament van de AD; tegelijkertijd zal het veilig worden geïntegreerd in de Active Directory. 
+Door middel van de netwerk login kan de systeem beheerder het gehele netwerk van directory data en eenheden beheren, en gemachtigde netwerk gebruikers hebben ook toegang tot het netwerk op een lokale bron.
+
+Active Directory omvat twee aspecten: een directory object en een directory service.
+
+Een directory object slaat informatie op over allerlei soorten object met een fysieke aard, waardoor we de active directory vanuit een statische oogpunt beter kunnen begrijpen. 
+We moeten de "catalogus" of "map" enkel als een object of een entiteit beschouwen, waar geen groot verschil tussen bestaat.
+
+Een directory service geeft de directory welke alle informatie en resources bevat de gelegenheid om een service-rol te vervullen. Active Directory is een verdeelde directory service. 
+Hoewel informatie verspreid wordt over verschillende computers, kunnen gebruikers snel informatie raadplegen. 
+Aangezien verschillende apparaten dezelfde informatie kunnen verschaffen, kan het systeem veel fouten verdragen. Daardoor biedt Active Directory eenzelfde beeld aan alle gebruikers,
+ongeacht waar de gebruiker inlogt en waar de informatie is.
+
+#### Namespace
+
+Active Directory is in essentie een namespace. We kunnen namespace toevoegen aan elke naam bij de analytische grens.
+De grens gekoppeld aan de naam kan het bereik bepalen voor het in kaart brengen van de informatie. 
+Name resolution levert een naam op, die vertaald wordt naar een naam die het object of de verwerking van informatie vertegenwoordigt
+
+#### Object
+
+Objecten zijn de informatie entiteiten in Active Director. We zien ze meestal als eigenschappen, maar het zijn sets van attributen, 
+die vaak fysieke entiteiten zoals gebruiker accounts en bestandnamen voorstellen. 
+Objecten kunnen met behulp van de attributenbeschrijving van hun basiseigenschappen (zoals een gebruikersaccountattribuut), onder meer een klanttnaam, telefoonnummer, e-mail adres en thuisadres bevatten.
+
+####Container
+
+Een container is bij de Active Directory het deel van de ruimte en het directory object bestemd voor namen. Het heeft tevens attributen, maarf het directory object is anders. Het vertegenwoordigt geen tastbaar object, maar een opslag object ruimte.
+Aangeizne het slecht een opslag object ruimte vertegenwoordigt, is het maar een kleine namespace.
+
+#### Trees
+
+In elke namespace, verwijst een directory tree naar de object container en de hierarchische structuur. De bladeren en knopen van een boom zijn vaak de objecten, en een boom zonder bladeren of bomen is een container. Een directory tree geeft de wijze
+waarop objecten zijn verbonden aan. Het toont ook het pad van één object naar een ander object.
+
+In de Active Directory is de directory tree de basisstructuur. Als elke container een startpunt is, waarbij de laag-op-laag methode wordt gebruikt, kan hiermee een subtree worden gevormd. 
+Een tree kan uit een simpele directory bestaan, en een computernetwerk of domein kan een boom vormen. Een directory tree beschrijft in feite een soort 'path' relatie.
+
+#### Domein
+
+Een domein is het logische, fundamentele bouwblok voor het partitioneren van Active Directory. Partitioneren is een belangrijk concept van directory services omdat het het gebruik van meerdere directory partities toelaat, in plaats van één grote opslag.
+De opslag van elk domein hoeft vervolgens enkel de informatie op te slaan over de objecten binnen dat domein, waardoor de Active Directory als geheel zeer schaalbaar wordt.
+
+### Active Directory met PowerShell beheren
+
+### Gebruiker beheer
+
+De AD module in PowerShell kan gebruikt worden om de gebruiker en computeraccounts in de Active Directory Domain Services (AD DS) te beheren. Hieronder wordt getoond hoe je de AD module kunt gebruiker om gebruikers te beheren.
+
+#### Een AD gebruiker creëren
+
+Het volgend voorbeeld toont aan hoe de AD module voor Windows Powershell gebruikt kan worden om een nieuwe gebruiker in AD DS te maken.
+We maken een nieuwe gebruiker aan (```TestUser```) met een wachtwoord (```p@ssword```) in een organisatie unit (```Test```) in het ```fuhaijun.com``` domein:
+
+```
+New-ADUser-SamAccountName TestUser -Name "A Test User" -AccountPassword
+(ConvertTo-SecureString -AsPlainText "p@ssw0rd" -Force) -Enabled $true
+-Path 'OU=Test,DC=FUHAIJUN,DC=COM'
+```
+
+Hier proberen we door middel van de ```-Force``` parameter een doorsnee tekst string te veranderen in een beveiligingsstring welke gebruikt wordt als wachtwoord.
+De ```-Path``` parameter wordt gebruikt om het domein path dat de user maakt te specificeren.
+
+#### Instellen dat een gebruikersaccount verloopt
+
+Soms is het nodig om een tijdelijk gebruikersaccount te maken, dat na een bepaalde periode verloopt.
+
+```
+Set-ADUser TestUser -AccountExpirationDate 11/27/2014
+```
+
+De ```Set-ADUser``` cmdlet wordt gebruikt om in te stellen dat de gebruiker (```TestUser```) vervalt op 11/27/2014.
+
+#### De gebruiker dwingen het wachtwoord te veranderen bij de volgende inlogpoging
+
+Om je ervan te verzekeren dat het wachtwoord van een nieuwe gebruiker geheim blijft, kun je de gebruiker dwingen het wachtwoord bij de volgende inlogpoging te veranderen.
+
+```
+Set-ADUser -Identity TestUser -ChangePasswordAtNextLogon $true
+```
+
+We dwingen de gebruiker (```TestUser```) om het wachtwoord te veranderen door de ```-ChangePasswordAtNextLogon``` switch parameter toe te wijzen.
+
+### Gebruikers ervan weerhouden het wachtwoord te veranderen
+
+Bij speciale gebruikers accounts, zoals een account dat gedeeld wordt door verschillende gebruikers, moeten we deze gebruikers ervan weerhouden het wachtwoord te veranderen.
+
+```
+Set-ADAccountControl -Identity TestUser -CannotChangePassword $true
+```
+
+De ```-CannotChangePassword``` parameter wordt gebruikt om de gebruiker (```TestUser```) ervan te weerhouden het wachtwoord aan te passen.
+
+### Computer management
+
+Als een computer in een domein bestuurd moet worden, moet deze verbonden worden aan het domein. 
+De volgende voorbeelden leggen uit hoe je de Active Directory module in PowerShell kunt gebruiken voor computer management.
+
+### Een computer aan een domein verbinden
+
+De command (hieronder) moet lokaal op de computer worden uitgevoerd als je de betreffende PC aan het ```fuhaijun.com``` domein wil toevoegen. Hierbij gebruiken we steeds de gegevens van de huidige ingelogde gebruiker.
+
+```
+Add-Computer -DomainOrWorkgroupName fuhaijun
+```
+
+Wanneer we de computer ```Win8Client``` aan het ```fuhaijun.com``` domein moeten toevoegen en een domain controller specificeren met de ```-server``` parameter, voeren we het volgende commando in:
+
+```
+Add-Computer Win8Client -DN fuhaijun -Server Win2012-ad
+```
+
+Natuurlijk kunnen we de lokale PC ook toevoegen aan de OU in de directory die met de ```-OUPath``` parameter is aangeduid
+
+```
+Add-Computer -DomainOrWorkgroupName fuhaijun -OUPath
+OU=testOU,DC=fuhaijun,DC=com
+```
+
+### De naam van een computer veranderen
+
+We kunnen de naam van een lokale computer verbonden met het domein veranderen door de volgende command uit te voeren:
+
+```
+Rename-Computer -NewName win8client2 -DomainCredential fuhaijun\
+administrator –Restart
+```
+
+Dit voorbeeld laat zien hoe je de naam van de PC naar ```Win8Client2```, waarbij de parameter ```-DomainCredential``` wordt gebruikt om de bevoegdheid van een beheerder van het domein aan de duiden.
+Om te zorgen dat de veranderingen in werking treden nadat de hostname is aangepast, moet na afloop de ```-Restart``` parameter worden gebruikt (om de PC te herstarten). Deze command moet lokaal op de PC uitgevoerd worden.
+
+### Beheren van een groep
+
+Een groep is een verzameling van objecten met dezelfde karakteristieken. 
+
+#### De gebruikersrechten (permissions) van een groep bekijken
+
+Om de rechten van een groep te achterhalen kun je vanuit de ```AD:\>``` drive de volgende command uitvoeren. De |drive moet verbonden zijn met het domein waarbinnen de groep bestaat.
+
+```
+Get-ACL (Get-ADGroup UserGroup) | fl * -f
+```
+
+We krijgen dan het volgende resultaat:
+
+![Alt text](http://i.imgur.com/0G9umFN.png)
+
+We gebruiken de `````` cmdlet om de bestaande groep, ```UserGroup```, te verkrijgen. We passen daarop de ```Get-ACL``` cmdlet toe en tot slot de ```Format-List``` cmdlet om de output op te maken als lijst.
+
+#### Een groep maken
+
+Als we de rechten van de groep hebben bekeken, moeten we een groep aanmaaken om een serie AD objecten te beheren. Het volgende voorbeeld illustreert hoe je een groep genaamd ```ProductAdmins``` aanmaakt in het ```fuhaijun.com``` domein:
+
+```
+New-ADGroup -Name "Product Admins" -SamAccountName ProductAdmins
+-GroupCategory Security -GroupScope Global -DisplayName "Product
+Administrators" -Path "CN=Users,DC=fuhaijun,DC=Com"
+```
+
+Als deze command is uitgevoerd, kunnen we met ADSI Edit de nieuwe groep ```ProductAdmins``` vinden:
+
+![Alt text](http://i.imgur.com/Epsf87i.png)
+
+### Leden aan een groep toevoegen of verwijderen
+
+We kunnen de ```Add-ADGroupMember``` cmdlet gebruiken om gebruiker ```fuhj``` aan de groep ```ProductAdmins``` toe te voegen
+
+```
+Add-ADGroupMember -Identity ProductAdmins -Member fuhj
+```
+
+De parameter ```-Identity``` wordt gebruikt om de groep aan te duiden waaraan het nieuwe lid wordt toegevoegd. 
+De parameter ```-Member``` wordt gebruikt om het nieuwe lid van de operationele groep te specificeren. Als de command is uitgevoerd,
+kunnen we de ```ProductAdmins``` groep vinden in de eigenschappenm van gebruiker ```fuhj``` onder het tabblad 'Member Of'.
+
+![Alt text](http://i.imgur.com/X1Z1itK.png)
+
+Als je een groep wil verwijderen, kun je de ```Remove-ADGroup``` cmdlet gebruiken om zo een Active Directory groep object te verwijderen. Je kunt deze cmdlet gebruiken om security en distribution groepen te verwijderen.
+
+```
+Get-ADGroup -filter 'Name -like "Product*' | Remove-ADGroup
+```
+
+Dit voorbeeld toont aan hoe je alle groepen vindt waarvan de naam met het woord ```Product``` begint, en deze vervolgens verwijdert.
+De ```-Identity``` parameter specificeert de AD groep die verwijderd moet worden. Je kunt een groep identificeren middels de distinguished name (DN), GUID, security identifier (SID),
+Security Accounts Manager (SAM) account naam, of canonieke naam. Je kunt de ```-Identity``` parameter ook instellen op een object variabele, zoals ```$<localADGroupObject>```, of je kunt
+een object door de pipeline naar de ```-Identity``` parameter laten gaan. Zo kun je de ```Get-ADGroup``` cmdlet gebruiken om een groepsobject te vinden en dan het object door de pipeline halen naar de ```Remove-ADGroup``` cmdlet.
+Als ```ADGroup``` wordt geïdentificeerd door middel van de DN, zal de parameter ```-Partition``` automatisch bepaald worden.
+
+In AD LDS omgevingen moet de ```-Partition``` parameter gespecificeerd worden, met uitzondering van de volgende gevallen:
+1. De cmdlet wordt uitgevoerd vanaf een Active Directory provider station.
+2. Er is een standaard naamgevingscontext of -partitie gedefinieerd voor de AD LDS-omgeving
+
+Om een standaard naamgevingscontext te specificeren voor een AD LDS omgeving, stel je de ```msDS-defaultNamingContext``` eigenschap van het Active Directory directory service agent (DSA) object (nTDSDSA) in voor de AD LDS instantie.
+
+### Organizational Unit management
+
+Organizational Units (OU) zijn Active Directory containers waarin je gebruikers, groepen, computers en andere OUs kunt plaatsen.
+OU kunnen geen objecten van andere domeinen bevatten. Een OU is de kleinste ruimte of eenheid waaraan je groepsbeleidsinstellingen of
+of administratieve bevoegdheden kunt toewijzen. Door het gebruik van OUs, kunt je containers aanmaken binnen een domein die de hiërarchische 
+en logische structuren vertegenwoordigen in de organisatie.
+
+#### Een nieuwe OU aanmaken
+
+In onderstaand voorbeeld creëren we een nieuwe OU genaamd ```UserAccounts```, welke zich bevindt in het domein ```fuhaijun.com```.
+
+```
+New-ADOrganizationalUnit -Name UserAccounts -Path "DC=FUHAIJUN,DC=COM"
+```
+
+We kunnen ook de ```-instance``` parameter gebruiken om een reeds aangemaakt OU object als template aan te duiden:
+
+```
+$ouTemplate = Get-ADOrganizationalUnit "OU=UserAccounts,DC=FUHAIJUN,DC=c
+om" -properties seeAlso,managedBy;
+New-ADOrganizationalUnit -name UserReports -instance $ouTemplate
+```
+
+In het voorgaande voorbeeld hebben we een OU genaamd ```UserReports``` gecreërd vanuit het template ```$ouTemplate```.
+
+#### Lijst van OUs
+
+Met de ```Get-ADOrganizationalUnit``` kun je één of meer Active Directory organisatorische units ophalen. Deze cmdlet haalt een OU object op, of voert een zoekopdracht uit om meerdere OUs op te halen.
+
+```
+Get-ADOrganizationalUnit -Filter 'Name -like "*"' | ft -AutoSize
+```
+
+![Alt text](http://i.imgur.com/U1LUn2O.png)
+
+We zien dat alle organisatorische units die in voorgaande voorbeelden zijn aangemaakt worden opgesomd. De ```Format-Tables``` cmdlet wordt gebruikt om de output display op te maken.
+
+#### De naam van een OU veranderen
+
+We kunnen de ```rename-ADObject``` cmdlet gebruiken om de naam van een OU te veranderen.
+
+```
+Rename-ADObject "OU=TestOU, DC=Fuhaijun,DC=Com" -NewName Groups
+```
+
+Door het uitvoeren van deze command verander je de naam van het object met de naam ```OU=
+TestOU,DC=Fuhaijun,DC=Com``` in ```Groups```.
+Of course, we can also use the -Identity parameter with the object GUID in order
+to locate the organizational unit object to be renamed.
+
+```
+Rename-ADObject -Identity "d465ddc9-a5e6-4998-91aa-09e33fe22369" -NewName
+Groups
+```
+
+NB: de ```-Partition``` parameter is niet aangeduid omdat het object binnen de standaard naamgevingscontext van het domein valt.
+
+#### Een OU aanpassen
+
+We kunnen de beschrijving van de OU met naam ```OU=
+TestOU,DC=Fuhaijun,DC=Com``` aanpassen door middel van de ```Set-ADOrganizationalUnit``` cmdlet.
+
+```
+C:\PS>Set-ADOrganizationalUnit -Identity "OU=TestOU,DC=Fuhaijun,DC=COM"
+-Description "This Organizational Unit is a test OU of Fuhaijun.COM"
+```
+
+We kunnen meerdere eigenschappen tegelijk bewerken. De ```Get-ADOrganizationalUnit``` cmdlet kan ons helpen OU-bestemming (destination) te vinden,
+en deze toewijzen aan de variabele ```$AsianSalesOU```. Vervolgens kunnen we de eigenschappen van de variabele instellen, en de ```Set-ADOrganizationalUnit``` cmdlet
+gebruiken met de ```-Instance``` parameter om de wijzigingen aan het object op te slaan. Dit gaat als volgt:
+
+```
+$AsianSalesOU = Get-ADOrganizationalUnit "OU=Asia,OU=Sales,OU=UserAccount
+s,DC=Fuhaijun,DC=COM"
+$AsianSalesOU.StreetAddress = "No. 20 Chang An Avenue"
+$AsianSalesOU.City = "Beijing"
+$AsianSalesOU.PostalCode = "100000"
+$AsianSalesOU.Country = "China"
+Set-ADOrganizationalUnit -Instance $AsianSalesOU
+```
+
+#### Een OU verplaatsen
+
+Om een OU te verplaatsen (bijvoorbeeld wanneer je de structuur van de organisatie wil aanpassen), gebruiken we de ```Move-ADObjecct``` cmdlet.
+
+```
+Move-ADObject "OU=ManagedGroups,DC=Fuhaijun,DC=Com" -TargetPath
+"OU=Managed,DC=Fuhaijun,DC=Com"
+```
+
+We gebruiken de ```-TargetPath``` parameter om het bestemmingspad aan te duiden. Deze cmdlet kan ook gebruikt worden om andere AD objecten te verplaatsen.
+
+#### Een OU verwijderen
+
+Het volgende voorbeeld toont aan hoe je een OU (en de verwante child-items) verwijdert.
+
+```
+C:\PS>Remove-ADOrganizationalUnit -Identity
+"OU=TestOU,DC=FUHAIJUN,DC=COM" -Recursive
+Are you sure you want to remove the item and all its children?
+Performing recursive remove on Target: 'OU=Accounting,DC=Fuhaijun,DC=com
+'.
+[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help
+(default is "Y"):y
+```
+
+Als de OU tegen verwijderen beschermd is, wordt deze niet gedelete. Als de OU niet beschermd is, wordt deze verwijderd, zelfs indien alle child-items wél beschermd zijn.
+Het is ook mogelijk een OU te verwijderen met gebruik van de object GUID als identiteit, terwijl je de confirmation prompt onderdrukt.
+
+```
+Remove-ADOrganizationalUnit -Identity "d465ddc9-a5e6-4998-91aa-
+09e33fe22369" -confirm:$false –ProtectedFromDeletion $false
+```
+
+We gebruiken de ```-Identity```parameter om de object GUID aan te duiden voor een OU en de ```-confirm:$false``` parameter om de confirmation prompt te onderdrukken.
+Als de vlag voor ```-ProtectedFromDeletion``` op ```True``` staat, verwijdert deze cmdlet de OU niet en levert deze een error op.
+
+### Domein controller management
+
+#### Een domein controller vinden
+
+Het volgende voorbeeld toont aan hoe je een domein controller vindt voor het ```Fuhaijun.com``` domein.
+
+```
+Get-ADDomainController -Discover -DomainName fuhaijun.com
+```
+
+![Alt text](http://i.imgur.com/cK8JD2T.png)
+
+We kunnen alle informatie over de domein controller vinden, inclusief de hostname, IP -adres, enzovoort. Als je alle domeincontrollers voor het domein  wil vinden,
+en je ingelogd bent, gebruik je daarvoor de volgende command:
+
+```
+Get-ADDomainController –filter *
+```
+
+![Alt text](http://i.imgur.com/yg1W5uq.png)
+
+#### De locatie van de domein controller vinden
+
+Nadat we de domein controller hebben gevonden, kunnen we ook de locatie achterhalen door middel van de ```Get-ADDomainController``` cmdlet met de ```-Identity``` parameter.
+
+```
+Get-ADDomainController -Identity Win2012-AD | FT Name,Site
+```
+
+#### De global catalog servers terugvinden in een forest
+
+De ```Get-ADForest``` cmdlet zoekt de Active Directory-forest die door de parameters wordt gespecificeerd. Je kunt de forest specificeren door ```-Identity``` of ```-Current```
+parameters op te geven. De parameter ```-Identity``` duidt het Active Directory-forest aan dat wordt gevraagd. Je kunt een forest identificeren door middel van de fully qualified domain name (FQDN), DNS host-naam, of NetBIOS-naam. 
+Je kunt ook de parameter instellen op een forest object variabele, zoals de ```$<localForestObject>```, of je kunt het forest object door een pipeline naar de parameter ```-identiteit``` halen.
+
+```
+Get-ADForest Fuhaijun.com | FL GlobalCatalogs
+```
+
+
 
 <div id='18'/>
 ##Beheer van een server met PowerShell
