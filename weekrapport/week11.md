@@ -33,9 +33,11 @@
 
 ### Jarno
 
-* ...
+* Windows core server installatie, configureren. Domein aangemaakt, NIC configureren, Users, groups en OU's aanmaken, DHCP ingesteld, Shares aangemaakt.
+* Powershell samenvatting variabelen en beheren van het active directory afgemaakt.
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/9wxCKsN.png)
+![Alt text](http://i.imgur.com/t1YFvze.png)
 
 ### Jonas
 
