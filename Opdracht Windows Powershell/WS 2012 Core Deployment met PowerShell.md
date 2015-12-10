@@ -139,7 +139,7 @@ New-SmbShare -Name Verzekeringen -Path c:\AsSv1Data\shares\Afdelingfolders\verze
 Grant-smbShareAccess -Name Verzekeringen -AccountName Administrator -Accesright Full
 ```
 
-
+![ALt text](http://i.imgur.com/zOUvxzK.png)
 
 
 
