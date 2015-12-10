@@ -24,11 +24,11 @@
 
 | Student  | Geschat | Gerealiseerd | 
 | :---     |    ---: |         ---: |
-| Jens |  8u  |   7u     |
+| Jens |  8u  |   9u     |
 | Jonas |   6u30     |      7u      |
-| Karel |        |            |
-| Jarno |         |              |
-| Robin |         |              |
+| Karel |    8u30    |       8u     |
+| Jarno |     7u    |         7u     |
+| Robin |     6u30    |         9u30     |
 
 
 
@@ -39,11 +39,11 @@
 
 | Student  | Geschat | Gerealiseerd | 
 | :---     |    ---: |         ---: |
-| Jens |  5u  |       7u       |
+| Jens |  13u  |       12u       |
 | Jonas |    15u    |      15u25       |
-| Karel |        |            |
-| Jarno |         |              |
-| Robin |         |              |
+| Karel |     13u   |      11u      |
+| Jarno |    20u     |        45u      |
+| Robin |    15u     |         16u     |
 
 ### Deeltaak 3: 
 
@@ -51,7 +51,7 @@
 
 | Student  | Geschat | Gerealiseerd | 
 | :---     |    ---: |         ---: |
-| Jarno |    10     |       10:30:19       |
-| Robin |         |              |
+| Jarno |    10     |       12u       |
+| Robin |    7u     |      9u        |
 
 (na oplevering van de taak een schermafbeelding toevoegen van rapport tijdbesteding voor deze taak)
