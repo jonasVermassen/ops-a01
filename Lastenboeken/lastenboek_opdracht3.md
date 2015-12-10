@@ -1,20 +1,19 @@
-# Lastenboek opdracht 2: Windows
+# Lastenboek opdracht 3: Packet tracers
 
-* Verantwoordelijke uitvoering: `Jarno Raes`
+* Verantwoordelijke uitvoering: `Jens Borgenon`
 * Verantwoordelijke testen: `Robin Van Wesemael`
 
 ## Deliverables
 
-* Een demo geven van de windows server
-* aantonen dat we de wva tutorial bekeken hebben door te antwoorden op verschillende vragen
-* bijhouden van scripts en andere interessante vergaarde informatie
+* labo's packet tracers
+* Demo opstelling
 
 
 ## Deeltaken
 
-* Deeltaak 1: wva: getting started with powershell 3.0 jump start
-* Deeltaak 2: windows individueel boek lezen
-* Deeltaak 3: windows server 2012 deployment met powershell
+* Deeltaak 1: Packet tracers maken + labo invullen
+* Deeltaak 2: Packet tracer 6.2.3.8 fysiek uitbouwen
+
 
 
 
@@ -39,11 +38,11 @@
 
 | Student  | Geschat | Gerealiseerd | 
 | :---     |    ---: |         ---: |
-| Jens |  5u  |       7u       |
-| Jonas |    15u    |      15u25       |
-| Karel |        |            |
-| Jarno |         |              |
-| Robin |         |              |
+| Jens | 2u  |       2u      |
+| Jonas |    2u    |      2u       |
+| Karel |    3u    |     5u       |
+| Jarno |    3u     |     3u15         |
+| Robin |    3u     |     5u         |
 
 ### Deeltaak 3: 
 
@@ -51,7 +50,8 @@
 
 | Student  | Geschat | Gerealiseerd | 
 | :---     |    ---: |         ---: |
-| Jarno |    10     |       10:30:19       |
-| Robin |         |              |
+| Jens |    3u     |      3u       |
+| Robin |    3u     |      3u       |
+| Jarno |    3u     |      3u       |
 
 (na oplevering van de taak een schermafbeelding toevoegen van rapport tijdbesteding voor deze taak)
