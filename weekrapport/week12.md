@@ -18,14 +18,16 @@
 [Afbeelding huidige toestand Kanban-bord(en) invoegen]
 
 * Finale evaluatie Linux
+* Core installation windows server
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
 ### Jens
 
+* Github in orde brengen
 * Finale evaluatie Linux
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/VQYA6Oy.png)
 
 ### Jarno
 
