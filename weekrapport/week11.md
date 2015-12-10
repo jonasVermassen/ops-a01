@@ -29,7 +29,7 @@
 * Lamp-stack afwerken en verslag over maken
 * Multi-tier Lamp-stack opzetten
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt text](http://i.imgur.com/8nIFfxd.png)
 
 ### Jarno
 
