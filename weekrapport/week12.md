@@ -41,7 +41,7 @@
 
 ### Karel
 
-* ...
+* Finale evaluatie Linux
 
 [Afbeelding individueel rapport tijdregistratie]
 
