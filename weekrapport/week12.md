@@ -57,6 +57,9 @@
 ## Wat plan je volgende week te doen?
 
 ### Algemeen
+
+Eindopdracht Gent
+
 ### Jens
 ### Jarno
 ### Jonas
@@ -66,8 +69,7 @@
 
 ## Waar hebben jullie nog problemen mee?
 
-* ...
-* ...
+* Load Balancer
 
 ## Feedback technisch luik
 
