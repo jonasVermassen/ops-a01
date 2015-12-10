@@ -40,7 +40,7 @@ Install-WindowsFeature DHCP  –IncludeAllSubFeature  –IncludeManagementTools
 
 DNS Client settings
 ```Powershell
-Set-DnsClientServerAddress –InterfaceAlias Ethernet –ServerAddresses 192.168.110.1
+Set-DnsClientServerAddress –InterfaceAlias Ethernet –ServerAddresses 192.168.110.11
 ```
 
 Active Directory configureren
@@ -98,21 +98,54 @@ add-dhcpserverv4SuperScope
 Users toevoegen aan AD
 
 ```
-PS C:\Windows\system32> New-ADUser -SamAccountName "FrankA"
+New-ADUser -SamAccountName "FrankA"
 Surname "Assengraaf" -DisplayName "Frank Assengraaf"
 ```
 
 Security Group toevoegen aan AD en ou
-
 ```
 NEW-ADGroup –name “Beheer” –groupscope Global –path “OU=Beheer,DC=Assengraaf,DC=nl”
 ```
-
 ![ALt text](http://i.imgur.com/JXf4665.png)
 
-Maak user rechtsstreeks in een bestaande OU
 
+Maak user rechtsstreeks in een bestaande OU
 ![ALt text](http://i.imgur.com/nBDk8iy.png)
+
+Local Domain Groups bekijken
+```Powershell
+net localgroup
+```
+
+Users toevoegen aan een Domain Group
+```Powershell
+net localgroup "print operator" /add femkevdv
+```
+
+Verbinding met server verbreken 
+```Powershell
+net use */delete
+```
+
+Nieuwe Share aanmaken met authorisaties
+```Powershell
+ PS C:\AsSv1Data\shares\Afdelingfolders> mkdir Verzekeringen
+```
+```Powershell
+New-SmbShare -Name Verzekeringen -Path c:\AsSv1Data\shares\Afdelingfolders\verzekeringen 
+-FullAccess Administrator -ChangeAccess AssenGraaf.nl\T_Verzekeringen 
+```
+```Powershell
+Grant-smbShareAccess -Name Verzekeringen -AccountName Administrator -Accesright Full
+```
+
+
+
+
+
+
+
+
 
 Handige sites:
 
