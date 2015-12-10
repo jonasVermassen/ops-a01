@@ -125,3 +125,5 @@ http://blogs.technet.com/b/heyscriptingguy/archive/2012/10/30/powertip-single-li
 https://social.technet.microsoft.com/Forums/scriptcenter/en-US/2ff646e0-1b1a-489a-8562-3f7bd21b7518/powershell-script-add-users-from-an-ou-to-an-ad-security-group?forum=ITCG
 
 http://ilovepowershell.com/2012/09/19/create-network-share-with-powershell-3/
+
+http://windowsitpro.com/powershell/managing-file-shares-windows-powershell
