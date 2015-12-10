@@ -1,28 +1,57 @@
-## Lastenboek Taak 1: (titel)
+# Lastenboek opdracht 1: Windows
 
-* Verantwoordelijke uitvoering: `studentx`
-* Verantwoordelijke testen: `studenty`
+* Verantwoordelijke uitvoering: `Jarno Raes`
+* Verantwoordelijke testen: `Robin Van Wesemael`
 
-### Deliverables
+## Deliverables
 
-* ...
+* Een demo geven van de windows server
+* aantonen dat we de wva tutorial bekeken hebben door te antwoorden op verschillende vragen
+* bijhouden van scripts en andere interessante vergaarde informatie
 
-### Deeltaken
 
-* POWERSHELL
+## Deeltaken
 
-### Kanban-bord
+* Deeltaak 1: wva: getting started with powershell 3.0 jump start
+* Deeltaak 2: windows individueel boek lezen
+* Deeltaak 3: windows server 2012 deployment met powershell
 
-(schermafbeeldingen van de toestand van het Kanban-bord invoegen elke week voor de samenkomst met de begeleider, tot oplevering van de opdracht)
 
-### Tijdbesteding
 
-| Student  | Geschat | Gerealiseerd |
+### Deeltaak 1: 
+
+#### Tijdbesteding
+
+| Student  | Geschat | Gerealiseerd | 
 | :---     |    ---: |         ---: |
-| Jens |         |              |
+| Jens |  8u  |   7u     |
+| Jonas |   6u30     |      7u      |
+| Karel |        |            |
 | Jarno |         |              |
-| Jonas |         |              |
-| Karel |         |              |
+| Robin |         |              |
+
+
+
+
+### Deeltaak 2: 
+
+#### Tijdbesteding
+
+| Student  | Geschat | Gerealiseerd | 
+| :---     |    ---: |         ---: |
+| Jens |  5u  |       7u       |
+| Jonas |    15u    |      15u25       |
+| Karel |        |            |
+| Jarno |         |              |
+| Robin |         |              |
+
+### Deeltaak 3: 
+
+#### Tijdbesteding
+
+| Student  | Geschat | Gerealiseerd | 
+| :---     |    ---: |         ---: |
+| Jarno |    10     |       10:30:19       |
 | Robin |         |              |
 
 (na oplevering van de taak een schermafbeelding toevoegen van rapport tijdbesteding voor deze taak)
