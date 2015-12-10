@@ -5,11 +5,11 @@
 
 | Student  | Aanw. | Opmerking |
 | :---     | :---  | :---      |
-| Jens |       |           |
-| Jarno |       |           |
-| Jonas |       |           |
-| Karel |       |           |
-| Robin |       |           |
+| Jens |   x    |           |
+| Jarno |   x    |           |
+| Jonas |    x   |           |
+| Karel |     x  |           |
+| Robin |      x |           |
 
 ## Wat heb je deze week gerealiseerd?
 
@@ -17,26 +17,25 @@
 
 [Afbeelding huidige toestand Kanban-bord(en) invoegen]
 
-* ...
-* ...
+* Finale evaluatie Linux
 
 [Afbeelding teamoverzicht tijdregistratie onderverdeeld per deelopdracht]
 
 ### Jens
 
-* ...
+* Finale evaluatie Linux
 
 [Afbeelding individueel rapport tijdregistratie]
 
 ### Jarno
 
-* ...
+* Finale evaluatie Linux
 
 [Afbeelding individueel rapport tijdregistratie]
 
 ### Jonas
 
-* ...
+* Finale evaluatie Linux
 
 [Afbeelding individueel rapport tijdregistratie]
 
@@ -48,7 +47,7 @@
 
 ### Robin
 
-* ...
+* Finale evaluatie Linux
 
 [Afbeelding individueel rapport tijdregistratie]
 
