@@ -141,8 +141,19 @@ Grant-smbShareAccess -Name Verzekeringen -AccountName Administrator -Accesright 
 
 ![ALt text](http://i.imgur.com/zOUvxzK.png)
 
+Rechten van OU aanpassen accidental deletion naar false
 
+```
+PS C:\Windows\system32> Set-ADOrganizationalUnit -Identity "OU=Financieringen,DC=Assengraaf,DC=nl" -ProtectedFromAcciden
+talDeletion $False
+```
 
+OU Toevoegen aan een bestaande OU.
+
+```
+PS C:\Windows\system32> Move-ADObject -Identity "OU=Financieringen,DC=Assengraaf,DC=nl" -TargetPath "OU=AsAfdelingen,DC=
+Assengraaf,DC=nl"
+```
 
 
 
