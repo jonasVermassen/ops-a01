@@ -155,7 +155,9 @@ PS C:\Windows\system32> Move-ADObject -Identity "OU=Financieringen,DC=Assengraaf
 Assengraaf,DC=nl"
 ```
 
+Maak de GPO beheerders Enforced 
 
+![enforced](http://i.imgur.com/Hmm5r5L.png)
 
 
 Handige sites:
