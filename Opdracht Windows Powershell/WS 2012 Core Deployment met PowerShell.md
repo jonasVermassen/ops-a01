@@ -95,6 +95,12 @@ DHCP SuperScope instellen
 add-dhcpserverv4SuperScope
 ```
 
+DHCP default-gateway instellen
+
+```
+Set-DhcpServerv4OptionValue -ScopeId 192.168.210.0 -Router 192.168.210.1
+```
+
 Users toevoegen aan AD
 
 ```
