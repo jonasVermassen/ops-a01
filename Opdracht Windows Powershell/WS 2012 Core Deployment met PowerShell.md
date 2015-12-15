@@ -169,6 +169,12 @@ Password policy instellen
 
 ![password policy](http://i.imgur.com/JtIjbfF.png)
 
+Users een homedirectory geven
+
+![Home Directory](http://i.imgur.com/CMpuiHI.png)
+
+
+
 Handige sites:
 
 http://www.tomsitpro.com/articles/powershell-active-directory-cmdlets,2-801.html
