@@ -165,6 +165,9 @@ Maak de GPO beheerders Enforced
 
 ![enforced](http://i.imgur.com/Hmm5r5L.png)
 
+Password policy instellen
+
+![password policy](http://i.imgur.com/JtIjbfF.png)
 
 Handige sites:
 
