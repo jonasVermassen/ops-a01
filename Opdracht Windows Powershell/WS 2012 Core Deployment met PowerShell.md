@@ -173,7 +173,7 @@ Users een homedirectory geven
 
 ![Home Directory](http://i.imgur.com/CMpuiHI.png)
 
-
+Voor profiles doe je hetzelfde maar gebruik je de parameter -ProfilePath \\ASSV1\AsSv1Data\shares\UserProfiles\%username%
 
 Handige sites:
 
