@@ -181,6 +181,10 @@ Users een homedirectory geven
 
 Voor profiles doe je hetzelfde maar gebruik je de parameter -ProfilePath \\ASSV1\AsSv1Data\shares\UserProfiles\%username%
 
+Werkstation wordt eindelijk herkend door DC
+
+![AsWs1 enabled](http://i.imgur.com/5rEIHyw.png)
+
 Handige sites:
 
 http://www.tomsitpro.com/articles/powershell-active-directory-cmdlets,2-801.html
