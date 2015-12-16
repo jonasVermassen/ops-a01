@@ -181,7 +181,15 @@ Users een homedirectory geven
 
 Voor profiles doe je hetzelfde maar gebruik je de parameter -ProfilePath \\ASSV1\AsSv1Data\shares\UserProfiles\%username%
 
+
+
 Werkstation wordt eindelijk herkend door DC
+
+Dit doe je door gebruik van het commando:
+
+```
+New-ADComputer -name AsWs1 -Path "OU=AsAfdelingen,DC=assengraaf,DC=nl"
+```
 
 ![AsWs1 enabled](http://i.imgur.com/5rEIHyw.png)
 
