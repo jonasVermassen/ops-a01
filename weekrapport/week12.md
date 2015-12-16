@@ -32,8 +32,10 @@
 ### Jarno
 
 * Finale evaluatie Linux
+* Evaluatie Windows Core Server
+* Windows Core Server in orde brengen
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt Text](http://i.imgur.com/HRsWxFp.png)
 
 ### Jonas
 
