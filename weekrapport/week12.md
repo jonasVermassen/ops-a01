@@ -40,8 +40,11 @@
 ### Jonas
 
 * Finale evaluatie Linux
+* load balancer proberen opzetten (niet gelukt binnen de deadline) 
+* ansible vsftpd rol op ansible galaxy plaatsen en mergen met de originele rol. 
 
-[Afbeelding individueel rapport tijdregistratie]
+![Alt Text](http://i.imgur.com/N6cZVX8.png)
+
 
 ### Karel
 
