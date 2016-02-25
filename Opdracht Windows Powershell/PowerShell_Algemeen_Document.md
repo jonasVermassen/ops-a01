@@ -19,7 +19,7 @@
 16. [Server Roles en Features Configureren](#16)
 17. [Beheer Active Directory met PowerShell](#17)
 18. [Beheer van een server met PowerShell](#18)
-19. [Beheer van Exchange server](#20)
+19. [Beheer van Exchange server](#19)
 
 <div id='1'/>
 ##Help-systeem
